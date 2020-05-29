@@ -28,7 +28,7 @@
 <div class="row">
 
 
-    <div class="col-md-6">
+    <!-- <div class="col-md-6">
         <section class="panel">
             <header class="panel-heading">
                 <div class="panel-actions">
@@ -180,7 +180,9 @@
                 </div>
             </div>
         </section>
-    </div>
+    </div> -->
+
+
 </div>
 
 
