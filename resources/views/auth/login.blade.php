@@ -12,7 +12,8 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- Custom fonts for this template-->
-    <link href="sbadmin2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="sbadmin2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="{{ asset('assets/vendor/font-awesome/css/font-awesome.css') }}" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
@@ -97,8 +98,11 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="sbadmin2/vendor/jquery/jquery.min.js"></script>
-    <script src="sbadmin2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="sbadmin2/vendor/jquery/jquery.min.js"></script>
+    <script src="sbadmin2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
+    <script src="{{ asset('js/jquery-3.5.0.min.js') }}"></script>
+	<script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="sbadmin2/vendor/jquery-easing/jquery.easing.min.js"></script>
