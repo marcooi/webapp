@@ -105,7 +105,7 @@
 	<script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="sbadmin2/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="sbadmin2/js/sb-admin-2.min.js"></script>
