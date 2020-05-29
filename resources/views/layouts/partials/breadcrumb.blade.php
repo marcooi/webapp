@@ -1,7 +1,6 @@
-<header class="page-header">
-    <!-- <h2>Blank Page</h2> -->
+<header class="page-header">   
 
-    <div class="right-wrapper pull-right">
+    <!-- <div class="right-wrapper pull-right">
         <ol class="breadcrumbs">
             <li>
                 <a href="index.html">
@@ -13,5 +12,6 @@
         </ol>
 
         <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
-    </div>
+    </div> -->
+
 </header>
