@@ -30,10 +30,11 @@
                         </ul>
                     </li>
 
-                    <li class="nav-parent {{ (request()->is('sales*')) ? 'nav-expanded' : '' }}">
+                    <li class="nav-parent {{ (request()->is('sale*')) ? 'nav-expanded' : '' }}">
                         <a><i class="fa fa-usd" aria-hidden="true"></i><span>Sales</span></a>
                         <ul class="nav nav-children">
                         <li class="{{ (request()->is('sales')) ? 'nav-active' : '' }}"><a href="{{ route('sales.index') }}">Order</a></li>
+                        <li class="{{ (request()->is('sale/quotations')) ? 'nav-active' : '' }}"><a href="{{ route('quotations.index') }}">Quotation</a></li>
                                                     
 
                         </ul>

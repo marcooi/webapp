@@ -28,12 +28,12 @@
 @endif
 
 
-<form action="{{ route('sales.store') }}" method="POST" class="form-horizontal" autocomplete="off">
+<form action="{{ route('quotations.store') }}" method="POST" class="form-horizontal" autocomplete="off">
     @csrf
 
     <section class="panel">
         <header class="panel-heading">
-            <h2 class="panel-title">Add Sales Order</h2>
+            <h2 class="panel-title">Add Sales Quotation</h2>
         </header>
         <div class="panel-body">
 
@@ -43,15 +43,11 @@
                     <select name="company_id" class="form-control select2-company" required></select>
                 </div>
 
-                <label class="col-sm-3 control-label">SO# </span></label>
-                <div class="col-sm-2">
-                    <input type="text" name='so_no' class="form-control input-sm" value="{{ Request::old('so_no') }}" required>
+                <label class="col-sm-3 control-label">Reff No </span></label>
+                <div class="col-sm-3">
+                    <input type="text" name="reff_no" class="form-control input-sm" value="{{ Request::old('reff_no') }}" required />
                 </div>
 
-                <!-- <label class="col-sm-3 control-label">Sales Person</label>
-                <div class="col-sm-3">
-                    <select name="sales_person_id" class="form-control select2-sales-person" required></select>
-                </div> -->
 
             </div>
 
@@ -70,57 +66,35 @@
 
             <div class="form-group">
 
-                <label class="col-sm-2 control-label">Invoice No </span></label>
+            <label class="col-sm-2 control-label">Contact Person </span></label>
                 <div class="col-sm-3">
-                    <input type="text" name="invoice_no" class="form-control input-sm" value="{{ Request::old('invoice_no') }}" required />
+                    <input type="text" name="contact_person" class="form-control input-sm" value="{{ Request::old('contact_person') }}" required />
                 </div>
 
-                <label class="col-sm-4 control-label">Invoice Date </span></label>
-                <div class="col-sm-3">
-                    <input type="text" name='invoice_date' class="form-control input-sm datepicker" value="{{ Request::old('invoice_date') }}" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-
-                <label class="col-sm-2 control-label">TT Invoice </span></label>
-                <div class="col-sm-3">
-                    <input type="text" name="tt_invoice_no" class="form-control input-sm" value="{{ Request::old('tt_invoice_no') }}" required />
-                </div>
-
-                <label class="col-sm-4 control-label">TT Invoice Date </span></label>
-                <div class="col-sm-3">
-                    <input type="text" name='tt_invoice_date' class="form-control input-sm datepicker" value="{{ Request::old('tt_invoice_date') }}" required>
+                <label class="col-sm-4 control-label">Date </span></label>
+                <div class="col-sm-2">
+                    <input type="text" name='date' class="form-control input-sm datepicker" value="{{ Request::old('date') }}" required>
                 </div>
             </div>
 
             <div class="form-group">
-
-                <label class="col-sm-2 control-label">Delivery Order </span></label>
-                <div class="col-sm-3">
-                    <input type="text" name="delivery_no" class="form-control input-sm" value="{{ Request::old('delivery_no') }}" required />
+                <label class="col-sm-2 control-label">Remark 1</span></label>
+                <div class="col-sm-5">
+                    <input type="text" name="remark1" class="form-control input-sm" value="{{ Request::old('remark1') }}" required />
                 </div>
 
-                <label class="col-sm-4 control-label">Delivery Date </span></label>
-                <div class="col-sm-3">
-                    <input type="text" name='delivery_date' class="form-control input-sm datepicker" value="{{ Request::old('delivery_date') }}" required>
-                </div>
+              
             </div>
 
             <div class="form-group">
-
-                <label class="col-sm-2 control-label">PO No. </span></label>
-                <div class="col-sm-3">
-                    <input type="text" name="po_no" class="form-control input-sm" value="{{ Request::old('po_no') }}" required />
+                <label class="col-sm-2 control-label">Remark 2 </span></label>
+                <div class="col-sm-5">
+                    <input type="text" name="remark2" class="form-control input-sm" value="{{ Request::old('remark2') }}" required />
                 </div>
 
-                <label class="col-sm-4 control-label">PO Date </span></label>
-                <div class="col-sm-3">
-                    <input type="text" name='po_date' class="form-control input-sm datepicker" value="{{ Request::old('po_date') }}" required>
-                </div>
+              
             </div>
 
-            
 
             <div class="form-group">
                 <label class="col-sm-2 control-label">Product</label>

@@ -37,7 +37,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('purchase/receipts', 'ReceiptController');
     Route::resource('sales', 'SaleController');
-   
+
+    Route::resource('sale/quotations','QuotationController');
 
 
     Route::get('/getcompany', 'CompanyController@searchCompany')->name('getcompany');
@@ -62,6 +63,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/purchases/confirm/{id}', 'PurchaseController@confirm')->name('purchase.confirm');
 
     Route::get('/sales/confirm/{id}', 'SaleController@confirm')->name('sale.confirm');
+    Route::get('/quotations/confirm/{id}', 'QuotationController@confirm')->name('quotation.confirm');
 
     Route::get('/employee/all', 'EmployeeController@searchEmployee')->name('employee.all');
     Route::get('/address/{id}', 'AddressController@searchShippingAddress')->name('address.all');

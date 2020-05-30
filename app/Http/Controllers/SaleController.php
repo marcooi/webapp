@@ -10,10 +10,19 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
 // use PDF;
-use Meneses\LaravelMpdf\Facades\LaravelMpdf as PDF;
+// use Meneses\LaravelMpdf\Facades\LaravelMpdf as PDF;
 
 class SaleController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:sale-list|sale-create|sale-edit|sale-delete', ['only' => ['index', 'show']]);
+        $this->middleware('permission:sale-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:sale-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:sale-delete', ['only' => ['destroy']]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -316,12 +325,12 @@ class SaleController extends Controller
             ->get();
 
 
-       
 
-            // $pdf = PDF::loadView('sales.invoice', compact('header', 'shipping', 'details'));            
-            // return $pdf->stream('document.pdf');
 
-          
+        // $pdf = PDF::loadView('sales.invoice', compact('header', 'shipping', 'details'));            
+        // return $pdf->stream('document.pdf');
+
+
 
         switch ($request->print_option) {
             case '1':
@@ -348,6 +357,4 @@ class SaleController extends Controller
 
         // return view('purchases.print', compact('purchases', 'companies', 'purchasesdetail'));
     }
-
-   
 }
