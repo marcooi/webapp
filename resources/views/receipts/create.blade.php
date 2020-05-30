@@ -161,7 +161,7 @@
             placeholder: "",
             minimumInputLength: 2,
             ajax: {
-                url: '{{ route("getcompany") }}',
+                url: '{{ route("getvendor") }}',
                 dataType: 'json',
                 delay: 250
             }

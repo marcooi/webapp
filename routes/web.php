@@ -41,6 +41,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
     Route::get('/getcompany', 'CompanyController@searchCompany')->name('getcompany');
+    Route::get('/getvendor', 'CompanyController@searchVendor')->name('getvendor');
     Route::get('/customer', 'CompanyController@getCustomer')->name('getcustomer');
 
     Route::get('/getcompanybyid/{id}', 'CompanyController@searchCompanyById')->name('getcompanybyid');

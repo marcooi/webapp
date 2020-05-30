@@ -89,7 +89,6 @@ class CompanyController extends Controller
      */
     public function show(Company $company)
     {
-      
     }
 
     /**
@@ -123,9 +122,9 @@ class CompanyController extends Controller
         $company->is_owner = $request->has('is_owner') ?? 0;
 
         $company->update($request->all());
-       
+
         return redirect()->route('companies.index')
-            ->with('success', 'Company updated successfully');        
+            ->with('success', 'Company updated successfully');
     }
 
     /**
@@ -143,7 +142,7 @@ class CompanyController extends Controller
     }
 
     public function searchCompany(Request $request)
-    {      
+    {
         $listvendor = Company::where('is_owner', '=', 0)
             ->where('description', 'LIKE', '%' . $request->input('term', '') . '%')
             ->get(['id', 'description as text']);
@@ -153,21 +152,26 @@ class CompanyController extends Controller
     function searchCompanyById($request)
     {
         $listvendor = Company::where('id', $request)->get();
-      
+
         return ['results' => $listvendor];
     }
 
     function getCustomer(Request $request)
     {
         $listvendor = Company::where('is_customer', 1)
-        ->where('is_active', 1)
-        ->where('description', 'LIKE', '%' . $request->input('term', '') . '%')
-        ->get(['id', 'description as text']);
-      
+            ->where('is_active', 1)
+            ->where('description', 'LIKE', '%' . $request->input('term', '') . '%')
+            ->get(['id', 'description as text']);
+
         return ['results' => $listvendor];
     }
 
-
-    
-
+    public function searchVendor(Request $request)
+    {
+        $listvendor = Company::where('is_owner', '=', 0)
+            ->where('is_vendor', '=', 1)
+            ->where('description', 'LIKE', '%' . $request->input('term', '') . '%')
+            ->get(['id', 'description as text']);
+        return ['results' => $listvendor];
+    }
 }
