@@ -47,9 +47,8 @@ class PurchaseController extends Controller
      */
     public function create()
     {
-        $companies = DB::table('Companies')->where('is_owner', '=', 1)->value('id');
+        $companies = DB::table('companies')->where('is_owner', '=', 1)->value('id');
         $addresses = Address::where('company_id', $companies)->get();
-
 
         return view('purchases.create', compact('companies', 'addresses'));
     }
