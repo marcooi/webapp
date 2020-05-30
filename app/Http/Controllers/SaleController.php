@@ -74,6 +74,7 @@ class SaleController extends Controller
         $sales->shipping_address_id = $request->input('shipping_address_id');
         $sales->sales_person_id = $request->input('sales_person_id');
         $sales->po_no = $request->input('po_no');
+        $sales->so_no = $request->input('so_no');
         $sales->po_date = Carbon::createFromFormat('d/m/Y', $request->input('po_date'))->format('Y-m-d');
         $sales->invoice_no = $request->input('invoice_no');
         $sales->invoice_date = Carbon::createFromFormat('d/m/Y', $request->input('invoice_date'))->format('Y-m-d');
@@ -177,10 +178,10 @@ class SaleController extends Controller
         request()->validate([
             'company_id' => 'required',
             'sales_person_id' => 'required',
-            'invoice_no' => 'required|unique:sales',
-            'tt_invoice_no' => 'required|unique:sales',
-            'delivery_no' => 'required|unique:sales',
-            'po_no' => 'required|unique:sales',
+            'invoice_no' => 'required',
+            'tt_invoice_no' => 'required',
+            'delivery_no' => 'required',
+            'po_no' => 'required',
 
         ]);
 

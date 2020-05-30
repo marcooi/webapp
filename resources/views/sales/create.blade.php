@@ -43,6 +43,11 @@
                     <select name="company_id" class="form-control select2-company" required></select>
                 </div>
 
+                <label class="col-sm-3 control-label">SO# </span></label>
+                <div class="col-sm-2">
+                    <input type="text" name='so_no' class="form-control input-sm" value="{{ Request::old('so_no') }}" required>
+                </div>
+
                 <!-- <label class="col-sm-3 control-label">Sales Person</label>
                 <div class="col-sm-3">
                     <select name="sales_person_id" class="form-control select2-sales-person" required></select>
@@ -137,7 +142,10 @@
                         <thead>
                             <tr>
                                 <th class="text-center" width=5%> # </th>
+                                <!-- <th class="text-center" style='display:none;' width=5%> ID </th> -->
+                                <th class="text-center" style='display:none;' width=5%> Product ID </th>
                                 <th class="text-center" style='display:none;' width=5%> ID </th>
+
                                 <th class="text-center" width=30%> Product </th>
                                 <th class="text-center" width=7%> Stock </th>
                                 <th class="text-center"> Qty </th>
@@ -150,7 +158,7 @@
                         </thead>
                         <tbody id="tbody1">
                             <!-- <tr id='addr0'> -->
-                                <!-- <td>1</td>
+                            <!-- <td>1</td>
                                 <td><select name="product_id[]" class="js-example-responsive select2-productx" style="width: 100%" required></select></td>
                                 <td><input type="number" name='qty[]' placeholder='Enter Qty' class="form-control input-sm qty" min="1" step="1" required /></td>
                                 <td><input type="number" name='unit_price[]' placeholder='Enter Unit Price' class="form-control input-sm price" step="0.00" min="0" required /></td>
@@ -327,17 +335,19 @@
 
 
                         let markup = "<tr><td><input type='text' class='form-control' value='" + (i + 1) + "' readonly>" + "</td>";
-                        let markup2 = "<td style='display:none;'> <input type='text' class='form-control' name='inventory_id[]' value='" + id + "'  readonly>" + "</td>";
-                        let markup3 = "<td> <input type='text' class='form-control' name='product_name[]' value='" + name + "' readonly>" + "</td>";
-                        let markup4 = "<td><input type='text' class='form-control stock' name='stock[]' value='" + stock + "'readonly></td>";
-                        let markup5 = "<td><input type='number' class='form-control qty' name='qty[]' value='0'></td>"
-                        let markup6 = "<td><input type='text' class='form-control price' name='unit_price[]' value='0'></td>"
-                        let markup7 = "<td><input type='text' class='form-control pph-23' name='pph_23[]' value='0'></td>"
-                        let markup8 = "<td><input type='text' class='form-control pph-23-amount' name='pph_23_amount[]' value='0'></td>"
-                        let markup9 = "<td><input type='text' class='form-control total' name='total_price[]' value='0'></td></tr>"
-                      
-                        $("#tbody1").append(markup + markup2 + markup3 + markup4 + markup5 + markup6 + markup7 + markup8 + markup9);
-                       
+                        // let markup2 = "<td style='display:none;'> <input type='text' class='form-control' name='inventory_id[]' value='" + id + "'  readonly>" + "</td>";
+                        let markup2 = "<td style='display:none;'> <input type='text' class='form-control' name='product_id[]' value='" + id + "'  readonly>" + "</td>";
+                        let markup3 = "<td style='display:none;'> <input type='text' class='form-control' name='inventory_id[]' value='" + id + "'  readonly>" + "</td>";
+                        let markup4 = "<td> <input type='text' class='form-control' name='product_name[]' value='" + name + "' readonly>" + "</td>";
+                        let markup5 = "<td><input type='text' class='form-control stock' name='stock[]' value='" + stock + "'readonly></td>";
+                        let markup6 = "<td><input type='number' class='form-control qty' name='qty[]' value='0'></td>"
+                        let markup7 = "<td><input type='text' class='form-control price' name='unit_price[]' value='0'></td>"
+                        let markup8 = "<td><input type='text' class='form-control pph-23' name='pph_23[]' value='0'></td>"
+                        let markup9 = "<td><input type='text' class='form-control pph-23-amount' name='pph_23_amount[]' value='0'></td>"
+                        let markup10 = "<td><input type='text' class='form-control total' name='total_price[]' value='0'></td></tr>"
+
+                        $("#tbody1").append(markup + markup2 + markup3 + markup4 + markup5 + markup6 + markup7 + markup8 + markup9 + markup10);
+
                     }
 
                 });

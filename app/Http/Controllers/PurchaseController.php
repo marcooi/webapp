@@ -75,6 +75,7 @@ class PurchaseController extends Controller
         $purchase->company_id = $request->input('company_id');
         $purchase->po_no = $request->input('po_no');
         $purchase->date = $request->input('date');
+        $purchase->so_no = $request->input('so_no');
         $purchase->payment_type = $request->input('payment_type');
         $purchase->time_of_delivery = $request->input('time_of_delivery');
         $purchase->remark1 = $request->input('remark1');

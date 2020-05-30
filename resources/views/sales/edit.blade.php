@@ -55,7 +55,7 @@
 
                 <label class="col-sm-2 control-label">Invoice No </span></label>
                 <div class="col-sm-4">
-                    <input type="text" name="invoice_no" class="form-control input-sm" value="{{ $sales->invoice_no }}" required />
+                    <input type="text" name="invoice_no" class="form-control input-sm" value="{{ $sales->invoice_no }}" readonly />
                 </div>
 
                 <label class="col-sm-3 control-label">Invoice Date </span></label>
@@ -68,7 +68,7 @@
 
                 <label class="col-sm-2 control-label">TT Invoice </span></label>
                 <div class="col-sm-4">
-                    <input type="text" name="tt_invoice_no" class="form-control input-sm" value="{{ $sales->tt_invoice_no }}" required />
+                    <input type="text" name="tt_invoice_no" class="form-control input-sm" value="{{ $sales->tt_invoice_no }}" readonly />
                 </div>
 
                 <label class="col-sm-3 control-label">TT Invoice Date </span></label>
@@ -81,7 +81,7 @@
 
                 <label class="col-sm-2 control-label">Delivery Order </span></label>
                 <div class="col-sm-4">
-                    <input type="text" name="delivery_no" class="form-control input-sm" value="{{ $sales->delivery_no }}" required />
+                    <input type="text" name="delivery_no" class="form-control input-sm" value="{{ $sales->delivery_no }}" readonly />
                 </div>
 
                 <label class="col-sm-3 control-label">Delivery Date </span></label>
@@ -94,7 +94,7 @@
 
                 <label class="col-sm-2 control-label">PO No. </span></label>
                 <div class="col-sm-4">
-                    <input type="text" name="po_no" class="form-control input-sm" value="{{ $sales->po_no }}" required />
+                    <input type="text" name="po_no" class="form-control input-sm" value="{{ $sales->po_no }}" readonly />
                 </div>
 
                 <label class="col-sm-3 control-label">PO Date </span></label>

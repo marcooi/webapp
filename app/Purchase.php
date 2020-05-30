@@ -10,7 +10,7 @@ class Purchase extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'company_id', 'po_no', 'date', 'payment_type', 'time_of_delivery',
+        'company_id', 'po_no', 'date', 'payment_type', 'time_of_delivery', 'so_no',
         'remark1', 'remark1', 'sub_total', 'ppn', 'ppn_amount', 'discount', 'grand_total', 'created_by', 'updated_by'
     ];
 

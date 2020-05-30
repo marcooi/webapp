@@ -18,8 +18,9 @@ class CreateSalesTable extends Migration
             $table->string('company_id');
             $table->string('shipping_address_id');
             $table->string('sales_person_id');
-            $table->string('po_no');
+            $table->string('po_no');            
             $table->timestamp('po_date', 0);
+            $table->string('so_no')->nullable();
             $table->string('invoice_no');
             $table->timestamp('invoice_date', 0)->nullable();
             $table->string('tt_invoice_no');

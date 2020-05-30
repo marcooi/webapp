@@ -20,6 +20,7 @@ class CreatePurchasesTable extends Migration
             // $table->string('ship_address_id')->nullable();
             $table->string('po_no');
             $table->string('date');
+            $table->string('so_no');
             $table->string('payment_type');
             $table->string('time_of_delivery');
             $table->string('remark1')->nullable();

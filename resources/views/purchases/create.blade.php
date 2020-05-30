@@ -75,15 +75,19 @@
 
                 <label class="col-sm-4 control-label">Date </span></label>
                 <div class="col-sm-2">
-                    <input type="text" name='date' class="form-control input-sm datepicker"  value="{{ Request::old('date') }}" required>
+                    <input type="text" name='date' class="form-control input-sm datepicker" value="{{ Request::old('date') }}" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-sm-1 control-label">Remark 2 </span></label>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <input type="text" name="remark2" class="form-control input-sm" value="{{ Request::old('remark2') }}" required />
+                </div>
 
+                <label class="col-sm-4 control-label">SO# </span></label>
+                <div class="col-sm-2">
+                    <input type="text" name='so_no' class="form-control input-sm"  value="{{ Request::old('so_no') }}" required>
                 </div>
             </div>
 
@@ -105,9 +109,9 @@
                         <tbody>
                             <tr id='addr0'>
                                 <td>1</td>
-                                <td><select name="product_id[]" class="js-example-responsive select2-product" style="width: 100%"  required></select></td>
+                                <td><select name="product_id[]" class="js-example-responsive select2-product" style="width: 100%" required></select></td>
                                 <!-- <td><textarea name='description' class="form-control input-sm "></textarea></td> -->
-                                <td><input type="number" name='qty[]' placeholder='Enter Qty' class="form-control input-sm qty"  min="1" step="1" required /></td>
+                                <td><input type="number" name='qty[]' placeholder='Enter Qty' class="form-control input-sm qty" min="1" step="1" required /></td>
                                 <!-- <td><input type="text" id="myinput" name='qty[]' placeholder='Enter Qty' class="form-control input-sm qty" required /></td> -->
                                 <!-- <td><input type="number" name='unit_price[]' placeholder='Enter Unit Price' class="form-control input-sm price" step="0.00" min="0" required /></td> -->
                                 <td><input type="number" name='unit_price[]' placeholder='Enter Unit Price' class="form-control input-sm price" step="0.00" min="0" required /></td>
@@ -211,7 +215,7 @@
 
     $(document).ready(function() {
 
-        
+
         $('.datepicker').datepicker({
             format: 'dd/mm/yyyy'
         });
@@ -259,7 +263,8 @@
         }
 
         // initSelect2Product();
-        initSelect2('.select2-company', '{{ route("getcompany") }}');
+        // initSelect2('.select2-company', '{{ route("getcompany") }}');
+        initSelect2('.select2-company', '{{ route("getvendor") }}');
         initSelect2('.select2-product', '{{ route("getproduct") }}');
 
         // function initSelect2Address(strClass, strUrl) {
@@ -354,7 +359,7 @@
         });
 
 
-     
+
 
 
 
