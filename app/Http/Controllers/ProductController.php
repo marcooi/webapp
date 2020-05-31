@@ -154,8 +154,14 @@ class ProductController extends Controller
 
     function searchProductById($request)
     {
-        $listproduct = Product::where('id', $request)->get();
-        //   dd($listproduct);
+        
+        $listproduct = Product::where('products.id', $request)
+        ->leftJoin('inventories', 'inventories.product_id', '=', 'products.id')
+        ->whereNull('products.deleted_at')   
+        ->whereNull('inventories.deleted_at')   
+        ->select('products.*',  DB::raw('IFNULL(inventories.qty, 0) as qty'))
+        ->get();
+          
 
         return $listproduct->toJson(JSON_PRETTY_PRINT);
         //  return [ $listproduct];

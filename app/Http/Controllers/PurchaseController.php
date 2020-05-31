@@ -238,13 +238,16 @@ class PurchaseController extends Controller
 
     public function printorder($id)
     {
-        $purchases = Purchase::find($id)->first();
+        $purchases = Purchase::find($id);
         $companies = Company::all();
         $purchasesdetail = DB::table('purchase_details')
             ->join('products', 'products.id', '=', 'purchase_details.product_id')
             ->where('purchase_id', '=', $id)
             ->select('purchase_details.*', 'products.name', 'products.detail')
             ->get();
+
+
+            // dd($purchases);
 
         // $purchases = DB::table('purchases')
         //     ->join('companies', 'companies.id', '=', 'purchases.company_id')            

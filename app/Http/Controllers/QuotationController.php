@@ -164,7 +164,7 @@ class QuotationController extends Controller
     public function update(Request $request, Quotation $quotation)
     {
         request()->validate([
-            'company_id' => 'required'   
+            'company_id' => 'required'
         ]);
 
         $user =  Auth::user()->name;
@@ -190,21 +190,23 @@ class QuotationController extends Controller
         $sales->created_by = $user;
         $sales->updated_by = $user;
 
-        // dd($sales);
-    
+        // $detailsx = QuotationDetail::where('id', $request->id)->get();
+        //   dd($detailsx);
+
 
         DB::transaction(function () use ($request, $sales, $quotation) {
             if ($sales->save()) {
 
-                DB::table('quotation_details')
-                    ->where('quotation_id', '=', $sales->id)
-                    ->update(array('deleted_at' => DB::raw('NOW()')));
+                // DB::table('quotation_details')
+                //     ->where('quotation_id', '=', $sales->id)
+                //     ->update(array('deleted_at' => DB::raw('NOW()')));
 
 
                 $count_product_id = count($request->product_id);
                 for ($i = 0; $i < $count_product_id; $i++) {
 
-                    $details = new QuotationDetail();
+                    // $details = new QuotationDetail();
+                    $details = QuotationDetail::find($request->id[$i])->first();
                     $details->quotation_id = $sales->id;
                     $details->product_id = $request->product_id[$i];
                     $details->qty = $request->qty[$i];
@@ -213,7 +215,7 @@ class QuotationController extends Controller
                     $details->pph_23 = $request->pph_23[$i];
                     $details->pph_23_amount = $request->pph_23_amount[$i];
 
-                   
+
                     $details->save();
                 };
             };
@@ -247,5 +249,30 @@ class QuotationController extends Controller
 
         return redirect()->route('quotations.index')
             ->with('success', 'Sales Quotation Confirmed successfully');
+    }
+
+    public function print($id)
+    {
+        $quotations = Quotation::find($id)
+            ->join('companies', 'quotations.company_id', '=', 'companies.id')
+            ->select(
+                'quotations.*',
+                'companies.description',
+                'companies.address1',
+                'companies.address2',
+                'companies.kota',
+                'companies.kode_pos',
+                'companies.no_telp',
+                'companies.no_fax',
+                'companies.negara'
+            )
+            ->first();
+
+        $details = QuotationDetail::where('quotation_id', $id)
+            ->join('products', 'quotation_details.product_id', '=', 'products.id')
+            ->get();
+
+        //  dd($quotations);
+        return view('quotations.print', compact('quotations', 'details'));
     }
 }

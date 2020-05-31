@@ -51,29 +51,24 @@
 
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label class="col-sm-2 control-label">Shipping Address</label>
                 <div class="col-sm-5">
                     <select name="shipping_address_id" class="form-control select2-address" required></select>
-                </div>
+                </div>            
 
-                <label class="col-sm-2 control-label">Sales Person</label>
-                <div class="col-sm-3">
-                    <select name="sales_person_id" class="form-control select2-sales-person" required></select>
-                </div>
-
-            </div>
+            </div> -->
 
             <div class="form-group">
 
-            <label class="col-sm-2 control-label">Contact Person </span></label>
+                <label class="col-sm-2 control-label">Contact Person </span></label>
                 <div class="col-sm-3">
                     <input type="text" name="contact_person" class="form-control input-sm" value="{{ Request::old('contact_person') }}" required />
                 </div>
 
-                <label class="col-sm-4 control-label">Date </span></label>
-                <div class="col-sm-2">
-                    <input type="text" name='date' class="form-control input-sm datepicker" value="{{ Request::old('date') }}" required>
+                <label class="col-sm-4 control-label">Sales Person</label>
+                <div class="col-sm-3">
+                    <select name="sales_person_id" class="form-control select2-sales-person" required></select>
                 </div>
             </div>
 
@@ -83,7 +78,10 @@
                     <input type="text" name="remark1" class="form-control input-sm" value="{{ Request::old('remark1') }}" required />
                 </div>
 
-              
+                <label class="col-sm-2 control-label">Date </span></label>
+                <div class="col-sm-2">
+                    <input type="text" name='date' class="form-control input-sm datepicker" value="{{ Request::old('date') }}" required>
+                </div>
             </div>
 
             <div class="form-group">
@@ -92,7 +90,7 @@
                     <input type="text" name="remark2" class="form-control input-sm" value="{{ Request::old('remark2') }}" required />
                 </div>
 
-              
+
             </div>
 
 
@@ -263,8 +261,8 @@
 
 
         initSelect2('.select2-company', '{{ route("getcustomer") }}');
-        // initSelect2('.select2-product', '{{ route("getproduct") }}');
-        initSelect2('.select2-product', '{{ route("getinventory") }}');
+        initSelect2('.select2-product', '{{ route("getproduct") }}');
+        // initSelect2('.select2-product', '{{ route("getinventory") }}');
         initSelect2('.select2-sales-person', '{{ route("employee.all") }}');
 
 
@@ -292,18 +290,24 @@
 
         initSelectAddress();
 
+        // function findProductId() {
+        //     $("#onpressofabutton").click(function() {
+        //         var data1 = $(this).find("td:eq(0) input[type='text']").val();
+
+        //     });
+        // };
+
         function getData() {
             let datax = $(".select2-product").val();
-
-            axios.get('/getinventory/' + datax)
+                  
+            axios.get('/getproductid/' + datax)
                 .then(function(response) {
-
-                    // $('#tab_logic tbody').empty();
-                    var len = response.data.length;
-
+                   
+                    var len = response.data.length;     
                     for (let i = 0; i < len; i++) {
                         let id = response.data[i]['id'];
                         let name = response.data[i]['name'];
+                        let detail = response.data[i]['detail'];
                         let stock = response.data[i]['qty'];
 
                         // console.log(response.data[i]);

@@ -97,6 +97,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center" width=5%> # </th>
+                                <th class="text-center" width=5% style='display:none;'>ID </th>
                                 <th class="text-center" width=30%> Product </th>
                                 <th class="text-center" width=10%> Qty </th>
                                 <th class="text-center" width=15%> Price </th>
@@ -111,6 +112,7 @@
 
                             <tr id='addr0'>
                                 <td class="text-center"><input type='text' class='form-control text-center' value="{{ ++$index }}" readonly></td>
+                                <td class="text-center" style='display:none;'><input type='text' name="id[]" class='form-control text-center' value="{{ $detail->id }}" readonly></td>
 
                                 <td><select name="product_id[]" class="js-example-responsive select2-product" style="width: 100%" required>
                                         <option value="{{ $detail->product_id }}">{{ $detail->name }}</option>

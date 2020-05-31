@@ -69,6 +69,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/address/{id}', 'AddressController@searchShippingAddress')->name('address.all');
 
     Route::get('/sale/printorder/{id}', 'SaleController@printorder')->name('sale.printorder');
+
+    Route::get('/sale/printquotation/{id}', 'QuotationController@print')->name('sale.printquotation');
   
    
 
