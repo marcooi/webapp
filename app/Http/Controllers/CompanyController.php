@@ -172,6 +172,7 @@ class CompanyController extends Controller
             ->where('is_vendor', '=', 1)
             ->where('description', 'LIKE', '%' . $request->input('term', '') . '%')
             ->get(['id', 'description as text']);
+
         return ['results' => $listvendor];
     }
 }

@@ -228,7 +228,8 @@ class PurchaseController extends Controller
         $user =  Auth::user()->name;
         $purchases = Purchase::find($id);
         $purchases->is_confirmed = 1;
-        $purchases->updated_by = $user;
+        $purchases->approved_by = $user;
+        $purchases->approved_at = DB::raw('NOW()');
 
         $purchases->save();
 
@@ -247,7 +248,7 @@ class PurchaseController extends Controller
             ->get();
 
 
-            // dd($purchases);
+        
 
         // $purchases = DB::table('purchases')
         //     ->join('companies', 'companies.id', '=', 'purchases.company_id')            

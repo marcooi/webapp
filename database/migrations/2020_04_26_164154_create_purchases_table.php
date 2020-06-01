@@ -22,6 +22,7 @@ class CreatePurchasesTable extends Migration
             $table->string('date');
             $table->string('so_no');
             $table->string('payment_type');
+            
             $table->string('time_of_delivery');
             $table->string('remark1')->nullable();
             $table->string('remark2')->nullable();
@@ -32,6 +33,8 @@ class CreatePurchasesTable extends Migration
             $table->decimal('discount', 18, 2);          
             $table->decimal('grand_total', 18, 2);
 
+            $table->string('approved_by')->nullable();
+            $table->timestamp('approved_at', 0)->nullable();
             $table->string('is_confirmed')->default(0);            
             $table->string('created_by');
             $table->string('updated_by');

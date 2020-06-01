@@ -40,13 +40,13 @@
 
 
         <div class="ccontainer ">
-            <img src="{{ asset('img/logo.png') }}" alt="KIN" />
+            <img src="{{ asset('img/logo2.png') }}" alt="KIN" />
             <hr class="style15">
         </div>
 
         <section class="invoice">
             <div class="row invoice-info">
-                <div class="col-sm-8 invoice-col">
+                <div class="col-sm-7 invoice-col">
                     To :
                     <address>
                         @foreach ($companies as $comp)
@@ -64,11 +64,16 @@
                     </address>
                 </div>
 
-                <div class="col-sm-4 invoice-col text-right">
+                <div class="col-sm-5  text-right">
                     <b>Purchase Order : &nbsp {{ $purchases->po_no }}</b><br>
                     <br>
                     <b>Time of Delivery : </b> &nbsp {{ $purchases->time_of_delivery }}<br>
                     <b>Payment : </b> &nbsp{{ $purchases->payment_type }}<br>
+
+                    <br>
+                    <b>Alamat Kirim Barang : </b><br>
+                    Jl. Kayu Putih Tengah IV C No.61 RT/RW 002/007 Pulogadung<br>
+                    Kec. Pulogadung Kota Jakarta Timur Kode Pos  13260
 
                 </div>
 
@@ -84,7 +89,7 @@
 
 
                         <tr class="h6 text-dark">
-                            <th rowspan="2" class="text-center text-semibold" style="vertical-align: middle" width=5%>#</th>
+                            <th rowspan="2" class="text-center text-semibold" style="vertical-align: middle" width=5%>SKU</th>
                             <th rowspan="2" class="text-center text-semibold" style="vertical-align: middle" width=20%>Part Number</th>
                             <th rowspan="2" class="text-center text-semibold" style="vertical-align: middle" width=48%>Description</th>
                             <th rowspan="2" class="text-center text-semibold" style="vertical-align: middle" width=5%>Qty</th>
@@ -135,7 +140,7 @@
                             </tr>
                             @endif
                             <tr>
-                                <th class="text-right">Tax (10%) :</th>
+                                <th class="text-right">Tax 10% :</th>
                                 <td>Rp. {{ number_format($purchases->ppn_amount) }}</td>
                             </tr>
                             <tr>
@@ -157,22 +162,38 @@
             <br /><br /><br />
 
             <div class="row">
+            <div class="col-md text-right">
+            Jakarta, {{ $purchases->date }}<br />
+            Ordered By, <br />
+            PT. KARYA INFORMASI NUSANTARA <br />
+            </div>
+           
+            </div>
 
-                <div class="col-3 text-center">
-                    Diterima oleh <br />
-                    Tanggal : <br /> <br /><br /><br /><br />
-                    Mohon ditandatangani dan dikirim
+            <div class="row">
+
+                <div class="col-4 text-left">
+                    Received By <br />
+                     <br /> <br /><br /><br /><br />
+                     Tanggal :
+                     <hr width="30%" align="left">
                 </div>
 
-                <div class="col-3">
+                <div class="col-4 text-center">
+                Requester Signature <br />
+                     <br /> <br /><br /><br /><br />
+                     <!-- {{ $user =  Auth::user()->name }} -->
+                     {{ $user =  $purchases->updated_by }}
+                     <hr width="30%" >
                 </div>
 
-                <div class="col-6 text-right">
-                    Jakarta, {{ $purchases->date }}<br />
-                    Ordered By, <br />
-                    PT. KARYA INFORMASI NUSANTARA <br /><br /><br /><br />
+                <div class="col-4 text-right">                 
+                    Approve Signature <br /><br /><br /><br /><br /><br />
 
-                    {{ $user =  Auth::user()->name }}
+                    <!-- {{ $user =  Auth::user()->name }} -->
+                    {{ $user =  $purchases->approved_by }}
+                    <hr width="30%;" align="right">
+                  
                 </div>
 
             </div>

@@ -66,7 +66,7 @@
                         <td class="text-center">{{ $purc->date }}</td>
                         <td class="text-center">
                             @if (($purc -> is_confirmed) == 1)
-                            <span class="badge badge-success">Confirmed</span>
+                            <span class="badge badge-success">Approved</span>
                             @else
                             <label class="badge badge-success">Draft</span>
 
@@ -83,7 +83,9 @@
                                 @can('purchase-edit')
 
                                 @if (($purc -> is_confirmed) == 0)
-                                <a class="btn btn-xs btn-primary" href="{{ route('purchase.confirm', $purc->id) }}" onclick="return confirm('Sure Want Confirm PO?')"><i class="fa fa-save"></i></a>
+                                @can('purchase-approve')
+                                <a class="btn btn-xs btn-primary" href="{{ route('purchase.confirm', $purc->id) }}" onclick="return confirm('Sure Want Confirm / Approve PO?')"><i class="fa fa-save"></i></a>
+                                @endcan
                                 @endif
 
                                 <a class="btn btn-xs btn-primary" href="{{ route('purchases.edit', $purc->id) }}"><i class="fa fa-pencil"></i></a>
