@@ -253,8 +253,10 @@ class QuotationController extends Controller
 
     public function print($id)
     {
-        $quotations = Quotation::find($id)
+        // $quotations = Quotation::find($id)
+        $quotations = DB::table('quotations')
             ->join('companies', 'quotations.company_id', '=', 'companies.id')
+            ->where('quotations.id', $id)
             ->select(
                 'quotations.*',
                 'companies.description',
@@ -267,6 +269,8 @@ class QuotationController extends Controller
                 'companies.negara'
             )
             ->first();
+
+            // dd($quotations);
 
         $details = QuotationDetail::where('quotation_id', $id)
             ->join('products', 'quotation_details.product_id', '=', 'products.id')
