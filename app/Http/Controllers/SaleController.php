@@ -71,11 +71,10 @@ class SaleController extends Controller
         request()->validate([
             'company_id' => 'required',
             'sales_person_id' => 'required',
-            'invoice_no' => 'required|unique:sales',
-            'tt_invoice_no' => 'required|unique:sales',
-            'delivery_no' => 'required|unique:sales',
-            'po_no' => 'required|unique:sales',
-
+            'invoice_no' => 'required|unique:sales,invoice_no,NULL,id,deleted_at,NULL',
+            'tt_invoice_no' => 'required|unique:sales,tt_invoice_no,NULL,id,deleted_at,NULL',
+            'delivery_no' => 'required|unique:sales,delivery_no,NULL,id,deleted_at,NULL',
+            'po_no' => 'required|unique:sales,po_no,NULL,id,deleted_at,NULL'
         ]);
 
         $user =  Auth::user()->name;

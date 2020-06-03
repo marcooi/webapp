@@ -327,7 +327,7 @@
                         let markup3 = "<td style='display:none;'> <input type='text' class='form-control' name='inventory_id[]' value='" + id + "'  readonly>" + "</td>";
                         let markup4 = "<td> <input type='text' class='form-control' name='product_name[]' value='" + name + "' readonly>" + "</td>";
                         let markup5 = "<td><input type='text' class='form-control stock' name='stock[]' value='" + stock + "'readonly></td>";
-                        let markup6 = "<td><input type='number' class='form-control qty' name='qty[]' value='0'></td>"
+                        let markup6 = "<td><input type='number' class='form-control qty' name='qty[]' value='0' min='0'></td>"
                         let markup7 = "<td><input type='text' class='form-control price' name='unit_price[]' value='0'></td>"
                         let markup8 = "<td><input type='text' class='form-control pph-23' name='pph_23[]' value='0'></td>"
                         let markup9 = "<td><input type='text' class='form-control pph-23-amount' name='pph_23_amount[]' value='0'></td>"
