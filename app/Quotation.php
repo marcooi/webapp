@@ -10,7 +10,8 @@ class Quotation extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'company_id', 'sales_person_id', 'reff_no', 'contact_person', 'remark1', 'remark2', 'date', 'sub_total', 'ppn', 'ppn_amount', 'pph_23', 'pph_23_amount',
+        'company_id', 'sales_person_id', 'reff_no', 'contact_person', 'remark1', 'remark2', 'payment_type', 'time_of_delivery', 
+        'date', 'sub_total', 'ppn', 'ppn_amount', 'pph_23', 'pph_23_amount',
         'discount', 'shipping_fee', 'grand_total', 'is_confirmed', 'created_by', 'updated_by', 'printed_at'
     ];
 

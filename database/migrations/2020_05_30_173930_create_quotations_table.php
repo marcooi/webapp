@@ -22,6 +22,8 @@ class CreateQuotationsTable extends Migration
             $table->string('contact_person');
             $table->string('remark1');
             $table->string('remark2');           
+            $table->string('payment_type');           
+            $table->string('time_of_delivery');           
             $table->timestamp('date', 0);
 
             $table->decimal('sub_total',18, 2);

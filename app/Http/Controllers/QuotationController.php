@@ -58,8 +58,6 @@ class QuotationController extends Controller
             'sales_person_id' => 'required'
         ]);
 
-
-
         $user =  Auth::user()->name;
 
         $sales = new Quotation();
@@ -70,6 +68,8 @@ class QuotationController extends Controller
         $sales->contact_person = $request->input('contact_person');
         $sales->remark1 = $request->input('remark1');
         $sales->remark2 = $request->input('remark2');
+        $sales->payment_type = $request->input('payment_type');
+        $sales->time_of_delivery = $request->input('time_of_delivery');
         $sales->date = Carbon::createFromFormat('d/m/Y', $request->input('date'))->format('Y-m-d');
 
         $sales->sub_total = $request->input('sub_total');
@@ -169,7 +169,12 @@ class QuotationController extends Controller
 
         $user =  Auth::user()->name;
 
-        $sales = Quotation::find($quotation)->first();
+       
+
+        $sales = Quotation::find($quotation->id);
+
+       
+
         $sales->company_id = $request->input('company_id');
         $sales->contact_person = $request->input('contact_person');
         $sales->sales_person_id = $request->input('sales_person_id');
@@ -177,6 +182,8 @@ class QuotationController extends Controller
         $sales->contact_person = $request->input('contact_person');
         $sales->remark1 = $request->input('remark1');
         $sales->remark2 = $request->input('remark2');
+        $sales->payment_type = $request->input('payment_type');
+        $sales->time_of_delivery = $request->input('time_of_delivery');
         $sales->date = Carbon::createFromFormat('d/m/Y', $request->input('date'))->format('Y-m-d');
 
         $sales->sub_total = $request->input('sub_total');
@@ -190,23 +197,20 @@ class QuotationController extends Controller
         $sales->created_by = $user;
         $sales->updated_by = $user;
 
+        // $sales->save();
         // $detailsx = QuotationDetail::where('id', $request->id)->get();
-        //   dd($detailsx);
+        //   dd($sales);
 
 
         DB::transaction(function () use ($request, $sales, $quotation) {
             if ($sales->save()) {
-
-                // DB::table('quotation_details')
-                //     ->where('quotation_id', '=', $sales->id)
-                //     ->update(array('deleted_at' => DB::raw('NOW()')));
-
-
+             
                 $count_product_id = count($request->product_id);
                 for ($i = 0; $i < $count_product_id; $i++) {
 
-                    // $details = new QuotationDetail();
-                    $details = QuotationDetail::find($request->id[$i])->first();
+                   
+                  
+                    $details = QuotationDetail::find($request->id[$i]);
                     $details->quotation_id = $sales->id;
                     $details->product_id = $request->product_id[$i];
                     $details->qty = $request->qty[$i];
@@ -217,7 +221,10 @@ class QuotationController extends Controller
 
 
                     $details->save();
+                    
                 };
+
+               
             };
         });
 
@@ -235,7 +242,27 @@ class QuotationController extends Controller
      */
     public function destroy(Quotation $quotation)
     {
-        //
+        if (Quotation::where('id', $quotation->id)->where('is_confirmed', '=', 1)->exists()) {
+            return redirect()->route('quotations.index')
+                ->with('warning', 'Cannot delete, data already confirmed !.');
+        } else {
+
+            DB::transaction(function () use ($quotation) {
+                DB::table('quotation_details')
+                    ->where('quotation_id', $quotation->id)
+                    ->where('deleted_at', null)
+                    ->update(array('deleted_at' => DB::raw('NOW()')));
+
+                DB::table('quotations')
+                    ->where('id', '=', $quotation->id)
+                    ->where('deleted_at', null)
+                    ->update(array('deleted_at' => DB::raw('NOW()')));
+            });
+
+
+            return redirect()->route('quotations.index')
+                ->with('success', 'Sales Quotation deleted successfully');
+        }
     }
 
     public function confirm($id)

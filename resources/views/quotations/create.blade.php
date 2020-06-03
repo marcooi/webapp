@@ -90,6 +90,11 @@
                     <input type="text" name="remark2" class="form-control input-sm" value="{{ Request::old('remark2') }}" required />
                 </div>
 
+                <label class="col-sm-2 control-label">Term of Payment </span></label>
+                <div class="col-sm-3">
+                    <input type="text" name="payment_type" class="form-control input-sm" value="{{ Request::old('payment_type') }}" required />
+                </div>
+
 
             </div>
 
@@ -99,10 +104,17 @@
                 <div class="col-sm-4">
                     <select class="form-control select2-product" required>
                     </select>
+
+                   
+                </div>
+                <input type="button" class="col-sm-1 add-row" value="Add Row">
+                
+                <label class="col-sm-2 control-label">Delivery Time </span></label>
+                <div class="col-sm-3">
+                    <input type="text" name="time_of_delivery" class="form-control input-sm" value="{{ Request::old('time_of_delivery') }}" required />
                 </div>
 
-                <input type="button" class="add-row" value="Add Row">
-                <!-- <input type="button" class="clear-row" value="Clear Row"> -->
+            
 
             </div>
 

@@ -50,12 +50,9 @@
             </div>
 
             <div class="form-group">
-            <label class="col-sm-2 control-label">Contact Person </span></label>
-                <div class="col-sm-3">
-                    <input type="text" name="contact_person" class="form-control input-sm" value="{{ $quotations->contact_person }}" required />
-                </div>
+               
 
-                <label class="col-sm-4 control-label">Sales Person</label>
+                <label class="col-sm-9 control-label">Sales Person</label>
                 <div class="col-sm-3">
                     <select name="sales_person_id" class="form-control select2-sales-person" required>
                         <option value="{{ $quotations->sales_person_id }}">{{ $quotations->name }}</option>
@@ -67,18 +64,30 @@
 
             <div class="form-group">
 
-            <label class="col-sm-2 control-label">Remark 1</span></label>
-                <div class="col-sm-5">
-                    <input type="text" name="remark1" class="form-control input-sm" value="{{ $quotations->remark1 }}" required />
+            <label class="col-sm-2 control-label">Contact Person </span></label>
+                <div class="col-sm-3">
+                    <input type="text" name="contact_person" class="form-control input-sm" value="{{ $quotations->contact_person }}" required />
                 </div>
-                
-                <label class="col-sm-2 control-label">Date </span></label>
+
+                <label class="col-sm-4 control-label">Date </span></label>
                 <div class="col-sm-2">
                     <input type="text" name='date' class="form-control input-sm datepicker" value="{{ date('d/m/yy', strtotime($quotations->date))  }}" required>
                 </div>
             </div>
 
-         
+
+
+            <div class="form-group">
+            <label class="col-sm-2 control-label">Remark 1</span></label>
+                <div class="col-sm-5">
+                    <input type="text" name="remark1" class="form-control input-sm" value="{{ $quotations->remark1 }}" required />
+                </div>
+
+                <label class="col-sm-2 control-label">Term of Payment </span></label>
+                <div class="col-sm-3">
+                    <input type="text" name="payment_type" class="form-control input-sm" value="{{ $quotations->payment_type }}" required />
+                </div>
+            </div>
 
             <div class="form-group">
                 <label class="col-sm-2 control-label">Remark 2 </span></label>
@@ -86,9 +95,11 @@
                     <input type="text" name="remark2" class="form-control input-sm" value="{{ $quotations->remark2 }}" required />
                 </div>
 
-              
+                <label class="col-sm-2 control-label">Delivery Time </span></label>
+                <div class="col-sm-3">
+                    <input type="text" name="time_of_delivery" class="form-control input-sm" value="{{ $quotations->time_of_delivery }}" required />
+                </div>
             </div>
-
 
             <div class="form-group">
                 <div class="col-md-12">

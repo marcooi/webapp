@@ -162,8 +162,8 @@
                         <li>Quotation is valid 1 (one) week</li>
                         <li>All prices are tax excluded</li>
                         <li>All prices and availability can change anytime prior notice</li>
-                        <li>Term of Payment : 2 weeks after invoice date</li>
-                        <li>Delivery time : 3-6 weeks after PO Open</li>
+                        <li>Term of Payment : {{ $quotations->payment_type}}</li>
+                        <li>Delivery time : {{ $quotations->time_of_delivery}}</li>
                         <li>For transfer, <b>all bank fees will be borne by customer</b>, we will receive the same value with our invoice (FULLPAYMENT)</li>
 
                     </ul>
