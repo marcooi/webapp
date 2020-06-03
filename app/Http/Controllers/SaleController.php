@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Address;
+use App\Inventory;
 use App\Sale;
 use App\SaleDetail;
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -109,6 +111,9 @@ class SaleController extends Controller
                 $count_product_id = count($request->product_id);
                 for ($i = 0; $i < $count_product_id; $i++) {
 
+
+                    Product::find($request->product_id[$i])->decrement('qty', $request->qty[$i]);
+
                     $details = new SaleDetail();
                     $details->sale_id = $sales->id;
                     $details->product_id = $request->product_id[$i];
@@ -208,6 +213,7 @@ class SaleController extends Controller
         $sales->tt_invoice_date = Carbon::createFromFormat('d/m/Y', $request->input('tt_invoice_date'))->format('Y-m-d');
         $sales->delivery_no = $request->input('delivery_no');
         $sales->delivery_date =  Carbon::createFromFormat('d/m/Y', $request->input('delivery_date'))->format('Y-m-d');
+        $sales->invoice_due_date =  Carbon::createFromFormat('d/m/Y', $request->input('invoice_due_date'))->format('Y-m-d');
         $sales->sub_total = $request->input('sub_total');
         $sales->shipping_fee = $request->input('shipping_fee');
         $sales->ppn = $request->input('ppn');
@@ -230,6 +236,15 @@ class SaleController extends Controller
 
                 $count_product_id = count($request->product_id);
                 for ($i = 0; $i < $count_product_id; $i++) {
+
+                    $adjustplus = $request->ori_qty[$i] - $request->qty[$i];
+
+                    if ($adjustplus > 0) {
+                        Product::find($request->product_id[$i])->increment('qty', $adjustplus);
+                    } else {
+                        $adjustmin = $request->qty[$i] - $request->ori_qty[$i];
+                        Product::find($request->product_id[$i])->decrement('qty', $adjustmin);
+                    };
 
                     $details = new SaleDetail();
                     $details->sale_id = $sales->id;
@@ -266,10 +281,27 @@ class SaleController extends Controller
         } else {
 
             DB::transaction(function () use ($sale) {
+
+                $detail = DB::table('sale_details')
+                    ->where('sale_id', $sale->id)
+                    ->whereNull('deleted_at')
+                    ->get();
+
+
+                $count_id = count($detail);
+
+                for ($i = 0; $i < $count_id; $i++) {
+                    Product::find($detail[$i]->product_id)->increment('qty', $detail[$i]->qty[$i]);
+                }
+
+
                 DB::table('sale_details')
                     ->where('sale_id', $sale->id)
                     ->where('deleted_at', null)
                     ->update(array('deleted_at' => DB::raw('NOW()')));
+
+
+
 
                 DB::table('sales')
                     ->where('id', '=', $sale->id)

@@ -27,6 +27,7 @@ class CreateSalesTable extends Migration
             $table->timestamp('tt_invoice_date', 0)->nullable();
             $table->string('delivery_no');
             $table->timestamp('delivery_date', 0)->nullable();
+            $table->timestamp('invoice_due_date', 0)->nullable();
 
             $table->decimal('sub_total',18, 2);
             $table->decimal('ppn',18, 2);

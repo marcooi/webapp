@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\GoodReceipt;
 use App\Inventory;
+use App\Product;
 use App\Purchase;
 use App\PurchaseDetail;
 use Illuminate\Http\Request;
@@ -82,21 +83,6 @@ class ReceiptController extends Controller
             'receive_at' => 'required'
         ]);
 
-        // $count_product_id = count($request->product_id);
-        // for ($i = 0; $i < $count_product_id; $i++) {
-
-            
-        //     $test = PurchaseDetail::where('purchase_id', $request->purchase_id[$i])
-        //     ->where('product_id', $request->product_id[$i])
-        //     ->sum('qty');
-    
-
-            
-        //     dd($test);
-        // };
-
-       
-
 
         $user =  Auth::user()->name;
         DB::transaction(function () use ($request, $user) {
@@ -116,6 +102,9 @@ class ReceiptController extends Controller
                     $inventory->updated_by = $user;
                     $inventory->save();
 
+                    Product::find($request->product_id[$i])->increment('qty', $request->qty[$i]);
+
+
 
                     $receipt = new GoodReceipt();
                     $receipt->purchase_id = $request->purchase_id;
@@ -126,7 +115,6 @@ class ReceiptController extends Controller
                     $receipt->surat_jalan_no = $request->surat_jalan_no[$i];
                     $receipt->created_by = $user;
                     $receipt->updated_by = $user;
-                    // $receipt->receive_at = $request->receive_at;
                     $receipt->receive_at = Carbon::createFromFormat('d/m/Y', $request->receive_at)->format('Y-m-d');
 
                     $receipt->save();
@@ -218,6 +206,17 @@ class ReceiptController extends Controller
                 $receipts->updated_at = Carbon::now();
                 $receipts->save();
 
+                $adjustplus = $request->qty[$i] - $request->ori_qty[$i];
+
+                if ($adjustplus > 0) {
+                    Product::find($request->product_id[$i])->increment('qty', $adjustplus);
+                } else {
+                    $adjustmin = $request->ori_qty[$i] - $request->qty[$i];
+                    Product::find($request->product_id[$i])->decrement('qty', $adjustmin);
+                };
+
+
+
                 $inventory = Inventory::find($request->inventory_id[$i]);
                 $inventory->qty = $request->qty[$i];
                 $inventory->appearing_at = Carbon::createFromFormat('d/m/Y', $request->receive_at)->format('Y-m-d');
@@ -240,18 +239,19 @@ class ReceiptController extends Controller
     public function destroy($id)
     {
 
-        $inventoryid = DB::table('good_receipts')->where('id', '=', $id)->value('inventory_id');
+        // $inventory = DB::table('good_receipts')->where('id', '=', $id)->select('inventory_id', 'product_id', 'qty')->get();
+        $inventory = GoodReceipt::find($id);
 
-        if (Inventory::where('id', '=', $inventoryid)->whereNotNull('disappearing_at')->exists()) {
-
-
+        
+        if (Inventory::where('id', '=', $inventory->inventory_id)->whereNotNull('disappearing_at')->exists()) {
             return redirect()->route('receipts.index')
                 ->with('warning', 'Cannot delete, data already disappeared!.');
         }
 
         $user =  Auth::user()->name;
 
-        DB::transaction(function () use ($id, $inventoryid, $user) {
+
+        DB::transaction(function () use ($id, $inventory, $user) {
             DB::table('good_receipts')
                 ->where('id', '=', $id)
                 ->update(
@@ -262,8 +262,10 @@ class ReceiptController extends Controller
                     )
                 );
 
+            Product::find($inventory->product_id)->decrement('qty', $inventory->qty);
+
             DB::table('inventories')
-                ->where('id', '=', $inventoryid)
+                ->where('id', '=', $inventory->inventory_id)
                 ->update(
                     array(
                         'deleted_at' => DB::raw('NOW()'),

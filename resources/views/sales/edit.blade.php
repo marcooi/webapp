@@ -112,6 +112,7 @@
                             <tr>
                                 <th class="text-center" width=5%> # </th>
                                 <th class="text-center" width=30%> Product </th>
+                                <th class="text-center" width=10% style='display:none;'> Ori Qty </th>
                                 <th class="text-center" width=10%> Qty </th>
                                 <th class="text-center" width=15%> Price </th>
                                 <th class="text-center" width=10%> PPH23 </th>
@@ -129,6 +130,7 @@
                                 <td><select name="product_id[]" class="js-example-responsive select2-product" style="width: 100%" required>
                                         <option value="{{ $detail->product_id }}">{{ $detail->name }}</option>
                                     </select></td>
+                                <td style='display:none;'><input type="decimal" name='ori_qty[]' placeholder='Enter Qty' class="form-control input-sm qty" min="1" step="1" value="{{ $detail->qty }}" readonly /></td>
                                 <td><input type="decimal" name='qty[]' placeholder='Enter Qty' class="form-control input-sm qty" min="1" step="1" value="{{ $detail->qty }}" required /></td>
                                 <td><input type="decimal" name='unit_price[]' placeholder='Enter Unit Price' class="form-control input-sm price" step="0.00" min="0" value="{{ $detail->unit_price }}" required /></td>
 

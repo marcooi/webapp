@@ -46,12 +46,7 @@
                 <label class="col-sm-3 control-label">SO# </span></label>
                 <div class="col-sm-2">
                     <input type="text" name='so_no' class="form-control input-sm" value="{{ Request::old('so_no') }}" required>
-                </div>
-
-                <!-- <label class="col-sm-3 control-label">Sales Person</label>
-                <div class="col-sm-3">
-                    <select name="sales_person_id" class="form-control select2-sales-person" required></select>
-                </div> -->
+                </div>            
 
             </div>
 
@@ -129,9 +124,12 @@
                     </select>
                 </div>
 
-                <input type="button" class="add-row" value="Add Row">
-                <!-- <input type="button" class="clear-row" value="Clear Row"> -->
+                <input type="button" class="col-sm-1 add-row" value="Add Row">  
 
+                <label class="col-sm-2 control-label">Invoice Due Date </span></label>
+                <div class="col-sm-3">
+                    <input type="text" name="invoice_due_date" class="form-control input-sm datepicker" value="{{ Request::old('invoice_due_date') }}" required />
+                </div>
             </div>
 
 
@@ -142,8 +140,7 @@
                     <table class="table table-bordered table-hover" id="tab_logic">
                         <thead>
                             <tr>
-                                <th class="text-center" width=5%> # </th>
-                                <!-- <th class="text-center" style='display:none;' width=5%> ID </th> -->
+                                <th class="text-center" width=5%> # </th>                               
                                 <th class="text-center" style='display:none;' width=5%> Product ID </th>
                                 <th class="text-center" style='display:none;' width=5%> ID </th>
 
@@ -153,23 +150,10 @@
                                 <th class="text-center"> Price </th>
                                 <th class="text-center"> PPH23 </th>
                                 <th class="text-center"> PPH23 Amount </th>
-                                <th class="text-center"> Total </th>
-                                <!-- <th width=5%><button type="button" id="add_row" class="btn btn-success input-sm"><i class="fa fa-plus text-center"></i></button></th> -->
+                                <th class="text-center"> Total </th>                               
                             </tr>
                         </thead>
-                        <tbody id="tbody1">
-                            <!-- <tr id='addr0'> -->
-                            <!-- <td>1</td>
-                                <td><select name="product_id[]" class="js-example-responsive select2-productx" style="width: 100%" required></select></td>
-                                <td><input type="number" name='qty[]' placeholder='Enter Qty' class="form-control input-sm qty" min="1" step="1" required /></td>
-                                <td><input type="number" name='unit_price[]' placeholder='Enter Unit Price' class="form-control input-sm price" step="0.00" min="0" required /></td>
-
-                                <td><input type="number" name='pph_23[]' placeholder='0.00' class="form-control input-sm pph-23" value="0" /></td>
-                                <td><input type="number" name='pph_23_amount[]' placeholder='0.00' class="form-control input-sm pph-23-amount" value="0" readonly /></td>
-
-                                <td><input type="number" name='total_price[]' placeholder='0.00' class="form-control input-sm total" readonly /></td>
-                                <td><button type="button" id="delete_row" class="btn btn-danger input-sm remove"><i class="fa fa-minus"></i></button></td> -->
-                            <!-- </tr> -->
+                        <tbody id="tbody1">                        
 
                         </tbody>
                     </table>
@@ -258,8 +242,9 @@
 
 @section('scripts')
 
-<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
-<script src="{{ asset('plugins/axios/axios.min.js') }}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
 <script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
 <script src="{{ asset('plugins/select2/select2.min.js') }}"></script>
 
@@ -289,8 +274,8 @@
 
 
         initSelect2('.select2-company', '{{ route("getcustomer") }}');
-        // initSelect2('.select2-product', '{{ route("getproduct") }}');
-        initSelect2('.select2-product', '{{ route("getinventory") }}');
+        initSelect2('.select2-product', '{{ route("getproduct") }}');
+        // initSelect2('.select2-product', '{{ route("getinventory") }}');
         initSelect2('.select2-sales-person', '{{ route("employee.all") }}');
 
 
@@ -321,8 +306,10 @@
         function getData() {
             let datax = $(".select2-product").val();
 
-            axios.get('/getinventory/' + datax)
+            // axios.get('/getinventory/' + datax)
+            axios.get('/getproductid/' + datax)
                 .then(function(response) {
+
 
                     // $('#tab_logic tbody').empty();
                     var len = response.data.length;
@@ -332,11 +319,10 @@
                         let name = response.data[i]['name'];
                         let stock = response.data[i]['qty'];
 
-                        // console.log(response.data[i]);
+                        console.log(response.data[i]);
 
 
-                        let markup = "<tr><td><input type='text' class='form-control' value='" + (i + 1) + "' readonly>" + "</td>";
-                        // let markup2 = "<td style='display:none;'> <input type='text' class='form-control' name='inventory_id[]' value='" + id + "'  readonly>" + "</td>";
+                        let markup = "<tr><td><input type='text' class='form-control' value='" + (i + 1) + "' readonly>" + "</td>";                       
                         let markup2 = "<td style='display:none;'> <input type='text' class='form-control' name='product_id[]' value='" + id + "'  readonly>" + "</td>";
                         let markup3 = "<td style='display:none;'> <input type='text' class='form-control' name='inventory_id[]' value='" + id + "'  readonly>" + "</td>";
                         let markup4 = "<td> <input type='text' class='form-control' name='product_name[]' value='" + name + "' readonly>" + "</td>";

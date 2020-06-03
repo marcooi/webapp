@@ -40,12 +40,7 @@
                 <div class="col-sm-2">
                     <input type="text" name='receive_at' class="form-control input-sm datepicker" value="{{ Request::old('date') }}" required>
                 </div>
-
-
-                <!-- <label class="col-sm-4 control-label">Purchase Order </span></label>
-                <div class="col-sm-3">
-                    <input type="text" name="po_no" class="form-control input-sm" value="{{ Request::old('po_no') }}" required />
-                </div> -->
+             
             </div>
 
             <div class="form-group">
@@ -64,18 +59,9 @@
                     </select>
                 </div>
 
-                <input type="button" class="add-row" value="Add Row">
-                <!-- <input type="button" class="clear-row" value="Clear Row"> -->
+                <input type="button" class="add-row" value="Add Row">             
 
-            </div>
-
-            <!-- <div class="form-group">
-                <label class="col-sm-2 control-label">Product</label>
-                <div class="col-sm-4">
-                    <select name="po_no" class="form-control po-no" required>
-                    </select>
-                </div>
-            </div> -->
+            </div>       
 
 
             <div class="form-group">

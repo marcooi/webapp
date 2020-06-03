@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('detail')->nullable();
+            $table->decimal('qty', 18, 2)->default(0);    
             $table->softDeletes();
             $table->timestamps();
         });

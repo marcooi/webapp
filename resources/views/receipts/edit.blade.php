@@ -60,8 +60,6 @@
                     </select>
                 </div>
 
-                <!-- <input type="button" class="add-row" value="Add Row"> -->
-
             </div>
 
 
@@ -78,8 +76,10 @@
                                 <th class="text-center" style="display:none;"> ID </th>
                                 <th class="text-center" style="display:none;"> InventoryId </th>
                                 <th class="text-center" width=30%> Product </th>
+                                <th class="text-center" style="display:none;"> Product ID</th>
                                 <th class="text-center"> OrderQty </th>
                                 <th class="text-center"> ReceiveQty </th>
+                                <th class="text-center" style="display:none;"> OriQty </th>
                                 <th class="text-center"> Serial# </th>
                                 <th class="text-center"> SuratJalan# </th>
                             </tr>
@@ -91,9 +91,11 @@
                             <td class="text-center" style="display:none;"><input type='text' class='form-control text-center' name="id[]" value="{{ $detail->id }}" readonly></td>
                             <td class="text-center" style="display:none;"><input type='text' class='form-control text-center' name="inventory_id[]" value="{{ $detail->inventory_id }}" readonly></td>
                             <td class="text-center"><input type='text' class='form-control' name="name[]" value="{{ $detail->name }}" readonly></td>
+                            <td class="text-center" style="display:none;"><input type='text' class='form-control' name="product_id[]" value="{{ $detail->product_id }}" readonly></td>
                             <td class="text-center"><input type='text' class='form-control text-right' name="order_qty[]" value="{{ number_format($detail->order_qty) }}" readonly></td>
 
                             <td class="text-center"><input type='text' class='form-control text-right' name="qty[]" value="{{ number_format($detail->qty) }}"></td>
+                            <td class="text-center" style="display:none;"><input type='text' class='form-control text-right' name="ori_qty[]" value="{{ number_format($detail->qty) }}" readonly></td>
                             <td class="text-center"><input type='text' class='form-control' name="serial_no[]" value="{{ $detail->serial_no }}"></td>
                             <td class="text-center"><input type='text' class='form-control' name="surat_jalan_no[]" value="{{ $detail->surat_jalan_no }}"></td>
 

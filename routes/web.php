@@ -52,10 +52,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/getpurchaseproduct/{id}', 'PurchaseController@getPurchaseProduct')->name('getpurchaseproduct');
 
     Route::get('/getproduct', 'ProductController@searchProduct')->name('getproduct');
-    Route::get('/getinventory', 'ProductController@searchInventory')->name('getinventory');
-    Route::get('/getinventory/{id}', 'ProductController@searchInventoryById')->name('getinventorybyid');
-    
     Route::get('/getproductid/{id}', 'ProductController@searchProductById');
+
+    Route::get('/getinventory', 'ProductController@searchInventory')->name('getinventory');
+    Route::get('/getinventory/{id}', 'ProductController@searchInventoryById')->name('getinventorybyid');    
+    
 
     Route::get('/getcompanyshipping/{id}', 'AddressController@getOwnerShippingAddress');
     Route::get('/printorder/{id}', 'PurchaseController@printorder')->name('purchase.printorder');
