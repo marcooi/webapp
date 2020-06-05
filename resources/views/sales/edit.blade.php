@@ -43,19 +43,41 @@
                     </select>
                 </div>
 
+                <label class="col-sm-3 control-label">SO# </span></label>
+                <div class="col-sm-2">
+                    <input type="text" name='so_no' class="form-control input-sm" value="{{ $sales->so_no }}" required>
+                </div>
+
+                <!-- <label class="col-sm-3 control-label">Sales Person</label>
+                <div class="col-sm-3">
+                    <select name="sales_person_id" class="form-control select2-sales-person" required>
+                        <option value="{{ $sales->sales_person_id }}">{{ $sales->name }}</option>
+                    </select>
+                </div> -->
+
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Shipping Address</label>
+                <div class="col-sm-4">
+                    <select name="shipping_address_id" class="form-control select2-address" required>
+                        <!-- <option value="{{ $sales->shipping_address_id }}">{{ $sales->address1 }}</option> -->
+                    </select>
+                </div>
+
                 <label class="col-sm-3 control-label">Sales Person</label>
                 <div class="col-sm-3">
                     <select name="sales_person_id" class="form-control select2-sales-person" required>
                         <option value="{{ $sales->sales_person_id }}">{{ $sales->name }}</option>
                     </select>
                 </div>
-
             </div>
+
             <div class="form-group">
 
                 <label class="col-sm-2 control-label">Invoice No </span></label>
                 <div class="col-sm-4">
-                    <input type="text" name="invoice_no" class="form-control input-sm" value="{{ $sales->invoice_no }}" readonly />
+                    <input type="text" name="invoice_no" class="form-control input-sm" value="{{ $sales->invoice_no }}" required />
                 </div>
 
                 <label class="col-sm-3 control-label">Invoice Date </span></label>
@@ -68,7 +90,7 @@
 
                 <label class="col-sm-2 control-label">TT Invoice </span></label>
                 <div class="col-sm-4">
-                    <input type="text" name="tt_invoice_no" class="form-control input-sm" value="{{ $sales->tt_invoice_no }}" readonly />
+                    <input type="text" name="tt_invoice_no" class="form-control input-sm" value="{{ $sales->tt_invoice_no }}" required />
                 </div>
 
                 <label class="col-sm-3 control-label">TT Invoice Date </span></label>
@@ -81,7 +103,7 @@
 
                 <label class="col-sm-2 control-label">Delivery Order </span></label>
                 <div class="col-sm-4">
-                    <input type="text" name="delivery_no" class="form-control input-sm" value="{{ $sales->delivery_no }}" readonly />
+                    <input type="text" name="delivery_no" class="form-control input-sm" value="{{ $sales->delivery_no }}" required />
                 </div>
 
                 <label class="col-sm-3 control-label">Delivery Date </span></label>
@@ -94,12 +116,19 @@
 
                 <label class="col-sm-2 control-label">PO No. </span></label>
                 <div class="col-sm-4">
-                    <input type="text" name="po_no" class="form-control input-sm" value="{{ $sales->po_no }}" readonly />
+                    <input type="text" name="po_no" class="form-control input-sm" value="{{ $sales->po_no }}" required />
                 </div>
 
                 <label class="col-sm-3 control-label">PO Date </span></label>
                 <div class="col-sm-3">
                     <input type="text" name='po_date' class="form-control input-sm datepicker" value="{{ date('d/m/yy', strtotime($sales->po_date)) }}" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-9 control-label">Invoice Due Date </span></label>
+                <div class="col-sm-3">
+                    <input type="text" name="invoice_due_date" class="form-control input-sm datepicker" value="{{ date('d/m/yy', strtotime($sales->invoice_due_date)) }}" required />
                 </div>
             </div>
 
@@ -175,7 +204,7 @@
                                     </tr>
                                     <tr>
                                         <th class="text-center">Tax Amount</th>
-                                        <td class="text-center"><input type="decimal" name='ppn_amount' id="tax_amount" placeholder='0.00' class="form-control" value="{{ number_format($sales->ppn_amount) }}" readonly /></td>
+                                        <td class="text-center"><input type="decimal" name='ppn_amount' id="tax_amount" placeholder='0.00' class="form-control" value="{{ $sales->ppn_amount }}" readonly /></td>
                                     </tr>
                                     <tr>
                                         <th class="text-center">PPH 23</th>
@@ -238,25 +267,6 @@
 <script src="{{ asset('plugins/select2/select2.min.js') }}"></script>
 
 <script>
-    // $(document).ready(function() {
-    //     let row_number = 1;
-    //     $("#add_row").click(function(e) {
-    //         e.preventDefault();
-    //         let new_row_number = row_number - 1;
-    //         $('#product' + row_number).html($('#product' + new_row_number).html()).find('td:first-child');
-    //         $('#products_table').append('<tr id="product' + (row_number + 1) + '"></tr>');
-    //         row_number++;
-    //     });
-
-    //     $("#delete_row").click(function(e) {
-    //         e.preventDefault();
-    //         if (row_number > 1) {
-    //             $("#product" + (row_number - 1)).html('');
-    //             row_number--;
-    //         }
-    //     });
-    // });
-
     $(document).ready(function() {
 
 
@@ -268,40 +278,28 @@
 
         $('#myForm').submit(function() {
             $('select').removeAttr('disabled');
-            // $(".select2-po-no").attr('disabled', true);
-            // $(".select2-company").attr('disabled', true);
         });
 
 
 
-        // $('.select2-vendor').select2({
-        //     minimumInputLength: 2,
-        //     ajax: {
-        //         url: '{{ route("getcompany") }}',
-        //         dataType: 'json',
-        //         delay: 250
-        //     },
-        // });
+        let companyId = $('.select2-company').val();
 
-        // function initSelect2Product() {
-        //     $('.select2-product').select2({
-        //         minimumInputLength: 2,
-        //         allowClear: true,
-        //         ajax: {
-        //             url: '{{ route("getproduct") }}',
-        //             dataType: 'json',
-        //             delay: 250
-        //         }
-        //     });
-        // }
+        axios.get('/address/' + companyId)
+            .then(function(response) {
 
-        // $('#select_id').change(function() {
-        //     alert($(this).val());
-        // })
+                // console.log(response);
+                var len = response.data.length;
+                $(".select2-address").append("<option></option>");
+                for (var i = 0; i < len; i++) {
+                    var id = response.data[i]['id'];
+                    var name = response.data[i]['text'];
 
-        // $('.select-address').on('change', function() {
-        //     alert(this.value);
-        // });
+                    var newOption = new Option(name, id, false, false);
+                    $('.select2-address').append(newOption).trigger('change');
+                }
+
+                $('.select2-address').val('{{ $sales->shipping_address_id }}');
+            });
 
         function initSelect2(strClass, strUrl) {
             $(strClass).select2({
@@ -413,7 +411,7 @@
             $('#total_pph_23').val(0);
         }
 
-        
+
 
 
         $('#total_pph_23_amount').val(pph23.toFixed(2));

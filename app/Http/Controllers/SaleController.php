@@ -91,6 +91,7 @@ class SaleController extends Controller
         $sales->tt_invoice_no = $request->input('tt_invoice_no');
         $sales->tt_invoice_date = Carbon::createFromFormat('d/m/Y', $request->input('tt_invoice_date'))->format('Y-m-d');
         $sales->delivery_no = $request->input('delivery_no');
+        $sales->invoice_due_date =  Carbon::createFromFormat('d/m/Y', $request->input('invoice_due_date'))->format('Y-m-d');
         $sales->delivery_date =  Carbon::createFromFormat('d/m/Y', $request->input('delivery_date'))->format('Y-m-d');
         $sales->sub_total = $request->input('sub_total');
         $sales->shipping_fee = $request->input('shipping_fee');
@@ -159,8 +160,11 @@ class SaleController extends Controller
         $sales = DB::table('sales')
             ->join('companies', 'sales.company_id', '=', 'companies.id')
             ->join('employees', 'sales.sales_person_id', '=', 'employees.id')
-            ->select('sales.*', 'companies.description', 'employees.name')
+            ->join('addresses', 'sales.shipping_address_id', '=', 'addresses.id')
+            ->select('sales.*', 'companies.description', 'employees.name', 'addresses.address1')
             ->where('sales.id', $sale->id)->first();
+
+          
 
         $details = DB::table('sale_details')
             ->join('products', 'sale_details.product_id', '=', 'products.id')

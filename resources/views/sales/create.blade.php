@@ -286,7 +286,7 @@
                 axios.get('/address/' + datax.id)
                     .then(function(response) {
 
-                        console.log(response);
+                        // console.log(response);
                         var len = response.data.length;
                         $(".select2-address").append("<option></option>");
                         for (var i = 0; i < len; i++) {
