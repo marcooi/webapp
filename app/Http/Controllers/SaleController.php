@@ -350,7 +350,8 @@ class SaleController extends Controller
             ->where('sales.id', $id)->first();
 
 
-        $shipping = Address::find($header->shipping_address_id)->first();
+        $shipping = Address::find($header->shipping_address_id);
+        // dd($shipping);
 
         $details = DB::table('sale_details')
             ->join('products', 'sale_details.product_id', '=', 'products.id')
