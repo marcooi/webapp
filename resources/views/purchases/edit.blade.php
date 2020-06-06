@@ -61,13 +61,13 @@
             <div class="form-group">
 
 
-                <label class="col-sm-2 control-label">Waktu Pengiriman</span></label>
+                <label class="col-sm-2 control-label">Time of Delivery</span></label>
                 <div class="col-sm-3">
                     <input type="text" name="time_of_delivery" value="{{ $purchases -> time_of_delivery }}" class="form-control input-sm" required />
                 </div>
 
 
-                <label class="col-sm-4 control-label">Tipe Pembayaran </span></label>
+                <label class="col-sm-4 control-label">Payment Type</span></label>
                 <div class="col-sm-3">
                     <input type="text" name="payment_type" class="form-control input-sm" value="{{ $purchases -> payment_type }}" required />
                 </div>
@@ -76,12 +76,12 @@
 
 
             <div class="form-group">
-                <label class="col-sm-2 control-label">Tgl. Transaksi </span></label>
+                <label class="col-sm-2 control-label">Transaction Date  </span></label>
                 <div class="col-sm-2">
                     <input type="text" name='date' value="{{ date('d/m/yy', strtotime($purchases -> date)) }}" class="form-control input-sm datepicker" required>
                 </div>
 
-                <label class="col-sm-5 control-label">Tgl. Jatuh Tempo </span></label>
+                <label class="col-sm-5 control-label">Payment Due Date </span></label>
                 <div class="col-sm-2">
                     <input type="text" name='due_date' class="form-control input-sm datepicker" value="{{ date('d/m/yy', strtotime($purchases -> due_date)) }}" required>
                 </div>
