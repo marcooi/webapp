@@ -16,10 +16,10 @@ class CreatePurchasesTable extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->string('company_id');
-            // $table->string('company_address_id')->nullable();           
-            // $table->string('ship_address_id')->nullable();
+          
             $table->string('po_no');
-            $table->string('date');
+            $table->timestamp('date', 0)->nullable();
+            $table->timestamp('due_date', 0)->nullable();           
             $table->string('so_no');
             $table->string('payment_type');
             

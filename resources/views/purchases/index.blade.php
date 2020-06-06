@@ -63,7 +63,7 @@
                         </td>
 
                         <td class="text-center">{{ number_format($purc->grand_total) }}</td>
-                        <td class="text-center">{{ $purc->date }}</td>
+                        <td class="text-center">{{ tanggal_local($purc->date) }}</td>
                         <td class="text-center">
                             @if (($purc -> is_confirmed) == 1)
                             <span class="badge badge-success">Approved</span>

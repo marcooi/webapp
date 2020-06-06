@@ -38,12 +38,12 @@
         <div class="panel-body">
 
             <div class="form-group">
-                <label class="col-sm-1 control-label">Company</label>
+                <label class="col-sm-2 control-label">Vendor</label>
                 <div class="col-sm-4">
                     <select name="company_id" class="form-control select2-company" required></select>
                 </div>
 
-                <label class="col-sm-4 control-label">Purchase Order </span></label>
+                <label class="col-sm-3 control-label">PO # </span></label>
                 <div class="col-sm-3">
                     <input type="text" name="po_no" class="form-control input-sm" value="{{ Request::old('po_no') }}" required />
                 </div>
@@ -52,43 +52,51 @@
             <div class="form-group">
 
 
-                <label class="col-sm-9 control-label">Time of Delivery </span></label>
+                <label class="col-sm-2 control-label">Waktu Pengiriman </span></label>
                 <div class="col-sm-3">
                     <input type="text" name="time_of_delivery" class="form-control input-sm" value="{{ Request::old('time_of_delivery') }}" required />
                 </div>
-            </div>
 
-
-
-            <div class="form-group">
-                <label class="col-sm-9 control-label">Payment </span></label>
+                <label class="col-sm-4 control-label">Tipe Pembayaran </span></label>
                 <div class="col-sm-3">
                     <input type="text" name="payment_type" class="form-control input-sm" value="{{ Request::old('payment_type') }}" required />
                 </div>
             </div>
 
+
+
             <div class="form-group">
-                <label class="col-sm-1 control-label">Remark 1</span></label>
+                <label class="col-sm-2 control-label">Tgl. Transaksi </span></label>
+                <div class="col-sm-2">
+                    <input type="text" name='date' class="form-control input-sm datepicker" value="{{ Request::old('date') }}" required>
+                </div>
+
+                <label class="col-sm-5 control-label">Tgl. Jatuh Tempo </span></label>
+                <div class="col-sm-2">
+                    <input type="text" name='due_date' class="form-control input-sm datepicker" value="{{ Request::old('due_date') }}" required>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Remark 1</span></label>
                 <div class="col-sm-4">
                     <input type="text" name="remark1" class="form-control input-sm" value="{{ Request::old('remark1') }}" required />
                 </div>
 
-                <label class="col-sm-4 control-label">Date </span></label>
+                <label class="col-sm-3 control-label">SO# </span></label>
                 <div class="col-sm-2">
-                    <input type="text" name='date' class="form-control input-sm datepicker" value="{{ Request::old('date') }}" required>
+                    <input type="text" name='so_no' class="form-control input-sm" value="{{ Request::old('so_no') }}" required>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-sm-1 control-label">Remark 2 </span></label>
+                <label class="col-sm-2 control-label">Remark 2 </span></label>
                 <div class="col-sm-4">
                     <input type="text" name="remark2" class="form-control input-sm" value="{{ Request::old('remark2') }}" required />
                 </div>
 
-                <label class="col-sm-4 control-label">SO# </span></label>
-                <div class="col-sm-2">
-                    <input type="text" name='so_no' class="form-control input-sm"  value="{{ Request::old('so_no') }}" required>
-                </div>
+               
             </div>
 
             <div class="form-group">
@@ -98,8 +106,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center" width=5%> # </th>
-                                <th class="text-center" width=30%> Product </th>
-                                <!-- <th class="text-center" width=30%> Description </th> -->
+                                <th class="text-center" width=30%> Product </th>                               
                                 <th class="text-center" width=10%> Qty </th>
                                 <th class="text-center" width=15%> Price </th>
                                 <th class="text-center" width=10%> Total </th>
@@ -110,10 +117,7 @@
                             <tr id='addr0'>
                                 <td>1</td>
                                 <td><select name="product_id[]" class="js-example-responsive select2-product" style="width: 100%" required></select></td>
-                                <!-- <td><textarea name='description' class="form-control input-sm "></textarea></td> -->
                                 <td><input type="number" name='qty[]' placeholder='Enter Qty' class="form-control input-sm qty" min="1" step="1" required /></td>
-                                <!-- <td><input type="text" id="myinput" name='qty[]' placeholder='Enter Qty' class="form-control input-sm qty" required /></td> -->
-                                <!-- <td><input type="number" name='unit_price[]' placeholder='Enter Unit Price' class="form-control input-sm price" step="0.00" min="0" required /></td> -->
                                 <td><input type="number" name='unit_price[]' placeholder='Enter Unit Price' class="form-control input-sm price" step="0.00" min="0" required /></td>
                                 <td><input type="number" name='total_price[]' placeholder='0.00' class="form-control input-sm total" readonly /></td>
                                 <td><button type="button" id="delete_row" class="btn btn-danger input-sm remove"><i class="fa fa-minus"></i></button></td>
@@ -193,62 +197,17 @@
 <script src="{{ asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
 <script src="{{ asset('plugins/select2/select2.min.js') }}"></script>
 
-<script>
-    // $(document).ready(function() {
-    //     let row_number = 1;
-    //     $("#add_row").click(function(e) {
-    //         e.preventDefault();
-    //         let new_row_number = row_number - 1;
-    //         $('#product' + row_number).html($('#product' + new_row_number).html()).find('td:first-child');
-    //         $('#products_table').append('<tr id="product' + (row_number + 1) + '"></tr>');
-    //         row_number++;
-    //     });
-
-    //     $("#delete_row").click(function(e) {
-    //         e.preventDefault();
-    //         if (row_number > 1) {
-    //             $("#product" + (row_number - 1)).html('');
-    //             row_number--;
-    //         }
-    //     });
-    // });
+<script>  
 
     $(document).ready(function() {
 
-
         $('.datepicker').datepicker({
-            format: 'dd/mm/yyyy'
+            format: 'dd/mm/yyyy',
+            orientation: 'bottom',
+            autoclose: true
         });
 
 
-        // $('.select2-vendor').select2({
-        //     minimumInputLength: 2,
-        //     ajax: {
-        //         url: '{{ route("getcompany") }}',
-        //         dataType: 'json',
-        //         delay: 250
-        //     },
-        // });
-
-        // function initSelect2Product() {
-        //     $('.select2-product').select2({
-        //         minimumInputLength: 2,
-        //         allowClear: true,
-        //         ajax: {
-        //             url: '{{ route("getproduct") }}',
-        //             dataType: 'json',
-        //             delay: 250
-        //         }
-        //     });
-        // }
-
-        // $('#select_id').change(function() {
-        //     alert($(this).val());
-        // })
-
-        // $('.select-address').on('change', function() {
-        //     alert(this.value);
-        // });
 
         function initSelect2(strClass, strUrl) {
             $(strClass).select2({
@@ -262,56 +221,11 @@
             });
         }
 
-        // initSelect2Product();
-        // initSelect2('.select2-company', '{{ route("getcompany") }}');
+    
         initSelect2('.select2-company', '{{ route("getvendor") }}');
         initSelect2('.select2-product', '{{ route("getproduct") }}');
 
-        // function initSelect2Address(strClass, strUrl) {
-        //     $('.select2-address').on('select2:select', function(e) {
-        //         let datax = e.params.data;
-        //         axios.get('/getaddressid/' + datax.id)
-        //             .then(function(response) {
-        //                 // console.log(response.data['0'].detail);                   
-        //                 document.getElementById("address").value = response.data['0'].detail;
-        //             });
-        //     });
-
-        // };
-
-        // $('.select2-product').on('select2:select', function(e) {
-        //     let datax = e.params.data;
-        //     axios.get('/getproductid/' + datax.id)
-        //         .then(function(response) {
-        //             console.log(response);
-        //             // document.getElementById("productdescr").value = response.data['0'].detail;
-        //         });
-        // });
-
-
-
-
-        // let row_number = 1;
-        // $("#add_row").click(function() {
-        //     // $('#select2-product').select2("destroy");
-        //     let new_row_number = row_number - 1;
-        //     $('#addr' + row_number).html($('#addr' + new_row_number).html()).find('td:first-child');
-        //     $('#tab_logic').append('<tr id="addr' + (row_number + 1) + '"></tr>');
-        //     row_number++;
-
-        // })
-
-
-
-        // var i = 1;
-        // $("#add_row").click(function() {
-        //     $('.select2-product').select2("destroy");
-        //     var $tr = $(this).closest('.tr_clone');
-        //     var $clone = $tr.clone();
-        //     $tr.after($clone);
-        //     $('.select2-product').select2();
-        //     $clone.find('.select2-product').select2('val', '');
-        // });
+       
 
 
 
@@ -322,16 +236,12 @@
             $('#addr' + i).html($('#addr' + b).html()).find('td:first-child').html(i + 1);
             $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
             i++;
-
-            // initSelect2Product();
-            initSelect2('.select2-product', '{{ route("getproduct") }}');
-            // $('.select2-product').trigger('change');
-            // $('.select2-product').val(null).trigger('change');
+           
+            initSelect2('.select2-product', '{{ route("getproduct") }}');           
 
         });
 
-        $("body").on("click", ".remove", function() {
-            // $(this).closest("tr").remove();
+        $("body").on("click", ".remove", function() {            
             if (i > 1) {
                 $("#addr" + (i - 1)).html('');
                 i--;

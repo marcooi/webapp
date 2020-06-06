@@ -9,6 +9,7 @@ use App\Address;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Carbon;
 // use App\Product;
 // use App\Vendor;
 // use PDF;
@@ -74,7 +75,8 @@ class PurchaseController extends Controller
         $purchase = new Purchase();
         $purchase->company_id = $request->input('company_id');
         $purchase->po_no = $request->input('po_no');
-        $purchase->date = $request->input('date');
+        $purchase->date = Carbon::createFromFormat('d/m/Y', $request->input('date'))->format('Y-m-d'); 
+        $purchase->due_date = Carbon::createFromFormat('d/m/Y', $request->input('due_date'))->format('Y-m-d');       
         $purchase->so_no = $request->input('so_no');
         $purchase->payment_type = $request->input('payment_type');
         $purchase->time_of_delivery = $request->input('time_of_delivery');
@@ -158,7 +160,9 @@ class PurchaseController extends Controller
 
         $purchase->company_id = $request->input('company_id');
         $purchase->po_no = $request->input('po_no');
-        $purchase->date = $request->input('date');
+        // $purchase->date = $request->input('date');
+        $purchase->date = Carbon::createFromFormat('d/m/Y', $request->input('date'))->format('Y-m-d'); 
+        $purchase->due_date = Carbon::createFromFormat('d/m/Y', $request->input('due_date'))->format('Y-m-d');    
         $purchase->payment_type = $request->input('payment_type');
         $purchase->time_of_delivery = $request->input('time_of_delivery');
         $purchase->remark1 = $request->input('remark1');
