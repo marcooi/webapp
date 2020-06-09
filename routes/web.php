@@ -29,7 +29,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('setting/users', 'UserController');
     Route::resource('setting/permissions', 'PermissionController');
     Route::resource('master/products', 'ProductController');
-    // Route::resource('master/vendors', 'VendorController');
+    Route::resource('master/chart-of-accounts', 'ChartOfAccountController');
 
     Route::resource('master/companies', 'CompanyController');
     Route::resource('master/addresses', 'AddressController');    

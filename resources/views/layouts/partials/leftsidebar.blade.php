@@ -46,6 +46,7 @@
                             <li class="{{ (request()->is('master/companies')) ? 'nav-active' : '' }}"><a href="{{ route('companies.index') }}">Company</a></li>
                             <li class="{{ (request()->is('master/addresses')) ? 'nav-active' : '' }}"><a href="{{ route('addresses.index') }}">Ship Addresses</a></li>
                             <li class="{{ (request()->is('master/products')) ? 'nav-active' : '' }}"><a href="{{ route('products.index') }}">Product</a></li>
+                            <li class="{{ (request()->is('master/chart-of-accounts')) ? 'nav-active' : '' }}"><a href="{{ route('chart-of-accounts.index') }}">Chart of Account</a></li>
                         </ul>
                     </li>
 

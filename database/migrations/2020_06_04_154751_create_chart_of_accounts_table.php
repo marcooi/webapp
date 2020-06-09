@@ -17,7 +17,8 @@ class CreateChartOfAccountsTable extends Migration
             $table->id();
             $table->string('no_akun');     
             $table->string('nama');     
-            $table->string('tipe');     
+            $table->string('parent_akun');
+            $table->softDeletes();     
             $table->timestamps();
         });
     }

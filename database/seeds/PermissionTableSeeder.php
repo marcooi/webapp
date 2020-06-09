@@ -52,7 +52,19 @@ class PermissionTableSeeder extends Seeder
             'sale-list',
             'sale-create',
             'sale-edit',
-            'sale-delete'            
+            'sale-delete',
+            
+            'quotation-list',
+            'quotation-create',
+            'quotation-edit',
+            'quotation-delete',
+
+            'coa-list',
+            'coa-create',
+            'coa-edit',
+            'coa-delete',
+            
+           
 
 
         ];
