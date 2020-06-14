@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\ChartOfAccount;
+use App\ChartOfAccountCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Response;
 
 class ChartOfAccountController extends Controller
 {
@@ -14,12 +17,26 @@ class ChartOfAccountController extends Controller
      */
     public function index()
     {
-        $coas = ChartOfAccount::latest()->paginate(10);
+        // $coas = ChartOfAccount::all();
+        $coas = DB::table('chart_of_accounts')
+            ->leftjoin('chart_of_account_categories', 'chart_of_accounts.category_id', '=', 'chart_of_account_categories.id')
+            ->select(
+                'chart_of_accounts.id',
+                'chart_of_accounts.coa_id',
+                'chart_of_accounts.name',
+                'chart_of_account_categories.nama_kategori'
+            )
+            ->get();
 
 
+        $categories = ChartOfAccountCategory::all();
 
-        return view('chart-of-accounts.index', compact('coas'))
-            ->with('i', (request()->input('page', 1) - 1) * 10);
+        // dd($coas);
+
+        return view('chart-of-accounts.index', compact('coas', 'categories'));
+
+        // return view('chart-of-accounts.index', compact('coas', 'categories'))
+        //     ->with('i', (request()->input('page', 1) - 1) * 50);
 
     }
 
@@ -40,21 +57,31 @@ class ChartOfAccountController extends Controller
      */
     public function store(Request $request)
     {
+
         request()->validate([
-            'no_akun' => 'required',
-            'nama' => 'required',
-            'parent_akun' => 'required'
+            'coa_id' => 'required|unique:chart_of_accounts,coa_id,' . $request->id, 
+            'name' => 'required'
         ]);
 
-        $coas = new ChartOfAccount();
-        $coas->no_akun = $request->input('no_akun');
-        $coas->nama = $request->input('nama');
-        $coas->parent_akun = $request->input('parent_akun');
+     
 
-        $coas->save();
+        $user = ChartOfAccount::updateOrCreate(
+            ['id' => $request->id],
+            [
+                'coa_id' => $request->coa_id,
+                'name' => $request->name,
+                'category_id' => $request->category_id
 
-        return redirect()->route('chart-of-accounts.index')
-            ->with('success', 'Chart of Account created successfully.');
+            ]
+        );
+        
+        return Response::json($user);
+        // return Response::json($request->id);
+
+
+
+        // return redirect()->route('chart-of-accounts.index')
+        //     ->with('success', 'Chart of Account created successfully.');
     }
 
     /**
@@ -76,7 +103,10 @@ class ChartOfAccountController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $coa = ChartOfAccount::find($id);
+        // return response()->json($coa);
+        return response()->json($coa);
     }
 
     /**
@@ -99,6 +129,15 @@ class ChartOfAccountController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $coa = ChartOfAccount::findOrFail($id);
+
+
+        $coa->delete();
+
+        // $coa->delete();
+
+        return redirect()->route('chart-of-accounts.index')
+            ->with('success', 'Chart of Account deleted successfully');
     }
 }

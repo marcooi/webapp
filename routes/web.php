@@ -31,6 +31,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('master/products', 'ProductController');
     Route::resource('master/chart-of-accounts', 'ChartOfAccountController');
 
+
     Route::resource('master/companies', 'CompanyController');
     Route::resource('master/addresses', 'AddressController');    
     Route::resource('purchases', 'PurchaseController');
@@ -40,6 +41,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('sale/quotations','QuotationController');
 
+    
 
     Route::get('/getcompany', 'CompanyController@searchCompany')->name('getcompany');
     Route::get('/getvendor', 'CompanyController@searchVendor')->name('getvendor');

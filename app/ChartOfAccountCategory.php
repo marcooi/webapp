@@ -4,9 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ChartOfAccount extends Model
-{   
+class ChartOfAccountCategory extends Model
+{
     protected $fillable = [
-        'coa_id', 'name', 'category_id' 
+        'no_kategori', 'nama_kategori'
     ];
+
+   
 }
