@@ -166,6 +166,8 @@ class CompanyController extends Controller
         return ['results' => $listvendor];
     }
 
+    
+
     public function searchVendor(Request $request)
     {
         $listvendor = Company::where('is_owner', '=', 0)

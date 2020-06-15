@@ -40,6 +40,18 @@
                         </ul>
                     </li>
 
+                    <li class="nav-parent {{ (request()->is('journal*')) ? 'nav-expanded' : '' }}">
+                        <a><i class="fa fa-university" aria-hidden="true"></i><span>Accounting</span></a>
+                        <ul class="nav nav-children">
+                        <li class="{{ (request()->is('journal')) ? 'nav-active' : '' }}"><a href="{{ route('journals.index') }}">Journal</a></li>
+                        
+                                                    
+
+                        </ul>
+                    </li>
+
+
+
                     <li class="nav-parent {{ (request()->is('master*')) ? 'nav-expanded' : '' }}">
                         <a><i class="fa fa-database" aria-hidden="true"></i><span>Master</span></a>
                         <ul class="nav nav-children">

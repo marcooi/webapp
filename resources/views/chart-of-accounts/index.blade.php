@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-
+@section('metas')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+@endsection
 
 @section('content')
 
@@ -11,7 +13,7 @@
         <div class="pull-right">
             <!-- <a class="btn btn-sm btn-success" data-toggle="modal" data-target="#myModal"> Add Chart of Account</a> -->
             <!-- <a href="javascript:void(0)" class="btn btn-success mb-2" id="create-new-coa">Add Chart of Account</a> -->
-            <a href="javascript:void(0)" class="btn btn-success mb-2" id="create-new-coa">Add User</a>
+            <a href="javascript:void(0)" class="btn btn-success mb-2" id="create-new-coa">Add COA</a>
         </div>
 
         <h2 class="panel-title">List Chart of Account</h2>
@@ -150,12 +152,12 @@
                     <div id="formerrors"></div>
 
 
-                  
+
 
                     <div class="form-group mt-lg">
                         <label class="col-sm-3 control-label">Coa Id</label>
                         <div class="col-sm-6">
-                            <input type="text" name="coa_id" id="coa_id" class="form-control"  autocomplete="off" required />
+                            <input type="text" name="coa_id" id="coa_id" class="form-control" autocomplete="off" required />
                             <input type="hidden" name="id" id="id" class="form-control" value="0" readonly>
                         </div>
                     </div>
