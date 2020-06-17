@@ -1,2570 +1,1548 @@
-<html lang="id" class="">
+<!DOCTYPE html>
+<html moznomarginboxes mozdisallowselectionprint>
 
 <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <script type="text/javascript" async="" src="https://widget.intercom.io/widget/yhxmtksi"></script>
-    <script src="https://js-agent.newrelic.com/nr-1169.min.js"></script>
-    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-W23JLJG"></script>
-    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NM8LB4L"></script>
-    <script async="" src="//connect.facebook.net/en_US/fbevents.js"></script>
-    <script>
-        window.NREUM || (NREUM = {});
-        NREUM.info = {
-            "beacon": "bam.nr-data.net",
-            "errorBeacon": "bam.nr-data.net",
-            "licenseKey": "a620b89621",
-            "applicationID": "9596944",
-            "transactionName": "elwLFUpdCggEFEkVQUtQDQBLVzkUAB8LAFpNQEoEXFsS",
-            "queueTime": 0,
-            "applicationTime": 241,
-            "agent": ""
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PT. BAC — Journal Entry — Edit</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.css?20.7.13.0" />
+    <style>
+        .btn-primary,
+        .btn-danger,
+        .btn-success,
+        .btn-info,
+        .btn-warning {
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
         }
-    </script>
-    <script>
-        (window.NREUM || (NREUM = {})).loader_config = {
-            xpid: "VQcGVV9UDRAJUVhUDgUD",
-            licenseKey: "a620b89621",
-            applicationID: "9596944"
-        };
-        window.NREUM || (NREUM = {}), __nr_require = function(t, n, e) {
-            function r(e) {
-                if (!n[e]) {
-                    var o = n[e] = {
-                        exports: {}
-                    };
-                    t[e][0].call(o.exports, function(n) {
-                        var o = t[e][1][n];
-                        return r(o || n)
-                    }, o, o.exports)
-                }
-                return n[e].exports
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact !important;
+                padding: 0;
+                margin: 0;
+                font-size: 10pt;
+                font-family: sans-serif;
+                line-height: 125%;
+                background: none !important;
             }
-            if ("function" == typeof __nr_require) return __nr_require;
-            for (var o = 0; o < e.length; o++) r(e[o]);
-            return r
-        }({
-            1: [function(t, n, e) {
-                function r(t) {
-                    try {
-                        s.console && console.log(t)
-                    } catch (n) {}
-                }
-                var o, i = t("ee"),
-                    a = t(21),
-                    s = {};
-                try {
-                    o = localStorage.getItem("__nr_flags").split(","), console && "function" == typeof console.log && (s.console = !0, o.indexOf("dev") !== -1 && (s.dev = !0), o.indexOf("nr_dev") !== -1 && (s.nrDev = !0))
-                } catch (c) {}
-                s.nrDev && i.on("internal-error", function(t) {
-                    r(t.stack)
-                }), s.dev && i.on("fn-err", function(t, n, e) {
-                    r(e.stack)
-                }), s.dev && (r("NR AGENT IN DEVELOPMENT MODE"), r("flags: " + a(s, function(t, n) {
-                    return t
-                }).join(", ")))
-            }, {}],
-            2: [function(t, n, e) {
-                function r(t, n, e, r, s) {
-                    try {
-                        p ? p -= 1 : o(s || new UncaughtException(t, n, e), !0)
-                    } catch (f) {
-                        try {
-                            i("ierr", [f, c.now(), !0])
-                        } catch (d) {}
-                    }
-                    return "function" == typeof u && u.apply(this, a(arguments))
-                }
 
-                function UncaughtException(t, n, e) {
-                    this.message = t || "Uncaught error with no additional information", this.sourceURL = n, this.line = e
-                }
+            .print-display-none,
+            .btn {
+                display: none !important
+            }
 
-                function o(t, n) {
-                    var e = n ? null : c.now();
-                    i("err", [t, e])
-                }
-                var i = t("handle"),
-                    a = t(22),
-                    s = t("ee"),
-                    c = t("loader"),
-                    f = t("gos"),
-                    u = window.onerror,
-                    d = !1,
-                    l = "nr@seenError",
-                    p = 0;
-                c.features.err = !0, t(1), window.onerror = r;
-                try {
-                    throw new Error
-                } catch (h) {
-                    "stack" in h && (t(9), t(8), "addEventListener" in window && t(5), c.xhrWrappable && t(10), d = !0)
-                }
-                s.on("fn-start", function(t, n, e) {
-                    d && (p += 1)
-                }), s.on("fn-err", function(t, n, e) {
-                    d && !e[l] && (f(e, l, function() {
-                        return !0
-                    }), this.thrown = !0, o(e))
-                }), s.on("fn-end", function() {
-                    d && !this.thrown && p > 0 && (p -= 1)
-                }), s.on("internal-error", function(t) {
-                    i("ierr", [t, c.now(), !0])
-                })
-            }, {}],
-            3: [function(t, n, e) {
-                t("loader").features.ins = !0
-            }, {}],
-            4: [function(t, n, e) {
-                function r(t) {}
-                if (window.performance && window.performance.timing && window.performance.getEntriesByType) {
-                    var o = t("ee"),
-                        i = t("handle"),
-                        a = t(9),
-                        s = t(8),
-                        c = "learResourceTimings",
-                        f = "addEventListener",
-                        u = "resourcetimingbufferfull",
-                        d = "bstResource",
-                        l = "resource",
-                        p = "-start",
-                        h = "-end",
-                        m = "fn" + p,
-                        w = "fn" + h,
-                        v = "bstTimer",
-                        g = "pushState",
-                        y = t("loader");
-                    y.features.stn = !0, t(7), "addEventListener" in window && t(5);
-                    var x = NREUM.o.EV;
-                    o.on(m, function(t, n) {
-                        var e = t[0];
-                        e instanceof x && (this.bstStart = y.now())
-                    }), o.on(w, function(t, n) {
-                        var e = t[0];
-                        e instanceof x && i("bst", [e, n, this.bstStart, y.now()])
-                    }), a.on(m, function(t, n, e) {
-                        this.bstStart = y.now(), this.bstType = e
-                    }), a.on(w, function(t, n) {
-                        i(v, [n, this.bstStart, y.now(), this.bstType])
-                    }), s.on(m, function() {
-                        this.bstStart = y.now()
-                    }), s.on(w, function(t, n) {
-                        i(v, [n, this.bstStart, y.now(), "requestAnimationFrame"])
-                    }), o.on(g + p, function(t) {
-                        this.time = y.now(), this.startPath = location.pathname + location.hash
-                    }), o.on(g + h, function(t) {
-                        i("bstHist", [location.pathname + location.hash, this.startPath, this.time])
-                    }), f in window.performance && (window.performance["c" + c] ? window.performance[f](u, function(t) {
-                        i(d, [window.performance.getEntriesByType(l)]), window.performance["c" + c]()
-                    }, !1) : window.performance[f]("webkit" + u, function(t) {
-                        i(d, [window.performance.getEntriesByType(l)]), window.performance["webkitC" + c]()
-                    }, !1)), document[f]("scroll", r, {
-                        passive: !0
-                    }), document[f]("keypress", r, !1), document[f]("click", r, !1)
-                }
-            }, {}],
-            5: [function(t, n, e) {
-                function r(t) {
-                    for (var n = t; n && !n.hasOwnProperty(u);) n = Object.getPrototypeOf(n);
-                    n && o(n)
-                }
-
-                function o(t) {
-                    s.inPlace(t, [u, d], "-", i)
-                }
-
-                function i(t, n) {
-                    return t[1]
-                }
-                var a = t("ee").get("events"),
-                    s = t("wrap-function")(a, !0),
-                    c = t("gos"),
-                    f = XMLHttpRequest,
-                    u = "addEventListener",
-                    d = "removeEventListener";
-                n.exports = a, "getPrototypeOf" in Object ? (r(document), r(window), r(f.prototype)) : f.prototype.hasOwnProperty(u) && (o(window), o(f.prototype)), a.on(u + "-start", function(t, n) {
-                    var e = t[1],
-                        r = c(e, "nr@wrapped", function() {
-                            function t() {
-                                if ("function" == typeof e.handleEvent) return e.handleEvent.apply(e, arguments)
-                            }
-                            var n = {
-                                object: t,
-                                "function": e
-                            } [typeof e];
-                            return n ? s(n, "fn-", null, n.name || "anonymous") : e
-                        });
-                    this.wrapped = t[1] = r
-                }), a.on(d + "-start", function(t) {
-                    t[1] = this.wrapped || t[1]
-                })
-            }, {}],
-            6: [function(t, n, e) {
-                function r(t, n, e) {
-                    var r = t[n];
-                    "function" == typeof r && (t[n] = function() {
-                        var t = i(arguments),
-                            n = {};
-                        o.emit(e + "before-start", [t], n);
-                        var a;
-                        n[m] && n[m].dt && (a = n[m].dt);
-                        var s = r.apply(this, t);
-                        return o.emit(e + "start", [t, a], s), s.then(function(t) {
-                            return o.emit(e + "end", [null, t], s), t
-                        }, function(t) {
-                            throw o.emit(e + "end", [t], s), t
-                        })
-                    })
-                }
-                var o = t("ee").get("fetch"),
-                    i = t(22),
-                    a = t(21);
-                n.exports = o;
-                var s = window,
-                    c = "fetch-",
-                    f = c + "body-",
-                    u = ["arrayBuffer", "blob", "json", "text", "formData"],
-                    d = s.Request,
-                    l = s.Response,
-                    p = s.fetch,
-                    h = "prototype",
-                    m = "nr@context";
-                d && l && p && (a(u, function(t, n) {
-                    r(d[h], n, f), r(l[h], n, f)
-                }), r(s, "fetch", c), o.on(c + "end", function(t, n) {
-                    var e = this;
-                    if (n) {
-                        var r = n.headers.get("content-length");
-                        null !== r && (e.rxSize = r), o.emit(c + "done", [null, n], e)
-                    } else o.emit(c + "done", [t], e)
-                }))
-            }, {}],
-            7: [function(t, n, e) {
-                var r = t("ee").get("history"),
-                    o = t("wrap-function")(r);
-                n.exports = r;
-                var i = window.history && window.history.constructor && window.history.constructor.prototype,
-                    a = window.history;
-                i && i.pushState && i.replaceState && (a = i), o.inPlace(a, ["pushState", "replaceState"], "-")
-            }, {}],
-            8: [function(t, n, e) {
-                var r = t("ee").get("raf"),
-                    o = t("wrap-function")(r),
-                    i = "equestAnimationFrame";
-                n.exports = r, o.inPlace(window, ["r" + i, "mozR" + i, "webkitR" + i, "msR" + i], "raf-"), r.on("raf-start", function(t) {
-                    t[0] = o(t[0], "fn-")
-                })
-            }, {}],
-            9: [function(t, n, e) {
-                function r(t, n, e) {
-                    t[0] = a(t[0], "fn-", null, e)
-                }
-
-                function o(t, n, e) {
-                    this.method = e, this.timerDuration = isNaN(t[1]) ? 0 : +t[1], t[0] = a(t[0], "fn-", this, e)
-                }
-                var i = t("ee").get("timer"),
-                    a = t("wrap-function")(i),
-                    s = "setTimeout",
-                    c = "setInterval",
-                    f = "clearTimeout",
-                    u = "-start",
-                    d = "-";
-                n.exports = i, a.inPlace(window, [s, "setImmediate"], s + d), a.inPlace(window, [c], c + d), a.inPlace(window, [f, "clearImmediate"], f + d), i.on(c + u, r), i.on(s + u, o)
-            }, {}],
-            10: [function(t, n, e) {
-                function r(t, n) {
-                    d.inPlace(n, ["onreadystatechange"], "fn-", s)
-                }
-
-                function o() {
-                    var t = this,
-                        n = u.context(t);
-                    t.readyState > 3 && !n.resolved && (n.resolved = !0, u.emit("xhr-resolved", [], t)), d.inPlace(t, g, "fn-", s)
-                }
-
-                function i(t) {
-                    y.push(t), h && (b ? b.then(a) : w ? w(a) : (E = -E, O.data = E))
-                }
-
-                function a() {
-                    for (var t = 0; t < y.length; t++) r([], y[t]);
-                    y.length && (y = [])
-                }
-
-                function s(t, n) {
-                    return n
-                }
-
-                function c(t, n) {
-                    for (var e in t) n[e] = t[e];
-                    return n
-                }
-                t(5);
-                var f = t("ee"),
-                    u = f.get("xhr"),
-                    d = t("wrap-function")(u),
-                    l = NREUM.o,
-                    p = l.XHR,
-                    h = l.MO,
-                    m = l.PR,
-                    w = l.SI,
-                    v = "readystatechange",
-                    g = ["onload", "onerror", "onabort", "onloadstart", "onloadend", "onprogress", "ontimeout"],
-                    y = [];
-                n.exports = u;
-                var x = window.XMLHttpRequest = function(t) {
-                    var n = new p(t);
-                    try {
-                        u.emit("new-xhr", [n], n), n.addEventListener(v, o, !1)
-                    } catch (e) {
-                        try {
-                            u.emit("internal-error", [e])
-                        } catch (r) {}
-                    }
-                    return n
-                };
-                if (c(p, x), x.prototype = p.prototype, d.inPlace(x.prototype, ["open", "send"], "-xhr-", s), u.on("send-xhr-start", function(t, n) {
-                        r(t, n), i(n)
-                    }), u.on("open-xhr-start", r), h) {
-                    var b = m && m.resolve();
-                    if (!w && !m) {
-                        var E = 1,
-                            O = document.createTextNode(E);
-                        new h(a).observe(O, {
-                            characterData: !0
-                        })
-                    }
-                } else f.on("fn-end", function(t) {
-                    t[0] && t[0].type === v || a()
-                })
-            }, {}],
-            11: [function(t, n, e) {
-                function r(t) {
-                    if (!i(t)) return null;
-                    var n = window.NREUM;
-                    if (!n.loader_config) return null;
-                    var e = (n.loader_config.accountID || "").toString() || null,
-                        r = (n.loader_config.agentID || "").toString() || null,
-                        s = (n.loader_config.trustKey || "").toString() || null;
-                    if (!e || !r) return null;
-                    var c = a.generateCatId(),
-                        f = a.generateCatId(),
-                        u = Date.now(),
-                        d = o(c, f, u, e, r, s);
-                    return {
-                        header: d,
-                        guid: c,
-                        traceId: f,
-                        timestamp: u
-                    }
-                }
-
-                function o(t, n, e, r, o, i) {
-                    var a = "btoa" in window && "function" == typeof window.btoa;
-                    if (!a) return null;
-                    var s = {
-                        v: [0, 1],
-                        d: {
-                            ty: "Browser",
-                            ac: r,
-                            ap: o,
-                            id: t,
-                            tr: n,
-                            ti: e
-                        }
-                    };
-                    return i && r !== i && (s.d.tk = i), btoa(JSON.stringify(s))
-                }
-
-                function i(t) {
-                    var n = !1,
-                        e = !1,
-                        r = {};
-                    if ("init" in NREUM && "distributed_tracing" in NREUM.init && (r = NREUM.init.distributed_tracing, e = !!r.enabled), e)
-                        if (t.sameOrigin) n = !0;
-                        else if (r.allowed_origins instanceof Array)
-                        for (var o = 0; o < r.allowed_origins.length; o++) {
-                            var i = s(r.allowed_origins[o]);
-                            if (t.hostname === i.hostname && t.protocol === i.protocol && t.port === i.port) {
-                                n = !0;
-                                break
-                            }
-                        }
-                    return e && n
-                }
-                var a = t(19),
-                    s = t(13);
-                n.exports = {
-                    generateTracePayload: r,
-                    shouldGenerateTrace: i
-                }
-            }, {}],
-            12: [function(t, n, e) {
-                function r(t) {
-                    var n = this.params,
-                        e = this.metrics;
-                    if (!this.ended) {
-                        this.ended = !0;
-                        for (var r = 0; r < l; r++) t.removeEventListener(d[r], this.listener, !1);
-                        n.aborted || (e.duration = a.now() - this.startTime, this.loadCaptureCalled || 4 !== t.readyState ? null == n.status && (n.status = 0) : i(this, t), e.cbTime = this.cbTime, u.emit("xhr-done", [t], t), s("xhr", [n, e, this.startTime]))
-                    }
-                }
-
-                function o(t, n) {
-                    var e = c(n),
-                        r = t.params;
-                    r.host = e.hostname + ":" + e.port, r.pathname = e.pathname, t.parsedOrigin = c(n), t.sameOrigin = t.parsedOrigin.sameOrigin
-                }
-
-                function i(t, n) {
-                    t.params.status = n.status;
-                    var e = w(n, t.lastSize);
-                    if (e && (t.metrics.rxSize = e), t.sameOrigin) {
-                        var r = n.getResponseHeader("X-NewRelic-App-Data");
-                        r && (t.params.cat = r.split(", ").pop())
-                    }
-                    t.loadCaptureCalled = !0
-                }
-                var a = t("loader");
-                if (a.xhrWrappable) {
-                    var s = t("handle"),
-                        c = t(13),
-                        f = t(11).generateTracePayload,
-                        u = t("ee"),
-                        d = ["load", "error", "abort", "timeout"],
-                        l = d.length,
-                        p = t("id"),
-                        h = t(17),
-                        m = t(16),
-                        w = t(14),
-                        v = window.XMLHttpRequest;
-                    a.features.xhr = !0, t(10), t(6), u.on("new-xhr", function(t) {
-                        var n = this;
-                        n.totalCbs = 0, n.called = 0, n.cbTime = 0, n.end = r, n.ended = !1, n.xhrGuids = {}, n.lastSize = null, n.loadCaptureCalled = !1, t.addEventListener("load", function(e) {
-                            i(n, t)
-                        }, !1), h && (h > 34 || h < 10) || window.opera || t.addEventListener("progress", function(t) {
-                            n.lastSize = t.loaded
-                        }, !1)
-                    }), u.on("open-xhr-start", function(t) {
-                        this.params = {
-                            method: t[0]
-                        }, o(this, t[1]), this.metrics = {}
-                    }), u.on("open-xhr-end", function(t, n) {
-                        "loader_config" in NREUM && "xpid" in NREUM.loader_config && this.sameOrigin && n.setRequestHeader("X-NewRelic-ID", NREUM.loader_config.xpid);
-                        var e = f(this.parsedOrigin);
-                        e && e.header && (n.setRequestHeader("newrelic", e.header), this.dt = e)
-                    }), u.on("send-xhr-start", function(t, n) {
-                        var e = this.metrics,
-                            r = t[0],
-                            o = this;
-                        if (e && r) {
-                            var i = m(r);
-                            i && (e.txSize = i)
-                        }
-                        this.startTime = a.now(), this.listener = function(t) {
-                            try {
-                                "abort" !== t.type || o.loadCaptureCalled || (o.params.aborted = !0), ("load" !== t.type || o.called === o.totalCbs && (o.onloadCalled || "function" != typeof n.onload)) && o.end(n)
-                            } catch (e) {
-                                try {
-                                    u.emit("internal-error", [e])
-                                } catch (r) {}
-                            }
-                        };
-                        for (var s = 0; s < l; s++) n.addEventListener(d[s], this.listener, !1)
-                    }), u.on("xhr-cb-time", function(t, n, e) {
-                        this.cbTime += t, n ? this.onloadCalled = !0 : this.called += 1, this.called !== this.totalCbs || !this.onloadCalled && "function" == typeof e.onload || this.end(e)
-                    }), u.on("xhr-load-added", function(t, n) {
-                        var e = "" + p(t) + !!n;
-                        this.xhrGuids && !this.xhrGuids[e] && (this.xhrGuids[e] = !0, this.totalCbs += 1)
-                    }), u.on("xhr-load-removed", function(t, n) {
-                        var e = "" + p(t) + !!n;
-                        this.xhrGuids && this.xhrGuids[e] && (delete this.xhrGuids[e], this.totalCbs -= 1)
-                    }), u.on("addEventListener-end", function(t, n) {
-                        n instanceof v && "load" === t[0] && u.emit("xhr-load-added", [t[1], t[2]], n)
-                    }), u.on("removeEventListener-end", function(t, n) {
-                        n instanceof v && "load" === t[0] && u.emit("xhr-load-removed", [t[1], t[2]], n)
-                    }), u.on("fn-start", function(t, n, e) {
-                        n instanceof v && ("onload" === e && (this.onload = !0), ("load" === (t[0] && t[0].type) || this.onload) && (this.xhrCbStart = a.now()))
-                    }), u.on("fn-end", function(t, n) {
-                        this.xhrCbStart && u.emit("xhr-cb-time", [a.now() - this.xhrCbStart, this.onload, n], n)
-                    }), u.on("fetch-before-start", function(t) {
-                        var n, e = t[1] || {};
-                        "string" == typeof t[0] ? n = t[0] : t[0] && t[0].url && (n = t[0].url), n && (this.parsedOrigin = c(n), this.sameOrigin = this.parsedOrigin.sameOrigin);
-                        var r = f(this.parsedOrigin);
-                        if (r && r.header) {
-                            var o = r.header;
-                            if ("string" == typeof t[0]) {
-                                var i = {};
-                                for (var a in e) i[a] = e[a];
-                                i.headers = new Headers(e.headers || {}), i.headers.set("newrelic", o), this.dt = r, t.length > 1 ? t[1] = i : t.push(i)
-                            } else t[0] && t[0].headers && (t[0].headers.append("newrelic", o), this.dt = r)
-                        }
-                    })
-                }
-            }, {}],
-            13: [function(t, n, e) {
-                var r = {};
-                n.exports = function(t) {
-                    if (t in r) return r[t];
-                    var n = document.createElement("a"),
-                        e = window.location,
-                        o = {};
-                    n.href = t, o.port = n.port;
-                    var i = n.href.split("://");
-                    !o.port && i[1] && (o.port = i[1].split("/")[0].split("@").pop().split(":")[1]), o.port && "0" !== o.port || (o.port = "https" === i[0] ? "443" : "80"), o.hostname = n.hostname || e.hostname, o.pathname = n.pathname, o.protocol = i[0], "/" !== o.pathname.charAt(0) && (o.pathname = "/" + o.pathname);
-                    var a = !n.protocol || ":" === n.protocol || n.protocol === e.protocol,
-                        s = n.hostname === document.domain && n.port === e.port;
-                    return o.sameOrigin = a && (!n.hostname || s), "/" === o.pathname && (r[t] = o), o
-                }
-            }, {}],
-            14: [function(t, n, e) {
-                function r(t, n) {
-                    var e = t.responseType;
-                    return "json" === e && null !== n ? n : "arraybuffer" === e || "blob" === e || "json" === e ? o(t.response) : "text" === e || "" === e || void 0 === e ? o(t.responseText) : void 0
-                }
-                var o = t(16);
-                n.exports = r
-            }, {}],
-            15: [function(t, n, e) {
-                function r() {}
-
-                function o(t, n, e) {
-                    return function() {
-                        return i(t, [f.now()].concat(s(arguments)), n ? null : this, e), n ? void 0 : this
-                    }
-                }
-                var i = t("handle"),
-                    a = t(21),
-                    s = t(22),
-                    c = t("ee").get("tracer"),
-                    f = t("loader"),
-                    u = NREUM;
-                "undefined" == typeof window.newrelic && (newrelic = u);
-                var d = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
-                    l = "api-",
-                    p = l + "ixn-";
-                a(d, function(t, n) {
-                    u[n] = o(l + n, !0, "api")
-                }), u.addPageAction = o(l + "addPageAction", !0), u.setCurrentRouteName = o(l + "routeName", !0), n.exports = newrelic, u.interaction = function() {
-                    return (new r).get()
-                };
-                var h = r.prototype = {
-                    createTracer: function(t, n) {
-                        var e = {},
-                            r = this,
-                            o = "function" == typeof n;
-                        return i(p + "tracer", [f.now(), t, e], r),
-                            function() {
-                                if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], e), o) try {
-                                    return n.apply(this, arguments)
-                                } catch (t) {
-                                    throw c.emit("fn-err", [arguments, this, t], e), t
-                                } finally {
-                                    c.emit("fn-end", [f.now()], e)
-                                }
-                            }
-                    }
-                };
-                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(t, n) {
-                    h[n] = o(p + n)
-                }), newrelic.noticeError = function(t, n) {
-                    "string" == typeof t && (t = new Error(t)), i("err", [t, f.now(), !1, n])
-                }
-            }, {}],
-            16: [function(t, n, e) {
-                n.exports = function(t) {
-                    if ("string" == typeof t && t.length) return t.length;
-                    if ("object" == typeof t) {
-                        if ("undefined" != typeof ArrayBuffer && t instanceof ArrayBuffer && t.byteLength) return t.byteLength;
-                        if ("undefined" != typeof Blob && t instanceof Blob && t.size) return t.size;
-                        if (!("undefined" != typeof FormData && t instanceof FormData)) try {
-                            return JSON.stringify(t).length
-                        } catch (n) {
-                            return
-                        }
-                    }
-                }
-            }, {}],
-            17: [function(t, n, e) {
-                var r = 0,
-                    o = navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);
-                o && (r = +o[1]), n.exports = r
-            }, {}],
-            18: [function(t, n, e) {
-                function r(t, n) {
-                    var e = t.getEntries();
-                    e.forEach(function(t) {
-                        "first-paint" === t.name ? c("timing", ["fp", Math.floor(t.startTime)]) : "first-contentful-paint" === t.name && c("timing", ["fcp", Math.floor(t.startTime)])
-                    })
-                }
-
-                function o(t, n) {
-                    var e = t.getEntries();
-                    e.length > 0 && c("lcp", [e[e.length - 1]])
-                }
-
-                function i(t) {
-                    if (t instanceof u && !l) {
-                        var n, e = Math.round(t.timeStamp);
-                        n = e > 1e12 ? Date.now() - e : f.now() - e, l = !0, c("timing", ["fi", e, {
-                            type: t.type,
-                            fid: n
-                        }])
-                    }
-                }
-                if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) {
-                    var a, s, c = t("handle"),
-                        f = t("loader"),
-                        u = NREUM.o.EV;
-                    if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) {
-                        a = new PerformanceObserver(r), s = new PerformanceObserver(o);
-                        try {
-                            a.observe({
-                                entryTypes: ["paint"]
-                            }), s.observe({
-                                entryTypes: ["largest-contentful-paint"]
-                            })
-                        } catch (d) {}
-                    }
-                    if ("addEventListener" in document) {
-                        var l = !1,
-                            p = ["click", "keydown", "mousedown", "pointerdown", "touchstart"];
-                        p.forEach(function(t) {
-                            document.addEventListener(t, i, !1)
-                        })
-                    }
-                }
-            }, {}],
-            19: [function(t, n, e) {
-                function r() {
-                    function t() {
-                        return n ? 15 & n[e++] : 16 * Math.random() | 0
-                    }
-                    var n = null,
-                        e = 0,
-                        r = window.crypto || window.msCrypto;
-                    r && r.getRandomValues && (n = r.getRandomValues(new Uint8Array(31)));
-                    for (var o, i = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx", a = "", s = 0; s < i.length; s++) o = i[s], "x" === o ? a += t().toString(16) : "y" === o ? (o = 3 & t() | 8, a += o.toString(16)) : a += o;
-                    return a
-                }
-
-                function o() {
-                    function t() {
-                        return n ? 15 & n[e++] : 16 * Math.random() | 0
-                    }
-                    var n = null,
-                        e = 0,
-                        r = window.crypto || window.msCrypto;
-                    r && r.getRandomValues && Uint8Array && (n = r.getRandomValues(new Uint8Array(31)));
-                    for (var o = [], i = 0; i < 16; i++) o.push(t().toString(16));
-                    return o.join("")
-                }
-                n.exports = {
-                    generateUuid: r,
-                    generateCatId: o
-                }
-            }, {}],
-            20: [function(t, n, e) {
-                function r(t, n) {
-                    if (!o) return !1;
-                    if (t !== o) return !1;
-                    if (!n) return !0;
-                    if (!i) return !1;
-                    for (var e = i.split("."), r = n.split("."), a = 0; a < r.length; a++)
-                        if (r[a] !== e[a]) return !1;
-                    return !0
-                }
-                var o = null,
-                    i = null,
-                    a = /Version\/(\S+)\s+Safari/;
-                if (navigator.userAgent) {
-                    var s = navigator.userAgent,
-                        c = s.match(a);
-                    c && s.indexOf("Chrome") === -1 && s.indexOf("Chromium") === -1 && (o = "Safari", i = c[1])
-                }
-                n.exports = {
-                    agent: o,
-                    version: i,
-                    match: r
-                }
-            }, {}],
-            21: [function(t, n, e) {
-                function r(t, n) {
-                    var e = [],
-                        r = "",
-                        i = 0;
-                    for (r in t) o.call(t, r) && (e[i] = n(r, t[r]), i += 1);
-                    return e
-                }
-                var o = Object.prototype.hasOwnProperty;
-                n.exports = r
-            }, {}],
-            22: [function(t, n, e) {
-                function r(t, n, e) {
-                    n || (n = 0), "undefined" == typeof e && (e = t ? t.length : 0);
-                    for (var r = -1, o = e - n || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = t[n + r];
-                    return i
-                }
-                n.exports = r
-            }, {}],
-            23: [function(t, n, e) {
-                n.exports = {
-                    exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
-                }
-            }, {}],
-            ee: [function(t, n, e) {
-                function r() {}
-
-                function o(t) {
-                    function n(t) {
-                        return t && t instanceof r ? t : t ? c(t, s, i) : i()
-                    }
-
-                    function e(e, r, o, i) {
-                        if (!l.aborted || i) {
-                            t && t(e, r, o);
-                            for (var a = n(o), s = m(e), c = s.length, f = 0; f < c; f++) s[f].apply(a, r);
-                            var d = u[y[e]];
-                            return d && d.push([x, e, r, a]), a
-                        }
-                    }
-
-                    function p(t, n) {
-                        g[t] = m(t).concat(n)
-                    }
-
-                    function h(t, n) {
-                        var e = g[t];
-                        if (e)
-                            for (var r = 0; r < e.length; r++) e[r] === n && e.splice(r, 1)
-                    }
-
-                    function m(t) {
-                        return g[t] || []
-                    }
-
-                    function w(t) {
-                        return d[t] = d[t] || o(e)
-                    }
-
-                    function v(t, n) {
-                        f(t, function(t, e) {
-                            n = n || "feature", y[e] = n, n in u || (u[n] = [])
-                        })
-                    }
-                    var g = {},
-                        y = {},
-                        x = {
-                            on: p,
-                            addEventListener: p,
-                            removeEventListener: h,
-                            emit: e,
-                            get: w,
-                            listeners: m,
-                            context: n,
-                            buffer: v,
-                            abort: a,
-                            aborted: !1
-                        };
-                    return x
-                }
-
-                function i() {
-                    return new r
-                }
-
-                function a() {
-                    (u.api || u.feature) && (l.aborted = !0, u = l.backlog = {})
-                }
-                var s = "nr@context",
-                    c = t("gos"),
-                    f = t(21),
-                    u = {},
-                    d = {},
-                    l = n.exports = o();
-                l.backlog = u
-            }, {}],
-            gos: [function(t, n, e) {
-                function r(t, n, e) {
-                    if (o.call(t, n)) return t[n];
-                    var r = e();
-                    if (Object.defineProperty && Object.keys) try {
-                        return Object.defineProperty(t, n, {
-                            value: r,
-                            writable: !0,
-                            enumerable: !1
-                        }), r
-                    } catch (i) {}
-                    return t[n] = r, r
-                }
-                var o = Object.prototype.hasOwnProperty;
-                n.exports = r
-            }, {}],
-            handle: [function(t, n, e) {
-                function r(t, n, e, r) {
-                    o.buffer([t], r), o.emit(t, n, e)
-                }
-                var o = t("ee").get("handle");
-                n.exports = r, r.ee = o
-            }, {}],
-            id: [function(t, n, e) {
-                function r(t) {
-                    var n = typeof t;
-                    return !t || "object" !== n && "function" !== n ? -1 : t === window ? 0 : a(t, i, function() {
-                        return o++
-                    })
-                }
-                var o = 1,
-                    i = "nr@id",
-                    a = t("gos");
-                n.exports = r
-            }, {}],
-            loader: [function(t, n, e) {
-                function r() {
-                    if (!E++) {
-                        var t = b.info = NREUM.info,
-                            n = p.getElementsByTagName("script")[0];
-                        if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && n)) return u.abort();
-                        f(y, function(n, e) {
-                            t[n] || (t[n] = e)
-                        }), c("mark", ["onload", a() + b.offset], null, "api");
-                        var e = p.createElement("script");
-                        e.src = "https://" + t.agent, n.parentNode.insertBefore(e, n)
-                    }
-                }
-
-                function o() {
-                    "complete" === p.readyState && i()
-                }
-
-                function i() {
-                    c("mark", ["domContent", a() + b.offset], null, "api")
-                }
-
-                function a() {
-                    return O.exists && performance.now ? Math.round(performance.now()) : (s = Math.max((new Date).getTime(), s)) - b.offset
-                }
-                var s = (new Date).getTime(),
-                    c = t("handle"),
-                    f = t(21),
-                    u = t("ee"),
-                    d = t(20),
-                    l = window,
-                    p = l.document,
-                    h = "addEventListener",
-                    m = "attachEvent",
-                    w = l.XMLHttpRequest,
-                    v = w && w.prototype;
-                NREUM.o = {
-                    ST: setTimeout,
-                    SI: l.setImmediate,
-                    CT: clearTimeout,
-                    XHR: w,
-                    REQ: l.Request,
-                    EV: l.Event,
-                    PR: l.Promise,
-                    MO: l.MutationObserver
-                };
-                var g = "" + location,
-                    y = {
-                        beacon: "bam.nr-data.net",
-                        errorBeacon: "bam.nr-data.net",
-                        agent: "js-agent.newrelic.com/nr-1169.min.js"
-                    },
-                    x = w && v && v[h] && !/CriOS/.test(navigator.userAgent),
-                    b = n.exports = {
-                        offset: s,
-                        now: a,
-                        origin: g,
-                        features: {},
-                        xhrWrappable: x,
-                        userAgent: d
-                    };
-                t(15), t(18), p[h] ? (p[h]("DOMContentLoaded", i, !1), l[h]("load", r, !1)) : (p[m]("onreadystatechange", o), l[m]("onload", r)), c("mark", ["firstbyte", s], null, "api");
-                var E = 0,
-                    O = t(23)
-            }, {}],
-            "wrap-function": [function(t, n, e) {
-                function r(t) {
-                    return !(t && t instanceof Function && t.apply && !t[a])
-                }
-                var o = t("ee"),
-                    i = t(22),
-                    a = "nr@original",
-                    s = Object.prototype.hasOwnProperty,
-                    c = !1;
-                n.exports = function(t, n) {
-                    function e(t, n, e, o) {
-                        function nrWrapper() {
-                            var r, a, s, c;
-                            try {
-                                a = this, r = i(arguments), s = "function" == typeof e ? e(r, a) : e || {}
-                            } catch (f) {
-                                l([f, "", [r, a, o], s])
-                            }
-                            u(n + "start", [r, a, o], s);
-                            try {
-                                return c = t.apply(a, r)
-                            } catch (d) {
-                                throw u(n + "err", [r, a, d], s), d
-                            } finally {
-                                u(n + "end", [r, a, c], s)
-                            }
-                        }
-                        return r(t) ? t : (n || (n = ""), nrWrapper[a] = t, d(t, nrWrapper), nrWrapper)
-                    }
-
-                    function f(t, n, o, i) {
-                        o || (o = "");
-                        var a, s, c, f = "-" === o.charAt(0);
-                        for (c = 0; c < n.length; c++) s = n[c], a = t[s], r(a) || (t[s] = e(a, f ? s + o : o, i, s))
-                    }
-
-                    function u(e, r, o) {
-                        if (!c || n) {
-                            var i = c;
-                            c = !0;
-                            try {
-                                t.emit(e, r, o, n)
-                            } catch (a) {
-                                l([a, e, r, o])
-                            }
-                            c = i
-                        }
-                    }
-
-                    function d(t, n) {
-                        if (Object.defineProperty && Object.keys) try {
-                            var e = Object.keys(t);
-                            return e.forEach(function(e) {
-                                Object.defineProperty(n, e, {
-                                    get: function() {
-                                        return t[e]
-                                    },
-                                    set: function(n) {
-                                        return t[e] = n, n
-                                    }
-                                })
-                            }), n
-                        } catch (r) {
-                            l([r])
-                        }
-                        for (var o in t) s.call(t, o) && (n[o] = t[o]);
-                        return n
-                    }
-
-                    function l(n) {
-                        try {
-                            t.emit("internal-error", n)
-                        } catch (e) {}
-                    }
-                    return t || (t = o), e.inPlace = f, e.flag = a, e
-                }
-            }, {}]
-        }, {}, ["loader", 2, 12, 4, 3]);
-    </script>
-    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
-    <meta content="/nowhere" name="turbolinks-root">
-    <title>Pembayaran Pembelian | Jurnal</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/jurnal-icon-3077d49acc1387104534d55005877fac.png">
-    <link rel="stylesheet" media="all" href="/assets/transaction-a71a4fd59d3843cd39695203f829219a.css">
-
-    <script src="/assets/application-cd90675b0fa71aacf7ef2f52de1cb52a.js"></script>
-    <meta name="csrf-param" content="authenticity_token">
-    <meta name="csrf-token" content="Wh6JeLkZWoOdT4oCv96slgac6nf6Z6cl31ngJeySnV89cd/uJbavphQC7FvmCM0wq2pQTj3QcFBMbJ8CXmklMg==">
-
-    <script>
-        try {
-            Typekit.load({
-                async: true
-            });
-        } catch (e) {}
-    </script>
-    <style id="poshytip-css-tip-twitter" type="text/css">
-        div.tip-twitter {
-            visibility: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        div.tip-twitter table.tip-table,
-        div.tip-twitter table.tip-table td {
-            margin: 0;
-            font-family: inherit;
-            font-size: inherit;
-            font-weight: inherit;
-            font-style: inherit;
-            font-variant: inherit;
-            vertical-align: middle;
-        }
-
-        div.tip-twitter td.tip-bg-image span {
-            display: block;
-            font: 1px/1px sans-serif;
-            height: 10px;
-            width: 10px;
-            overflow: hidden;
-        }
-
-        div.tip-twitter td.tip-right {
-            background-position: 100% 0;
-        }
-
-        div.tip-twitter td.tip-bottom {
-            background-position: 100% 100%;
-        }
-
-        div.tip-twitter td.tip-left {
-            background-position: 0 100%;
-        }
-
-        div.tip-twitter div.tip-inner {
-            background-position: -10px -10px;
-        }
-
-        div.tip-twitter div.tip-arrow {
-            visibility: hidden;
-            position: absolute;
-            overflow: hidden;
-            font: 1px/1px sans-serif;
-        }
-    </style>
-    <style id="poshytip-css-tip-twitter-white" type="text/css">
-        div.tip-twitter-white {
-            visibility: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        div.tip-twitter-white table.tip-table,
-        div.tip-twitter-white table.tip-table td {
-            margin: 0;
-            font-family: inherit;
-            font-size: inherit;
-            font-weight: inherit;
-            font-style: inherit;
-            font-variant: inherit;
-            vertical-align: middle;
-        }
-
-        div.tip-twitter-white td.tip-bg-image span {
-            display: block;
-            font: 1px/1px sans-serif;
-            height: 10px;
-            width: 10px;
-            overflow: hidden;
-        }
-
-        div.tip-twitter-white td.tip-right {
-            background-position: 100% 0;
-        }
-
-        div.tip-twitter-white td.tip-bottom {
-            background-position: 100% 100%;
-        }
-
-        div.tip-twitter-white td.tip-left {
-            background-position: 0 100%;
-        }
-
-        div.tip-twitter-white div.tip-inner {
-            background-position: -10px -10px;
-        }
-
-        div.tip-twitter-white div.tip-arrow {
-            visibility: hidden;
-            position: absolute;
-            overflow: hidden;
-            font: 1px/1px sans-serif;
-        }
-    </style>
-    <style type="text/css">
-        .fancybox-margin {
-            margin-right: 17px;
+            a {
+                color: #000;
+                text-decoration: none
+            }
         }
     </style>
 </head>
+<style>
+    .text-start {
+        text-align: left !important
+    }
 
-<body id="modj" class="pace-done" style="">
-    <div class="pace  pace-inactive">
-        <div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
-            <div class="pace-progress-inner"></div>
+    .text-end {
+        text-align: right !important
+    }
+
+    .border-start {
+        border-left: 1px solid #000 !important
+    }
+
+    .border-end {
+        border-right: 1px solid #000 !important
+    }
+
+    .float-left {
+        float: left
+    }
+</style>
+
+<body style="background: #eee url('resources/noise.png')"><noscript>
+        <div style="background-color: yellow; padding: 100px; text-align: center; font-weight: bold; border-bottom: 1px solid #ccc; font-size: 16px">Javascript Error</div>
+    </noscript>
+    <style>
+        #navbar {
+            z-index: 9;
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            margin: 0px;
+        }
+
+        #navbar {
+            font-size: 12px;
+            background-color: #FAFAFA;
+            background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
+            background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+            background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
+            background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
+            *zoom: 1;
+            background-repeat: repeat-x;
+            border: 1px solid #D4D4D4;
+            font-weight: bold;
+            border-width: 0 0 1px 0;
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #navbar table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #navbar td {
+            width: 1px;
+            white-space: nowrap;
+        }
+
+        #navbar td.active {
+            color: #555555;
+            background-color: #e5e5e5;
+            -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+            -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+            box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+        }
+
+        #navbar a {
+            color: #777777;
+            display: block;
+            padding: 15px
+        }
+
+        #navbar a:hover {
+            color: #333;
+            text-decoration: none
+        }
+
+        #navbar a img {
+            margin: 0px 6px;
+            margin-top: -4px;
+            opacity: 0.4;
+        }
+
+        #navbar a:hover img {
+            opacity: 0.8
+        }
+    </style>
+    <div id="navbar" class="print-display-none">
+        <div style="padding-right: 15px">
+            <table>
+                <tr>
+                    <td><a href="javascript:window.history.back();"><img src="resources/webalys/_16px/triangle-big-3-01.png" style="margin-top: -2px" />Back</a></td>
+                    <td class="active"><a href="/businesses"><img src="resources/webalys/_16px/places-11.png" style="margin-top: -2px" />Businesses</a></td>
+                    <td><a href="/users"><img src="resources/webalys/_16px/users-23.png" style="margin-top: -2px" />Users</a></td>
+                    <td><a href="/preferences"><img src="resources/webalys/_16px/setting-2.png" style="margin-top: -2px" />Preferences</a></td>
+                    <td><a href="/support"><img src="resources/webalys/_16px/interface-56.png" style="margin-top: -2px" />Support</a></td>
+                    <td style="width: auto"></td>
+                </tr>
+            </table>
         </div>
-        <div class="pace-activity"></div>
     </div>
-    <div id="wrapper">
-        <div class="alert alert-danger alert-notif alert-almost-expired hidden">
-            <span>
-                Masa percobaan
-            </span>
-            <p>
-                Halo Qomarudin, masa percobaan Anda akan berakhir dalam 9 hari.
-                <a href="/company/setting#billings">Berlangganan sekarang</a>
-            </p>
-            <button arial-label="Close" class="close close-notif" data-dismiss="alert">
-                ×
-            </button>
-        </div>
-        <div class="navbar-static-side in" id="sidebar-wrapper">
-            <ul class="side-menu nav" id="side-menu">
-                <li class="sidebar-brand">
-                    <a href="/">
-                        <img alt="Jurnal" class="logo_j" height="46" src="/assets/jurnal-logo-6a3bcb679aa25f58656e42a7fee9ea65.svg" width="144">
-                    </a>
-                </li>
-                <li class="" id="dashboard-li">
-                    <a class="sidenav-tooltip" href="/" id="vnav-dashboard-link">
-                        <img class="img_icon" src="/assets/icon/dashboard-a58143f51f6fef150eac016e847c7477.svg">
-                        <span class="nav-label in">
-                            Dasbor
-                        </span>
-                    </a>
-                </li>
-                <li class="" id="reports-li">
-                    <a class="sidenav-tooltip" href="/reports/index" id="vnav-reports-link">
-                        <img class="img_icon" src="/assets/icon/reports-7c252cd294e650672b1c1526c295772c.svg">
-                        <span class="nav-label in">
-                            Laporan
-                        </span>
-                    </a>
-                </li>
-                <li class="v-nav-divider"></li>
-                <li class="" id="registers-li">
-                    <a class="sidenav-tooltip" href="/registers/index" id="vnav-cashbank-link">
-                        <img class="img_icon" src="/assets/icon/cashandbank-5b96d1806ce8ee7ae3e834712e7eb59e.svg">
-                        <span class="nav-label in">
-                            Kas &amp; Bank
-                        </span>
-                    </a>
-                </li>
-                <li class="" id="sales-li">
-                    <a class="sidenav-tooltip" href="/invoices" id="vnav-sales-link">
-                        <img class="img_icon" src="/assets/icon/sales-ba35cc15f6c3703fdfba0b12e9ad99e8.svg">
-                        <span class="nav-label in">
-                            Penjualan
-                        </span>
-                    </a>
-                </li>
-                <li class="" id="purchases-li">
-                    <a class="sidenav-tooltip" href="/purchases" id="vnav-purchases-link" style="background-color: rgb(58, 200, 248);">
-                        <img class="img_icon" src="/assets/icon/purchase-496f50704826a8eeb3ae15d1d3d97b0d.svg">
-                        <span class="nav-label in">
-                            Pembelian
-                        </span>
-                    </a>
-                </li>
-                <li class="" id="expenses-li">
-                    <a class="sidenav-tooltip" href="/expenses" id="vnav-expenses-link">
-                        <img class="img_icon" src="/assets/icon/expense-4f579aebd575a99d5703ed2021a2279e.svg">
-                        <span class="nav-label in">
-                            Biaya
-                        </span>
-                    </a>
-                </li>
-                <li class="v-nav-divider"></li>
-                <li class="" id="contacts-li">
-                    <a class="sidenav-tooltip" href="/contacts" id="vnav-contacts-link">
-                        <img class="img_icon" src="/assets/icon/contacts-87e803c8a43f242640e5c7ec0d093152.svg">
-                        <span class="nav-label in">
-                            Kontak
-                        </span>
-                    </a>
-                </li>
-                <li class="" id="products-li">
-                    <a class="sidenav-tooltip" href="/products/index" id="vnav-inventory-link">
-                        <img class="img_icon" src="/assets/icon/product-952b62d410edd6ec635efb26fbda9141.svg">
-                        <span class="nav-label in">
-                            Produk
-                        </span>
-                    </a>
-                </li>
-                <li class="" id="assets-li">
-                    <a class="sidenav-tooltip" href="/asset_managements" id="vnav-assetmanagement-link">
-                        <img class="img_icon" src="/assets/icon/asset_management-ef02118e7000c196026e041e1192ff2f.svg">
-                        <span class="nav-label in">
-                            Pengaturan Aset
-                        </span>
-                    </a>
-                </li>
-                <li class="" id="bookkeeping-chart_of_accounts-li">
-                    <a class="sidenav-tooltip" href="/accounts/chart_of_accounts" id="vnav-chartofaccounts-link">
-                        <img class="img_icon" src="/assets/icon/chartofaccount-565b9e28f84edab97374fda0a5ae7055.svg">
-                        <span class="nav-label in">
-                            Daftar Akun
-                        </span>
-                    </a>
-                </li>
-                <li class="v-nav-divider"></li>
-                <li class="" id="payroll-li">
-                    <a class="sidenav-tooltip" href="/payroll" id="vnav-payroll-link">
-                        <img class="img_icon" src="/assets/icon/payroll-72e43b82c6c9764aa2266ab7e85c620b.svg">
-                        <span class="nav-label in">
-                            Payroll
-                        </span>
-                    </a>
-                </li>
-                <li class="" id="company-lists-li">
-                    <a class="sidenav-tooltip" href="/company/lists" id="vnav-otherlists-link">
-                        <img class="img_icon" src="/assets/icon/otherlist-09fd7bf1b0649945939209efefd0de40.svg">
-                        <span class="nav-label in">
-                            Daftar Lainnya
-                        </span>
-                    </a>
-                </li>
-                <li class="" id="add-ons-li">
-                    <a class="sidenav-tooltip" href="/company/add_ons" id="vnav-add-ons-link">
-                        <img class="add_on_image" src="https://s3-ap-southeast-1.amazonaws.com/jurnal-quickbook-s3/images/icon_apps.svg">
-                        <span class="nav-label in">
-                            Add-Ons
-                        </span>
-                    </a>
-                </li>
-                <li class="" id="company-setting-li">
-                    <a class="sidenav-tooltip" href="/company/setting" id="vnav-settings-link">
-                        <img class="img_icon" src="/assets/icon/setting-af9f6e5dc3a8b4270e4222162827e52d.svg">
-                        <span class="nav-label in">
-                            Settings
-                        </span>
-                    </a>
-                </li>
-                <li class="logoff">
-                    <a class="sidenav-tooltip" data-method="delete" href="/users/logout" id="vnav-logout-link">
-                        <img class="img_icon" src="/assets/icon/signout-8fe386b4bb59b7acdb1101c8f94767fe.svg">
-                        <span class="nav-label in">
-                            Keluar
-                        </span>
-                    </a>
-                </li>
-                <li class="border">
-                    <a class="arrow-left in" id="menu-toggle">
-                        <i class="arrow_menu fa fa-fw img_icon fa-angle-double-left"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="notification hidden">
-            <div id="header_section">
-                <nav class="notif-navbar">
-                    <input type="hidden" name="company_notification" id="company_notification" value="215589">
-                    <div class="row header_notif">
-                        <div class="col-md-2 col-sm-2 col-xs-2">
-                            <i class="notif-image-margin">
-                                <img src="/assets/icon/notification-nav-08217abf3303d0f2aea9e7389929ea7c.svg" alt="Notification nav">
-                            </i>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 title">
-                            Pemberitahuan
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-2 arrow">
-                            <i class="fa fa-angle-double-right fa-2x fa-inverse" id="arrow_notif"></i>
+    <div class="print-reset" style="padding: 35px; padding-top: 85px">
+        <link rel="stylesheet" type="text/css" href="resources/theme.css?20.7.13.0" />
+        <link rel="stylesheet" type="text/css" href="resources/custom.css?20.7.13.0" />
+        <table class="print-reset" style="width: 100%; border-collapse: separate">
+            <tr>
+                <td class="print-reset" style="border: 1px solid #ccc; padding-left: 20px; padding-right: 20px; background-color: #f3f3f3; box-shadow: inset 1px 1px 0px #fff;" colspan="2">
+                    <div class="print-display-none" style="line-height: 54px">
+                        <table style="width: 100%">
+                            <tr>
+                                <td style="vertical-align: middle; width: 1px"><a href="/businesses" class="text-decoration-none file-close" style="color: #ccc; font-size: 24px; display: block; font-weight: bold">&times;</a></td>
+                                <td style="vertical-align: middle; padding: 0 10px"><span style="text-shadow: 1px 1px 0 #FFFFFF; color: #555555; font-size: 18px; font-weight: bold">PT. BAC</span><a href="/business-form?FileID=UFQuIEJBQw" style="font-size: 11px; margin: 0 10px; color: #999; text-shadow: 1px 1px 0px #fff">Rename</a></td>
+                                <td style="width: 1px; white-space: nowrap"><a href="/backup?FileID=UFQuIEJBQw" class="btn btn-default btn-sm" style="font-weight: bold">Backup</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <style>
+                    #sidenav div {
+                        padding: 0px;
+                        background-color: #fafafa;
+                        box-shadow: inset 1px 1px 0px #fff;
+                    }
+
+                    #sidenav img {
+                        opacity: 0.4;
+                        vertical-align: top;
+                        width: 16px;
+                        height: 16px
+                    }
+
+                    #sidenav .tab-active {
+                        background-color: #fff;
+                        border-right: none
+                    }
+
+                    #sidenav a.tab-link,
+                    #sidenav span.tab-link {
+                        line-height: 16px;
+                        display: block;
+                        position: relative;
+                        white-space: nowrap;
+                        padding: 12px;
+                        font-size: 11px;
+                        font-weight: bold;
+                        font-family: 'Lucida Grande', Verdana, sans-serif
+                    }
+
+                    #sidenav table {
+                        border: 1px solid #ccc;
+                        border-top: none;
+                        border-spacing: 0px;
+                        width: 100%
+                    }
+
+                    #sidenav .tab-active table {
+                        border-right: 1px solid #fff
+                    }
+
+                    #sidenav a:hover {
+                        text-decoration: none
+                    }
+
+                    #sidenav a:hover img {
+                        opacity: 0.6
+                    }
+
+                    #sidenav .tab-active img {
+                        opacity: 0.6
+                    }
+
+                    #sidenav span.count {
+                        background-color: #FFFFFF;
+                        border: 1px solid #CCCCCC;
+                        border-radius: 3px 3px 3px 3px;
+                        color: #666666;
+                        font-size: 10px;
+                        font-weight: bold;
+                        padding: 3px 6px;
+                    }
+
+                    #sidenav span.count-zero {
+                        border: 1px solid #EEEEEE;
+                        color: #DDDDDD
+                    }
+
+                    #sidenav span.tab-label {
+                        margin: 0 10px;
+                    }
+
+                    #sidenav a:hover span.tooltiptext {
+                        visibility: visible
+                    }
+
+                    .tooltiptext {
+                        visibility: hidden;
+                        background-color: #000;
+                        color: #fff;
+                        text-align: center;
+                        padding: 5px 10px;
+                        border-radius: 6px;
+                        position: absolute;
+                        z-index: 99999;
+                        top: 7px;
+                        left: 42px;
+                    }
+
+                    .tooltiptext::after {
+                        content: ' ';
+                        position: absolute;
+                        top: 50%;
+                        right: 100%;
+                        margin-top: -5px;
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: transparent black transparent transparent;
+                    }
+                </style>
+                <td id="rtl-graypixel" class="print-reset" style="width: 1px; vertical-align: top; padding: 0; background-image: url('resources/graypixel.png'); background-repeat:repeat-y; background-position: right top">
+                    <div id="sidenav" class="print-display-none">
+                        <div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/summary-view?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-76.png" /><span class="tab-label hide-on-collapse">Summary</span><span class="show-on-collapse hidden"><span class="tooltiptext">Summary</span></span></a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/bank-accounts?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-69.png" /><span class="tab-label hide-on-collapse">Bank Accounts</span><span class="show-on-collapse hidden"><span class="tooltiptext">Bank Accounts</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/cash-accounts?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-16.png" /><span class="tab-label hide-on-collapse">Cash Accounts</span><span class="show-on-collapse hidden"><span class="tooltiptext">Cash Accounts</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/receipts-and-payments?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-37.png" /><span class="tab-label hide-on-collapse">Receipts & Payments</span><span class="show-on-collapse hidden"><span class="tooltiptext">Receipts & Payments</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/inter-account-transfers?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/transfers-72.png" /><span class="tab-label hide-on-collapse">Inter Account Transfers</span><span class="show-on-collapse hidden"><span class="tooltiptext">Inter Account Transfers</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/bank-reconciliations?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/status-17.png" /><span class="tab-label hide-on-collapse">Bank Reconciliations</span><span class="show-on-collapse hidden"><span class="tooltiptext">Bank Reconciliations</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/expense-claims?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-41.png" /><span class="tab-label hide-on-collapse">Expense Claims</span><span class="show-on-collapse hidden"><span class="tooltiptext">Expense Claims</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/customers?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/users-23.png" /><span class="tab-label hide-on-collapse">Customers</span><span class="show-on-collapse hidden"><span class="tooltiptext">Customers</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/sales-quotes?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/design-23.png" /><span class="tab-label hide-on-collapse">Sales Quotes</span><span class="show-on-collapse hidden"><span class="tooltiptext">Sales Quotes</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/sales-orders?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-6.png" /><span class="tab-label hide-on-collapse">Sales Orders</span><span class="show-on-collapse hidden"><span class="tooltiptext">Sales Orders</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/sales-invoices?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/communication-55.png" /><span class="tab-label hide-on-collapse">Sales Invoices</span><span class="show-on-collapse hidden"><span class="tooltiptext">Sales Invoices</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/credit-notes?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/edition-66.png" /><span class="tab-label hide-on-collapse">Credit Notes</span><span class="show-on-collapse hidden"><span class="tooltiptext">Credit Notes</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/late-payment-fees?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/time-11.png" /><span class="tab-label hide-on-collapse">Late Payment Fees</span><span class="show-on-collapse hidden"><span class="tooltiptext">Late Payment Fees</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/delivery-notes?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-92.png" /><span class="tab-label hide-on-collapse">Delivery Notes</span><span class="show-on-collapse hidden"><span class="tooltiptext">Delivery Notes</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/suppliers?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/places-11.png" /><span class="tab-label hide-on-collapse">Suppliers</span><span class="show-on-collapse hidden"><span class="tooltiptext">Suppliers</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/purchase-quotes?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/content-36.png" /><span class="tab-label hide-on-collapse">Purchase Quotes</span><span class="show-on-collapse hidden"><span class="tooltiptext">Purchase Quotes</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/purchase-orders?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-1.png" /><span class="tab-label hide-on-collapse">Purchase Orders</span><span class="show-on-collapse hidden"><span class="tooltiptext">Purchase Orders</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/purchase-invoices?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/time-3.png" /><span class="tab-label hide-on-collapse">Purchase Invoices</span><span class="show-on-collapse hidden"><span class="tooltiptext">Purchase Invoices</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/debit-notes?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/files-47.png" /><span class="tab-label hide-on-collapse">Debit Notes</span><span class="show-on-collapse hidden"><span class="tooltiptext">Debit Notes</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/goods-receipts?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-86.png" /><span class="tab-label hide-on-collapse">Goods Receipts</span><span class="show-on-collapse hidden"><span class="tooltiptext">Goods Receipts</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/inventory-items?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-94.png" /><span class="tab-label hide-on-collapse">Inventory Items</span><span class="show-on-collapse hidden"><span class="tooltiptext">Inventory Items</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/inventory-transfers?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-95.png" /><span class="tab-label hide-on-collapse">Inventory Transfers</span><span class="show-on-collapse hidden"><span class="tooltiptext">Inventory Transfers</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/inventory-write-offs?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/design-7.png" /><span class="tab-label hide-on-collapse">Inventory Write-offs</span><span class="show-on-collapse hidden"><span class="tooltiptext">Inventory Write-offs</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/production-orders?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/places-13.png" /><span class="tab-label hide-on-collapse">Production Orders</span><span class="show-on-collapse hidden"><span class="tooltiptext">Production Orders</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/employees?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/users-30.png" /><span class="tab-label hide-on-collapse">Employees</span><span class="show-on-collapse hidden"><span class="tooltiptext">Employees</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/payslips?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-48.png" /><span class="tab-label hide-on-collapse">Payslips</span><span class="show-on-collapse hidden"><span class="tooltiptext">Payslips</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/billable-time-entries?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/time-1.png" /><span class="tab-label hide-on-collapse">Billable Time</span><span class="show-on-collapse hidden"><span class="tooltiptext">Billable Time</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/billable-expenses?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-14.png" /><span class="tab-label hide-on-collapse">Billable Expenses</span><span class="show-on-collapse hidden"><span class="tooltiptext">Billable Expenses</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/fixed-assets?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/content-1.png" /><span class="tab-label hide-on-collapse">Fixed Assets</span><span class="show-on-collapse hidden"><span class="tooltiptext">Fixed Assets</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/depreciation-entries?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/hardware-52.png" /><span class="tab-label hide-on-collapse">Depreciation Entries</span><span class="show-on-collapse hidden"><span class="tooltiptext">Depreciation Entries</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/intangible-assets?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/vote-11.png" /><span class="tab-label hide-on-collapse">Intangible Assets</span><span class="show-on-collapse hidden"><span class="tooltiptext">Intangible Assets</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/amortization-entries?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/business-74.png" /><span class="tab-label hide-on-collapse">Amortization Entries</span><span class="show-on-collapse hidden"><span class="tooltiptext">Amortization Entries</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/capital-accounts?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/users-8.png" /><span class="tab-label hide-on-collapse">Capital Accounts</span><span class="show-on-collapse hidden"><span class="tooltiptext">Capital Accounts</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/special-accounts?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/content-15.png" /><span class="tab-label hide-on-collapse">Special Accounts</span><span class="show-on-collapse hidden"><span class="tooltiptext">Special Accounts</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tab-active">
+                                <table>
+                                    <tr>
+                                        <td><a href="/journal-entries?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/design-6.png" /><span class="tab-label hide-on-collapse">Journal Entries</span><span class="show-on-collapse hidden"><span class="tooltiptext">Journal Entries</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/folders?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/content-3.png" /><span class="tab-label hide-on-collapse">Folders</span><span class="show-on-collapse hidden"><span class="tooltiptext">Folders</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/attachments?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/edition-49.png" /><span class="tab-label hide-on-collapse">Attachments</span><span class="show-on-collapse hidden"><span class="tooltiptext">Attachments</span></span></a></td>
+                                        <td class="count-column hide-on-collapse" style="text-align: right; padding: 0 10px; width: 1px"><span class="count count-zero" style="white-space: nowrap">0</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/emails?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/communication-42.png" /><span class="tab-label hide-on-collapse">Emails</span><span class="show-on-collapse hidden"><span class="tooltiptext">Emails</span></span></a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/reports-view?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/text-9.png" /><span class="tab-label hide-on-collapse">Reports</span><span class="show-on-collapse hidden"><span class="tooltiptext">Reports</span></span></a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td><a href="/settings-view?FileID=UFQuIEJBQw" class="tab-link"><img src="resources/webalys/_16px/setting-8.png" /><span class="tab-label hide-on-collapse">Settings</span><span class="show-on-collapse hidden"><span class="tooltiptext">Settings</span></span></a></td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </nav>
+                    <script type="text/javascript">
+                        var compact = false;
 
-            </div>
-            <div class="hidden" id="setting_section">
-                <nav class="notif-navbar">
-                    <div class="row header_notif">
-                        <div class="col-md-2 col-sm-2 col-xs-2">
-                            <i class="notif-image-margin fa fa-bell"></i>
-                        </div>
-                        <div class="col-md-8 col-sm-8 col-xs-8 title setting-title">
-                            Pengaturan
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-2 arrow" id="setting_arrow_notif">
-                            <i class="fa fa-angle-left fa-2x fa-inverse"></i>
-                        </div>
+                        function toggleNav() {
+
+                            compact = !compact;
+                            document.cookie = 'compact=' + compact.toString();
+
+                            var elements = document.querySelectorAll('.hide-on-collapse');
+                            for (var i = 0, len = elements.length; i < len; i++) {
+                                if (compact) elements[i].classList.add('hidden');
+                                else elements[i].classList.remove('hidden');
+                            }
+
+                            var elements = document.querySelectorAll('.show-on-collapse');
+                            for (var i = 0, len = elements.length; i < len; i++) {
+                                if (!compact) elements[i].classList.add('hidden');
+                                else elements[i].classList.remove('hidden');
+                            }
+
+                        }
+                    </script><a href="javascript:toggleNav();" class="print-display-none" style="position: fixed; bottom: 1px; left: 1px; padding: 9px"><img src="resources/webalys/_16px/interface-32.png" style="opacity: 0.5" /></a>
+                    <div style="height: 100px">
+                        <div class="hide-on-collapse" style="text-align: center; padding-top: 10px"><a href="/tabs-form?Key=ac789d1f-034f-4964-a8b5-ebfffc3511f2&FileID=UFQuIEJBQw" class="btn btn-link btn-xs" style="font-weight: bold; text-shadow: 1px 1px 0px #fff">Customize</a></div>
                     </div>
-                </nav>
+                </td>
+                <td id="rtl-mainpanel" class="print-reset" style="vertical-align: top; background-color: #fff; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; padding: 30px">
+                    <ol class="breadcrumb print-display-none">
+                        <li><a href="/journal-entries?Skip=0&Take=50&FileID=UFQuIEJBQw">Journal Entries</a></li>
+                        <li class="active">Journal Entry — Edit</li>
+                    </ol>
+                    <script src="resources/jquery/jquery-1-8-2-min.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/jquery/jquery-ui-1-9-2-custom-min.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/knockoutjs/knockout.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/knockoutjs/knockout-sortable.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/knockoutjs/knockout-dictionary.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/jquery/globalize.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/decimal/decimal.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/mathexpressionevaluator/math-expression-evaluator-min.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/bootstrap/js/bootstrap-min.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/select2/select2.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/datepicker/bootstrap-datepicker.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/typeahead/typeahead-min.js?v=20.7.13.0" type="text/javascript"></script>
+                    <script src="resources/autosize/autosize.js?v=20.7.13.0" type="text/javascript"></script>
+                    <link rel="stylesheet" type="text/css" href="resources/select2/select2.css?20.7.13.0" />
+                    <link rel="stylesheet" type="text/css" href="resources/typeahead/typeahead.css?20.7.13.0" />
+                    <link rel="stylesheet" type="text/css" href="resources/datepicker/bootstrap-datepicker3.css?20.7.13.0" />
+                    <style>
+                        .input-group .select2-container .select2-choice {
+                            border-bottom-left-radius: 0;
+                            border-top-left-radius: 0
+                        }
 
-            </div>
-            <div id="unavailable">
-                Bagian ini sementara tidak tersedia.
-            </div>
-        </div>
+                        .select2-container .select2-choice {
+                            height: 30px;
+                            line-height: 30px
+                        }
 
-        <div class="out" id="page-wrapper">
-            <div class="mobile-nav show-small col-xs-12">
-                <span class="icn-toggle">
-                    <b class="srt">
-                        Toggle
-                    </b>
-                </span>
-                <!-- / NOTIFICATION ICON -->
-                <span class="notif-toggle notif-sini">
-                    <div class="fa fa-bell-o fa-2x"></div>
-                </span>
-                <a href="/">
-                    <img alt="Jurnal" height="40" src="/assets/jurnal-logo-6a3bcb679aa25f58656e42a7fee9ea65.svg" width="125">
-                </a>
-            </div>
-            <!-- /Top Navbar -->
-            <nav class="navbar sm top-navbar">
-                <div class="col-xs-12 col-sm-7 col-md-4 show-large">
-                    <ul class="shortcut nav navbar-nav">
-                        <li id="menu-bar-invoice-create">
-                            <a href="/invoices/new">
-                                <img class="img_icon_top" id="sale" src="/assets/icon/sales-ba35cc15f6c3703fdfba0b12e9ad99e8.svg">
-                                Jual
-                            </a>
-                        </li>
-                        <li id="menu-bar-purchase-create">
-                            <a href="/purchases/new">
-                                <img class="img_icon_top" id="purchase" src="/assets/icon/purchase-496f50704826a8eeb3ae15d1d3d97b0d.svg">
-                                Beli
-                            </a>
-                        </li>
-                        <li id="menu-bar-expense-create">
-                            <a href="/expenses/new">
-                                <img class="img_icon_top" id="expense" src="/assets/icon/expense-4f579aebd575a99d5703ed2021a2279e.svg">
-                                Biaya
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-5 col-md-8">
-                    <div class="row" id="show_notif" style="display:block;">
-                        <!-- / NOTIFICATION ICON -->
-                        <div class="notif_icon_box float-right" id="notif_id">
-                            <center>
-                                <div class="notif_icon">
-                                    <img style="width:35%; padding-top:14px; margin-right:18px;" src="/assets/icon/notification-nav-08217abf3303d0f2aea9e7389929ea7c.svg" alt="Notification nav">
-                                </div>
-                            </center>
-                        </div>
-                        <div class="top_five_activities_box">
-                            <div class="top-five-dropdown" id="dd" tabindex="1">
-                                <span>
-                                    <img style="width: 75%; margin-right: 2px; margin-top: -2px; margin-left: 2px;" id="activity-timeline-img" src="/assets/icon/activity-nav-24cf5bef20cfb30310105fcdf2df2fa1.svg">
-                                </span>
-                                <ul class="dropdown">
-                                    <div class="activity-timeline-toolbar">
-                                        <div class="medium-text">
-                                            Riwayat Aktifitas
+                        .select2-container .select2-choice .select2-chosen {
+                            font-size: 12px;
+                            color: #555
+                        }
+
+                        .select2-container .select2-choice.select2-default .select2-chosen {
+                            color: #ccc
+                        }
+
+                        .select2-container,
+                        .select2-drop {
+                            font-size: 12px;
+                            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                        }
+
+                        .select2-container .select2-choice {
+                            background-image: none;
+                            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset
+                        }
+
+                        .select2-container .select2-choice {
+                            border: 1px solid #ccc
+                        }
+
+                        .select2-container-active .select2-choice {
+                            border: 1px solid #5897FB
+                        }
+
+                        .select2-container .select2-choice .select2-arrow {
+                            background: none;
+                            border-left: none
+                        }
+
+                        table.input td input,
+                        table.input td select,
+                        table.input td .select2-container {
+                            margin-bottom: 0px
+                        }
+
+                        .tt-suggestions {
+                            font-size: 12px;
+                        }
+                    </style>
+                    <script type="text/javascript">
+                        Globalize.addCultureInfo("default", {
+                            numberFormat: {
+                                pattern: ["-n"],
+                                decimals: "2",
+                                ",": ",",
+                                ".": ".",
+                                groupSizes: [3],
+                                "+": "+",
+                                "-": "-"
+                            }
+                        });
+                        Globalize.culture("default");
+                    </script>
+                    <script type="text/javascript">
+                        $.fn.datepicker.dates['en'].daysMin = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+                        $.fn.datepicker.dates['en'].months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                        $.fn.datepicker.dates['en'].monthsShort = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                        $.fn.datepicker.dates['en'].today = "Today";
+                    </script>
+                    <script type="text/javascript">
+                        if (!Number.prototype.getDecimals) {
+                            Number.prototype.getDecimals = function() {
+                                var num = parseFloat(this.toFixed(10));
+                                var match = ('' + num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+                                if (!match)
+                                    return 0;
+                                return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));
+                            }
+                        }
+
+                        function getDecimal(text, defaultValue) {
+                            if (text && text.length > 0) return new Decimal(text);
+                            return new Decimal(defaultValue);
+                        }
+                        String.prototype.replaceAll = function(target, replacement) {
+                            return this.split(target).join(replacement);
+                        };
+                    </script>
+                    <script type="text/javascript">
+                        function JournalEntryViewModel() {
+                            var self = this;
+                            self.Date = ko.observable();
+                            self.Reference = ko.observable();
+                            self.Narration = ko.observable();
+                            self.Lines = ko.observableArray();
+
+                            function TransactionLineViewModel() {
+                                var self = this;
+                                self.Helper = ko.observable();
+                                self.Description = ko.observable();
+                                self.Account = ko.observable();
+                                self.TaxCode = ko.observable();
+                                self.Qty = ko.observable();
+                                self.Item = ko.observable();
+                                self.Amount = ko.observable();
+                                self.Debit = ko.observable();
+                                self.Credit = ko.observable();
+                                self.Discount = ko.observable();
+                                self.TrackingCode = ko.observable();
+                                self.ProposedAccountAmount = ko.observable();
+                                self.CustomFields = ko.observableDictionary();
+                                self.DiscountAmount = ko.observable();
+                                self.MemberAccount = ko.observable();
+                                self.BillableExpenseCustomer = ko.observable();
+                                self.BillableExpenseSalesInvoice = ko.observable();
+                                self.Invoice = ko.observable();
+                                self.Obsolete_Disbursement = ko.observable();
+                                self.Obsolete_Account = ko.observable();
+                                self.Obsolete_SalesInvoice = ko.observable();
+                                self.Obsolete_PurchaseInvoice = ko.observable();
+                                self.Obsolete_Employee = ko.observable();
+                                self.Obsolete_ExpenseClaimPayer = ko.observable();
+                                self.Obsolete_IntangibleAsset = ko.observable();
+                                self.Obsolete_InventoryItem = ko.observable();
+                                self.Obsolete_Customer = ko.observable();
+                                self.Obsolete_Supplier = ko.observable();
+                                self.Obsolete_FixedAsset = ko.observable();
+                                self.Obsolete_Member = ko.observable();
+                                self.Obsolete_Item = ko.observable();
+                                self.Obsolete_PurchaseInvoiceItem = ko.observable();
+                                self.Obsolete_Discount = ko.observable();
+                                self.Obsolete_EquityReason = ko.observable();
+                                self.Obsolete_CurrencyAmount = ko.observable();
+                                self.Obsolete_DisbursementStatus = ko.observable();
+                                self.Obsolete_DisbursementSalesInvoice = ko.observable();
+                                self.Obsolete_DisbursementWriteOffDate = ko.observable();
+                                self.Obsolete_Cheque = ko.observable();
+                                self.Obsolete_BankDeposit = ko.observable();
+                                self.Obsolete_BankAccount = ko.observable();
+                                self.Obsolete_CashAccount = ko.observable();
+                                self.Obsolete_Amount = ko.observable();
+                                self.Obsolete_Invoice = ko.observable();
+                                self.Obsolete_BillableExpense = ko.observable();
+                                self.Item.subscribe(function(data) {
+                                    if (viewModelInit) return;
+                                    if (data && data.Description && data.Description.length > 0) {
+                                        self.Description(data.Description);
+                                    }
+                                    if (data && data.TaxCode && data.TaxCode.length > 0) {
+                                        self.TaxCode({
+                                            id: data.TaxCode,
+                                            text: data.TaxCodeName
+                                        });
+                                    }
+                                    if (data && data.UnitPrice != null && !isNaN(data.UnitPrice)) {
+                                        self.Amount(data.UnitPrice);
+                                    }
+                                    if (data && data.TrackingCode && data.TrackingCode.length > 0) {
+                                        self.TrackingCode({
+                                            id: data.TrackingCode
+                                        });
+                                    }
+                                    if (self.Qty() == null || isNaN(self.Qty())) {
+                                        self.Qty(1);
+                                    }
+                                });
+                                self.Helper.subscribe(function(data) {
+                                    if (viewModelInit) return;
+                                    if (data && data.TaxCode && data.TaxCode.length > 0) {
+                                        self.TaxCode({
+                                            id: data.TaxCode,
+                                            text: data.TaxCodeName
+                                        });
+                                    }
+                                    self.Account(data && data.Account ? {
+                                        id: data.Account
+                                    } : null);
+                                });
+                                self.Account.subscribe(function(data) {
+                                    if (viewModelInit) return;
+                                    self.Invoice(null);
+                                    if (data && data.TaxCode && data.TaxCode.length > 0) {
+                                        self.TaxCode({
+                                            id: data.TaxCode,
+                                            text: data.TaxCodeName
+                                        });
+                                    }
+                                });
+                                self.LineTotal = ko.computed(function() {
+                                    var qty = self.Qty();
+                                    var amount = self.Amount();
+                                    var discount = self.Discount();
+                                    var discountAmount = self.DiscountAmount();
+                                    if (qty == null || isNaN(qty)) {
+                                        qty = 1;
+                                    };
+                                    if (amount == null || isNaN(amount)) {
+                                        amount = 0;
+                                    };
+                                    var total = new Decimal(amount);
+                                    var total = total.times(qty);
+                                    if (discount != null && !isNaN(discount) && discount != 0 && total.toNumber() != 0) {
+                                        total = total.dividedBy(100).times(new Decimal(100).minus(discount));
+                                    };
+                                    if (discountAmount != null && !isNaN(discountAmount) && discountAmount != 0) {
+                                        total = total.minus(discountAmount);
+                                    };
+                                    return total.toNumber();
+                                });
+                                self.FormattedLineTotal = ko.computed(function() {
+                                    var total = self.LineTotal();
+                                    return Globalize.format(total, 'n' + total.getDecimals());
+                                });
+                            }
+                            self.AddLines = function() {
+                                self.Lines.push(new TransactionLineViewModel());
+                            };
+                            self.Add5Lines = function() {
+                                for (var i = 0; i < 5; i++) self.Lines.push(new TransactionLineViewModel());
+                            };
+                            self.Add10Lines = function() {
+                                for (var i = 0; i < 10; i++) self.Lines.push(new TransactionLineViewModel());
+                            };
+                            self.Add20Lines = function() {
+                                for (var i = 0; i < 20; i++) self.Lines.push(new TransactionLineViewModel());
+                            };
+                            self.RemoveLines = function(line) {
+                                self.Lines.remove(line);
+                            };
+                            self.CustomFields = ko.observableDictionary();
+                            self.Currency = ko.observable();
+                            self.CustomTheme = ko.observable();
+                            self.Theme = ko.observable();
+                            self.AutomaticReference = ko.observable();
+                            self.InventoryLocation = ko.observable();
+                            self.Obsolete_IsReversing = ko.observable();
+                            self.Obsolete_Notes = ko.observable();
+                            self.Key = ko.observable();
+                            self.Timestamp = ko.observable();
+                        }
+                        var viewModelInit = true;
+                        var viewModel = new JournalEntryViewModel();
+                        viewModel.Date(new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate());
+                        viewModel.Reference(null);
+                        viewModel.Narration(null);
+                        viewModel.AddLines();
+                        viewModel.Lines()[0].Helper(null);
+                        viewModel.Lines()[0].Description(null);
+                        viewModel.Lines()[0].Obsolete_EquityReason(null);
+                        viewModel.Lines()[0].Obsolete_DisbursementStatus("Uninvoiced");
+                        viewModel.AddLines();
+                        viewModel.Lines()[1].Helper(null);
+                        viewModel.Lines()[1].Description(null);
+                        viewModel.Lines()[1].Obsolete_EquityReason(null);
+                        viewModel.Lines()[1].Obsolete_DisbursementStatus("Uninvoiced");
+                        viewModel.CustomTheme(false);
+                        viewModel.AutomaticReference(false);
+                        viewModel.Obsolete_IsReversing(false);
+                        viewModel.Obsolete_Notes(null);
+                        viewModel.Key({
+                            id: "00000000-0000-0000-0000-000000000000",
+                            text: "00000000000000000000000000000000"
+                        });
+                        viewModel.Key({
+                            id: "00000000-0000-0000-0000-000000000000",
+                            text: "00000000000000000000000000000000"
+                        });
+                        viewModel.Timestamp(0);
+                        var viewModelInit = false;
+                    </script>
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><span class="header">Journal Entry</span></div>
+                        <div class="panel-body" style="background-color: #f9f9f9; box-shadow: inset 0px 1px 0px #fff; padding: 30px">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="form-group"><label>Date</label>
+                                            <div class="controls"><input type="text" class="form-control input-sm" style="width: 100px; margin-bottom: 0px; text-align: center" data-bind="datePicker: Date" /></div>
                                         </div>
-                                    </div>
-                                    <div class="card-container"></div>
-                                    <div id="card_pagination" style="display:none;"></div>
+                                    </td>
+                                    <td style="padding-left: 10px">
+                                        <div class="form-group"><label>Reference</label>
+                                            <div class="input-group"><span class="input-group-addon"><input type="checkbox" data-bind="checked: AutomaticReference" /></span><input type="text" class="form-control input-sm" style="width: 80px; text-align: center" data-bind="value: Reference, visible: !AutomaticReference()" /><input type="text" class="form-control input-sm" style="width: 80px; text-align: center" value="Automatic" readonly="readonly" data-bind="visible: AutomaticReference" /></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="form-group"><label>Narration</label><input type="text" class="form-control input-sm" style="width: 400px" data-bind="textInput: Narration" /></div>
+                            <table style="margin-left: -20px">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th style="text-align: left" colspan="3"><label>Account</label></th>
+                                        <th style="text-align: left; width: 300px"><label>Description</label></th>
+                                        <th style="text-align: center" data-bind="visible: false"><label>Qty</label></th>
+                                        <th style="text-align: center"><label>Debit</label></th>
+                                        <th style="text-align: center"><label>Credit</label></th>
+                                    </tr>
+                                </thead>
+                                <tbody data-bind="sortable: { data: Lines, options: { handle: '.sortableHandle', cursor: 'move' } }">
+                                    <tr>
+                                        <td class="sortableHandle" style="cursor: move"><img src="resources/webalys/_16px/interface-30.png" style="margin-right: 4px" data-bind="style: { opacity: ($root.Lines().length > 1) ? '0.25' : '0' }" /></td>
+                                        <td style="vertical-align: top; min-width: 200px" data-bind="attr: { colspan: Item() == null && Helper() != null && (Helper().id == '054dfae1-c34a-475e-abde-49e0385ffc9a' || Helper().id == '650a36fe-801f-4031-8d5b-ab422d061fca' || Helper().id == 'f728124f-c6b6-4dad-82c5-22fc0d8d0571' || Helper().id == '059dbfb9-1c80-4043-887f-0fc441099fe0') ? '1' : '3' }">
+                                            <div data-bind="visible: Item() != null"></div>
+                                            <div data-bind="visible: Item() == null"><select data-bind="select2data: Helper" data-placeholder="Suspense" data-width="100%">
+                                                    <option></option>
+                                                    <optgroup label="Income">
+                                                        <option value="6a53805c-e299-4ed5-977d-489049e19051" data-TaxCode="" data-TaxCodeName="" data-Account="6a53805c-e299-4ed5-977d-489049e19051">Interest received</option>
+                                                        <option value="af4ced94-d720-4815-a3a5-a5931bb87ceb" data-TaxCode="" data-TaxCodeName="" data-Account="af4ced94-d720-4815-a3a5-a5931bb87ceb">Sales</option>
+                                                    </optgroup>
+                                                    <optgroup label="Expenses">
+                                                        <option value="f72c1ad1-2e37-4779-accf-7d9accd9cdc4" data-TaxCode="" data-TaxCodeName="" data-Account="f72c1ad1-2e37-4779-accf-7d9accd9cdc4">Accounting fees</option>
+                                                        <option value="2b9eb1e9-1c20-4c14-831d-c9317f11138a" data-TaxCode="" data-TaxCodeName="" data-Account="2b9eb1e9-1c20-4c14-831d-c9317f11138a">Advertising and promotion</option>
+                                                        <option value="f347c0dc-3a4c-4f00-852e-018815a534dc" data-TaxCode="" data-TaxCodeName="" data-Account="f347c0dc-3a4c-4f00-852e-018815a534dc">Bank charges</option>
+                                                        <option value="107a396b-1eb8-4cc4-b045-99e2229bd36b" data-TaxCode="" data-TaxCodeName="" data-Account="107a396b-1eb8-4cc4-b045-99e2229bd36b">Computer equipment</option>
+                                                        <option value="c325f9b5-2a4d-4382-9000-a5adfae62dd7" data-TaxCode="" data-TaxCodeName="" data-Account="c325f9b5-2a4d-4382-9000-a5adfae62dd7">Donations</option>
+                                                        <option value="caf713d4-a1f0-4d45-bf7b-2845bbf0acba" data-TaxCode="" data-TaxCodeName="" data-Account="caf713d4-a1f0-4d45-bf7b-2845bbf0acba">Electricity</option>
+                                                        <option value="7bf1289b-5683-402b-a323-3ddba083159a" data-TaxCode="" data-TaxCodeName="" data-Account="7bf1289b-5683-402b-a323-3ddba083159a">Entertainment</option>
+                                                        <option value="3e5f305c-0057-4f01-83d9-d93d4c0a7c39" data-TaxCode="" data-TaxCodeName="" data-Account="3e5f305c-0057-4f01-83d9-d93d4c0a7c39">Legal fees</option>
+                                                        <option value="16c7ae7e-2b66-4381-bb32-bb6c77e2249c" data-TaxCode="" data-TaxCodeName="" data-Account="16c7ae7e-2b66-4381-bb32-bb6c77e2249c">Motor vehicle expenses</option>
+                                                        <option value="81631509-7bd4-49d2-b736-14f27a1d8054" data-TaxCode="" data-TaxCodeName="" data-Account="81631509-7bd4-49d2-b736-14f27a1d8054">Printing and stationery</option>
+                                                        <option value="f9367e42-98f6-41fd-85a8-f483c270d645" data-TaxCode="" data-TaxCodeName="" data-Account="f9367e42-98f6-41fd-85a8-f483c270d645">Rent</option>
+                                                        <option value="6fc4effb-3133-479d-a6bd-3fc14241a75e" data-TaxCode="" data-TaxCodeName="" data-Account="6fc4effb-3133-479d-a6bd-3fc14241a75e">Repairs and maintenance</option>
+                                                        <option value="6588ef8e-bb7f-4146-aeae-045f700669b3" data-TaxCode="" data-TaxCodeName="" data-Account="6588ef8e-bb7f-4146-aeae-045f700669b3">Telephone</option>
+                                                    </optgroup>
+                                                    <optgroup label="Assets">
+                                                        <option value="059dbfb9-1c80-4043-887f-0fc441099fe0" data-TaxCode="" data-TaxCodeName="" data-Account="059dbfb9-1c80-4043-887f-0fc441099fe0" data-currency="">Billable expenses</option>
+                                                    </optgroup>
+                                                    <optgroup label="Liabilities"></optgroup>
+                                                    <optgroup label="Equity">
+                                                        <option value="74dfd025-d68e-4a99-9c78-5d43e17c0e09" data-TaxCode="" data-TaxCodeName="" data-Account="74dfd025-d68e-4a99-9c78-5d43e17c0e09" data-currency="">Retained earnings</option>
+                                                    </optgroup>
+                                                </select></div>
+                                        </td><!-- ko if: (Item() == null && Helper() != null && Helper().id == '059dbfb9-1c80-4043-887f-0fc441099fe0') -->
+                                        <td style="vertical-align: top" data-bind="attr: { colspan: (BillableExpenseCustomer() == null ? '2' : '1') }"><input type="hidden" data-bind="select2data: BillableExpenseCustomer" data-placeholder="Customer" data-width="100%" data-autocomplete="/customer-autocomplete?FileID=UFQuIEJBQw" /></td><!-- /ko -->
+                                        <!-- ko if: (Item() == null && Helper() != null && Helper().id == '059dbfb9-1c80-4043-887f-0fc441099fe0' && BillableExpenseCustomer() != null) -->
+                                        <td style="vertical-align: top">
+                                            <div><input type="hidden" style="width: 100%" data-bind="select2data: BillableExpenseSalesInvoice, attr: { 'data-autocomplete-filterby': BillableExpenseCustomer().id }" data-autocomplete="/sales-invoice-autocomplete?FileID=UFQuIEJBQw" data-placeholder="Uninvoiced" /></div>
+                                        </td><!-- /ko -->
+                                        <!-- ko if: (Item() == null && Helper() != null && Helper().id == 'f728124f-c6b6-4dad-82c5-22fc0d8d0571') -->
+                                        <td style="vertical-align: top" colspan="2"><input type="hidden" data-bind="select2data: Account" data-placeholder="Payer" data-width="100%" data-autocomplete="/expense-claims-payer-autocomplete?FileID=UFQuIEJBQw" /></td><!-- /ko -->
+                                        <td style="vertical-align: top"><textarea class="form-control input-sm" style="width: 300px; margin-bottom: 0px; resize:none" rows="1" data-bind="valueWithAutosize: Description" spellcheck="true"></textarea></td>
+                                        <td style="vertical-align: top" data-bind="visible: false"><input type="text" class="regular form-control input-sm" style="width: 80px; text-align: center; margin-bottom: 0px; line-height: 14px" data-bind="decimalInput: Qty, visible: false" /><input type="text" class="regular form-control input-sm" style="width: 80px; margin-bottom: 0px" readonly="readonly" data-bind="visible: !false" /></td>
+                                        <td style="vertical-align: top"><input type="text" class="regular form-control input-sm" style="width: 100px; text-align: right; margin-bottom: 0px; line-height: 14px" data-bind="decimalInput: Debit" /></td>
+                                        <td style="vertical-align: top">
+                                            <div class="input-group" style="margin-bottom: 0px"><input type="text" class="regular form-control input-sm" style="width: 100px; text-align: right; margin-bottom: 0px; line-height: 14px" data-bind="decimalInput: Credit" /><span class="input-group-addon input-sm" style="vertical-align: top; line-height: 14px; color: #999; text-shadow: 1px 1px 0px #fff" data-bind="text: function() { try { return $root.Currency().currency; } catch(error) { return ''; } }()"></span></div>
+                                        </td>
+                                        <td style="vertical-align: top; padding-left: 5px; padding-top: 5px"><a href="#" class="close" style="font-size: 24px; float: none" data-bind="click: $root.RemoveLines, visible: $root.Lines().length > 1">&times;</a></td>
+                                        <td style="vertical-align: top; padding-left: 10px" colspan="2" data-bind="if: (Account() != null && Account().currency != null && Account().currency != function() { try { return $root.Currency().currency; } catch(error) { return ''; } }())">
+                                            <div class="input-group" style="margin-bottom: 0px"><input type="text" class="regular form-control input-sm" style="width: 100px; text-align: right; margin-bottom: 0px; line-height: 14px" placeholder="Optional" data-bind="decimalInput: ProposedAccountAmount" /><span class="input-group-addon input-sm" style="vertical-align: top; line-height: 14px; color: #999; text-shadow: 1px 1px 0px #fff; width: 40px" data-bind="text: Account().currency"></span></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tr>
+                                    <td></td>
+                                    <td colspan="3"></td>
+                                    <td></td>
+                                    <td data-bind="visible: false"></td>
+                                    <td><input type="text" class="form-control input-sm" style="width: 100px; text-align: right; margin-bottom: 0px; font-weight: bold" readonly="readonly" data-bind="value: function() { var total = new Decimal(0); for (i = 0; i < $root.Lines().length; i++) { var debit = $root.Lines()[i].Debit(); if (!isNaN(debit)) total = total.plus(debit); } total = total.toNumber(); return Globalize.format(total,'N'+total.getDecimals()); }()" /></td>
+                                    <td>
+                                        <div class="input-group" style="margin-bottom: 0px"><input type="text" class="form-control input-sm" style="width: 100px; text-align: right; margin-bottom: 0px; font-weight: bold" readonly="readonly" data-bind="value: function() { var total = new Decimal(0); for (i = 0; i < $root.Lines().length; i++) { var credit = $root.Lines()[i].Credit(); if (!isNaN(credit)) total = total.plus(credit); } total = total.toNumber(); return Globalize.format(total, 'N'+total.getDecimals()); }()" /><span class="input-group-addon input-sm" style="color: #999; text-shadow: 1px 1px 0px #fff" data-bind="text: function() { try { return Currency().currency; } catch(error) { return ''; } }()"></span></div>
+                                    </td>
+                                    <td><span style="margin-left: 5px; color: red; font-weight: bold; font-size: 12px" data-bind="text: function() { var total = new Decimal(0); for (i = 0; i < $root.Lines().length; i++) { var debit = $root.Lines()[i].Debit(); var credit = $root.Lines()[i].Credit(); if (!isNaN(debit)) total = total.plus(debit); if (!isNaN(credit)) total = total.minus(credit); } total = total.toNumber(); return Globalize.format(total, 'N'+total.getDecimals()); }()"></span></td>
+                                </tr>
+                            </table>
+                            <div class="btn-group" style="margin-top: -50px; margin-left: 3px"><button class="btn btn-default btn-xs" data-bind="click: AddLines">Add line</button><button class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" style="min-width: 0px"><span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-bind="click: AddLines">Add line</a></li>
+                                    <li><a href="#" data-bind="click: Add5Lines">Add line (5&times;)</a></li>
+                                    <li><a href="#" data-bind="click: Add10Lines">Add line (10&times;)</a></li>
+                                    <li><a href="#" data-bind="click: Add20Lines">Add line (20&times;)</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <a href="/data_migrations">
-                            <div class="data_migration_top_nav">
-                                <div class="data_migration_box" data-value="true" id="data-migration">
-                                    <span>
-                                        <img style="width: 100%; margin-right: 2px; margin-top: -2px;" id="activity-timeline-img" src="/assets/icon/data-migration-nav-1232c8900ed91c92ab6194baa33f6cab.svg">
-                                    </span>
-                                    <div class="data-migration-tooltip hidden">
-                                        <div class="tooltiptext">
-                                            Kembali ke migrasi
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="btn-group nav-user-text">
-                            <div class="dropdown-toggle user-nav uppercase" data-toggle="dropdown" style="padding: 6px 0px;">
-                                <div style="max-width: 412px; display: flex;">
-                                    <div class="text-long" style="max-width: 400px;">
-                                        <a href="/">
-                                            PT. XYZ
-                                        </a>
-                                    </div>
-                                    <i class="fa fa-caret-down" style="cursor:pointer;margin-left: 4px;"></i>
-                                </div>
-                                <div class="user-name-label">
-                                    Qomarudin
-                                </div>
-                            </div>
-                            <ul class="dropdown-menu dropdown-menu-right" style="max-width: 200px; left: auto;">
-                                <li>
-                                    <a href="/user_account/profile">Profil Akun</a>
-                                </li>
-                                <li>
-                                    <a href="/user_account/companies">Daftar Perusahaan</a>
-                                </li>
-                                <li>
-                                    <a class="new-label" href="/credential_access">
-                                        <div class="new-feature">
-                                            API Credentials
-                                        </div>
-                                        <div class="new-tag">
-                                            New
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="new-label" href="/user_referrals">
-                                        <div class="new-feature">
-                                            Referral program
-                                        </div>
-                                        <div class="new-tag">
-                                            New
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <div>
-                                        <a style="display: flex; color: inherit;" rel="nofollow" data-method="post" href="/users/switch_company?company_id=215589">
-                                            <div class="text-long" style="max-width: 170px;">
-                                                PT. XYZ
-                                            </div>
-                                            <div style="margin-left: 4px;">
-                                                (Aktif)
-                                            </div>
-                                        </a></div>
-                                </li>
-                                <li>
-                                    <a style="display: flex;" rel="nofollow" data-method="post" href="/users/switch_company?company_id=215645">
-                                        <div class="text-long" style="max-width: 170px;">
-                                            PT. ABC
-                                        </div>
-                                    </a></li>
-                            </ul>
+                        <div class="panel-footer" style="padding: 15px 30px"><img src="resources/ajax-loader.gif" id="ajaxIndicator" style="display: none; margin-right: 10px" /><input type="button" id="btnCreate" class="btn btn-primary" style="font-weight: bold" value="Create" />&nbsp;&nbsp;<input type="button" id="btnCreateAndAddAnother" class="btn btn-default" style="font-weight: bold; background-color: #f5f5f5" value="Create & add another" /></div>
+                    </div>
+                    <script type="text/javascript">
+                        ko.bindingHandlers.select2data = {
+                            init: function(element, valueAccessor, allBindingsAccessor) {
+
+                                var select2options = {};
+                                if ($(element).is('select')) {
+                                    select2options.width = $(element).attr('data-width');
+                                    select2options.allowClear = ($(element).attr('data-placeholder'));
+                                    select2options.formatNoMatches = function() {
+                                        return "No matches found";
+                                    };
+                                    if (select2options.allowClear) select2options.placeholder = $(element).attr('data-placeholder');
+                                }
+
+                                if ($(element).is('input') && $(element).attr('data-autocomplete')) {
+                                    var select2options = {
+                                        allowClear: true,
+                                        placeholder: ' ',
+                                        /*formatResult: function(item) { return item.text+(item.description ? item.description : null); },*/
+                                        formatNoMatches: function() {
+                                            return "No matches found";
+                                        },
+                                        formatSearching: function() {
+                                            return "Searching ...";
+                                        },
+                                        ajax: {
+                                            url: $(element).attr('data-autocomplete'),
+                                            dataType: 'json',
+                                            width: 'copy',
+                                            data: function(term, page) {
+                                                return {
+                                                    Term: term,
+                                                    Page: page,
+                                                    FilterBy: $(element).attr('data-autocomplete-filterby')
+                                                }
+                                            },
+                                            results: function(data, page) {
+                                                return data;
+                                            }
+                                        }
+                                    };
+                                    select2options.width = $(element).attr('data-width');
+                                }
+                                $(element).select2(select2options);
+                                var tr = $(element).select2('container').closest('tr');
+                                if (tr.attr('data-select2height')) {
+                                    $(element).select2('container').find('.select2-choice').height(tr.attr('data-select2height'));
+                                }
+
+                                ko.utils.registerEventHandler(element, 'change', function() {
+                                    var observable = valueAccessor();
+                                    var data = $(element).select2('data');
+                                    if (data != null) {
+                                        data = jQuery.extend(true, {}, data);
+                                        if ($(element).is('select')) {
+                                            data.TaxCode = $(element).find('option:selected').attr('data-TaxCode');
+                                            data.TaxCodeName = $(element).find('option:selected').attr('data-TaxCodeName');
+                                            data.Account = $(element).find('option:selected').attr('data-Account');
+                                            data.currency = $(element).find('option:selected').attr('data-currency');
+                                            data.type = $(element).find('option:selected').attr('data-type');
+                                        }
+                                        delete data.element;
+                                        delete data.disabled;
+                                        delete data.locked;
+                                    }
+                                    observable(data);
+                                });
+
+                                ko.utils.domNodeDisposal.addDisposeCallback(element, function() {
+                                    $(element).select2('destroy');
+                                });
+                            },
+                            update: function(element, valueAccessor) {
+                                var data = ko.utils.unwrapObservable(valueAccessor());
+                                if ($(element).is('input')) {
+                                    $(element).select2('data', data);
+                                }
+                                if ($(element).is('select')) {
+                                    if (data == null) $(element).select2('val', '');
+                                    else $(element).select2('val', data.id);
+                                }
+                            }
+                        };
+                        ko.bindingHandlers.select2text = {
+                            init: function(element, valueAccessor, allBindingsAccessor) {
+
+                                var select2options = {};
+                                select2options.width = $(element).attr('data-width');
+                                select2options.allowClear = ($(element).attr('data-placeholder'));
+                                select2options.formatNoMatches = function() {
+                                    return "No matches found";
+                                };
+                                if (select2options.allowClear) select2options.placeholder = $(element).attr('data-placeholder');
+
+                                if ($(element).attr('data-autocomplete')) {
+                                    var select2options = {
+                                        allowClear: true,
+                                        placeholder: ' ',
+                                        formatNoMatches: function() {
+                                            return "No matches found";
+                                        },
+                                        formatSearching: function() {
+                                            return "Searching ...";
+                                        },
+                                        ajax: {
+                                            url: $(element).attr('data-autocomplete'),
+                                            dataType: 'json',
+                                            width: 'copy',
+                                            data: function(term, page) {
+                                                return {
+                                                    Term: term,
+                                                    Page: page,
+                                                    FilterBy: $(element).attr('data-autocomplete-filterby')
+                                                }
+                                            },
+                                            results: function(data, page) {
+                                                return data;
+                                            }
+                                        }
+                                    };
+                                    select2options.width = $(element).attr('data-width');
+                                }
+                                $(element).select2(select2options);
+                                var tr = $(element).select2('container').closest('tr');
+                                if (tr.attr('data-select2height')) {
+                                    $(element).select2('container').find('.select2-choice').height(tr.attr('data-select2height'));
+                                }
+
+                                ko.utils.registerEventHandler(element, 'change', function() {
+                                    var observable = valueAccessor();
+                                    var data = $(element).select2('data');
+                                    if (data != null) {
+                                        observable(data.text);
+                                    } else {
+                                        observable(null);
+                                    }
+                                });
+
+                                ko.utils.domNodeDisposal.addDisposeCallback(element, function() {
+                                    $(element).select2('destroy');
+                                });
+                            },
+                            update: function(element, valueAccessor) {
+                                var data = ko.utils.unwrapObservable(valueAccessor());
+                                if (data == null) $(element).select2('data', null);
+                                else $(element).select2('data', {
+                                    text: data
+                                });
+                            }
+                        };
+                        ko.bindingHandlers.select2 = {
+                            init: function(element, valueAccessor, allBindingsAccessor) {
+
+                                var select2options = {};
+                                if ($(element).is('select')) {
+                                    select2options.dropdownAutoWidth = true;
+                                    select2options.width = $(element).attr('data-width');
+                                    select2options.allowClear = ($(element).attr('data-placeholder'));
+                                    select2options.formatNoMatches = function() {
+                                        return "No matches found";
+                                    };
+                                    if (select2options.allowClear) select2options.placeholder = $(element).attr('data-placeholder');
+                                }
+
+                                $(element).select2(select2options);
+
+                                ko.utils.domNodeDisposal.addDisposeCallback(element, function() {
+                                    $(element).select2('destroy');
+                                });
+                            },
+                        };
+                        ko.bindingHandlers.fadeVisible = {
+                            init: function(element, valueAccessor) {
+                                var value = valueAccessor();
+                                $(element).toggle(ko.unwrap(value));
+                            },
+                            update: function(element, valueAccessor) {
+                                var value = valueAccessor();
+                                ko.unwrap(value) ? $(element).slideDown() : $(element).slideUp();
+                            }
+                        };
+                        ko.bindingHandlers.typeahead = {
+                            init: function(element, valueAccessor, allBindingsAccessor) {
+                                var value = valueAccessor();
+                                var allBindings = allBindingsAccessor();
+                                $(element).typeahead({
+                                    remote: {
+                                        url: ko.unwrap(value) + '&query=%QUERY'
+                                    }
+                                });
+                                if (allBindings.value) {
+                                    $(element).on('typeahead:selected', function(object, datum) {
+                                        allBindings.value(datum.value);
+                                    });
+                                }
+                            }
+                        }; // Prevent the backspace key from navigating back.
+                        $(document).unbind('keydown').bind('keydown', function(event) {
+                            var doPrevent = false;
+                            if (event.keyCode === 8) {
+                                var d = event.srcElement || event.target;
+                                if ((d.tagName.toUpperCase() === 'INPUT' &&
+                                        (
+                                            d.type.toUpperCase() === 'TEXT' ||
+                                            d.type.toUpperCase() === 'PASSWORD' ||
+                                            d.type.toUpperCase() === 'FILE' ||
+                                            d.type.toUpperCase() === 'EMAIL' ||
+                                            d.type.toUpperCase() === 'SEARCH' ||
+                                            d.type.toUpperCase() === 'DATE')
+                                    ) ||
+                                    d.tagName.toUpperCase() === 'TEXTAREA') {
+                                    doPrevent = d.readOnly || d.disabled;
+                                } else {
+                                    doPrevent = true;
+                                }
+                            }
+
+                            if (doPrevent) {
+                                event.preventDefault();
+                            }
+                        });
+                        ko.bindingHandlers.datePicker = {
+                            init: function(element, valueAccessor, allBindingsAccessor) {
+                                var value = valueAccessor();
+                                $(element).datepicker({
+                                    todayBtn: 'linked',
+                                    todayHighlight: true,
+                                    weekStart: 1,
+                                    keyboardNavigation: false,
+                                    assumeNearbyYear: true,
+                                    autoclose: true,
+                                    format: 'mm/dd/yyyy'
+                                });
+                                var value2 = ko.utils.unwrapObservable(value);
+                                if (value2) {
+                                    var parts = value2.split('-');
+                                    var day = parseInt(parts[2]);
+                                    var month = parseInt(parts[1]) - 1;
+                                    var year = parseInt(parts[0]);
+                                    $(element).datepicker('update', new Date(year, month, day));
+                                }
+                                $(element).datepicker().on('changeDate', function(e) {
+                                    var day = e.date.getDate();
+                                    var month = e.date.getMonth() + 1;
+                                    var year = e.date.getFullYear();
+                                    if (year > 9999) {
+                                        value(null);
+                                        $(element).parent().addClass('has-error');
+                                    } else {
+                                        value(year + '-' + month + '-' + day);
+                                        $(element).parent().removeClass('has-error');
+                                    }
+                                });
+                                $(element).datepicker().on('blur', function() {
+                                    /* https://github.com/uxsolutions/bootstrap-datepicker/issues/2151 */
+                                    var date = $(element).datepicker('getDate');
+                                    var day = date.getDate();
+                                    var month = date.getMonth() + 1;
+                                    var year = date.getFullYear();
+                                    if (year > 9999) {
+                                        value(null);
+                                        $(element).parent().addClass('has-error');
+                                    } else {
+                                        value(year + '-' + month + '-' + day);
+                                        $(element).parent().removeClass('has-error');
+                                    }
+                                });
+                                $(element).datepicker().on('clearDate', function(e) {
+                                    value(null);
+                                    $(element).parent().removeClass('has-error');
+                                });
+                            }
+                        };
+
+                        function isMathExpression(s) {
+                            if (s && s.length > 0) {
+                                if (s.includes('*')) return true;
+                                if (s.includes('/')) return true;
+                                if (s.slice(1).includes('-')) return true;
+                                if (s.slice(1).includes('+')) return true;
+                            }
+                            return false;
+                        }
+                        ko.bindingHandlers.decimalInput = {
+                            init: function(element, valueAccessor, allBindingsAccessor) {
+                                var value = valueAccessor();
+                                var value2 = ko.utils.unwrapObservable(value);
+                                if (value2 != null && !isNaN(value2)) $(element).val(value2.toString().replace('.', '.'));
+                                $(element).on('input', function() {
+                                    var text = $(element).val() || '';
+                                    text = text.replaceAll(",", "");
+                                    text = text.replaceAll(".", ".");
+                                    text = text.replaceAll(' ', '');
+                                    if (text.length == 0) {
+                                        value(undefined);
+                                    } else {
+                                        try {
+                                            var parsedNumber = mexp.eval(text);
+                                        } catch (e) {}
+                                        if (parsedNumber == null || isNaN(parsedNumber)) {
+                                            value(undefined);
+                                            $(element).parent().addClass('has-error');
+                                        } else {
+                                            value((parsedNumber.toPrecision(12) * 1));
+                                            //if (isMathExpression(text)) value((parsedNumber.toPrecision(12)*1).toString());
+                                            //else value(text);
+                                            $(element).parent().removeClass('has-error');
+                                        }
+                                    }
+                                })
+                            },
+                            update: function(element, valueAccessor) {
+                                var value = ko.utils.unwrapObservable(valueAccessor());
+                                if ($(element).is(':focus')) return;
+                                if (value == null || isNaN(value)) $(element).val('');
+                                else $(element).val(value.toString().replaceAll('.', '.'));
+                            }
+                        };
+                        ko.bindingHandlers.integerInput = {
+                            init: function(element, valueAccessor, allBindingsAccessor) {
+                                var value = valueAccessor();
+                                var value2 = ko.utils.unwrapObservable(value);
+                                if (value2 != null && !isNaN(value2)) $(element).val(value2.toString());
+                                $(element).on('input', function() {
+                                    var text = $(element).val() || '';
+                                    if (text.length == 0) {
+                                        value(undefined);
+                                    } else {
+                                        var parsedNumber = parseInt(text);
+                                        if (parsedNumber == null || isNaN(parsedNumber)) {
+                                            value(undefined);
+                                            $(element).parent().addClass('has-error');
+                                        } else {
+                                            value(parsedNumber);
+                                            $(element).parent().removeClass('has-error');
+                                        }
+                                    }
+                                })
+                            },
+                            update: function(element, valueAccessor) {
+                                var value = ko.utils.unwrapObservable(valueAccessor());
+                                if ($(element).is(':focus')) return;
+                                if (value == null || isNaN(value)) $(element).val('');
+                                else $(element).val(value.toString());
+                            }
+                        };
+                        ko.bindingHandlers.valueWithAutosize = {
+                            init: function(element, valueAccessor, allBindingsAccessor) {
+                                var value = valueAccessor();
+                                var value2 = ko.utils.unwrapObservable(valueAccessor());
+                                autosize($(element));
+                                $(element).on('autosize:resized', function() {
+                                    $(this).data('height', $(this).height());
+                                    var heights = $.map($(this).parent().parent().find('textarea'), function(val, i) {
+                                        return $(val).data('height')
+                                    });
+                                    var height = Math.max.apply(Math, heights) + 12;
+                                    var tr = $(this).parent().parent();
+                                    tr.find('textarea').css('min-height', height + 'px');
+                                    tr.find('input[type=text].regular').css('height', height + 'px');
+                                    tr.find('input[type=text].regular').css('padding-bottom', (height - 24) + 'px');
+                                    tr.attr('data-select2height', height);
+                                    tr.find('.select2-choice').css('height', height + 'px');
+                                });
+                                $(element).val(value2);
+                                $(element).on('input', function() {
+                                    var text = $(element).val();
+                                    value(text);
+                                });
+                            },
+                            update: function(element, valueAccessor) {
+                                var value = ko.utils.unwrapObservable(valueAccessor());
+                                if ($(element).val() != value) $(element).val(value);
+                                autosize.update($(element));
+                            }
+                        };
+                    </script>
+                    <script type="text/javascript">
+                        $(function() {
+
+                            ko.applyBindings(viewModel);
+
+                            $('.ajax-typeahead').on('typeahead:selected', function(object, datum) {
+                                console.log(datum.value);
+                            });
+
+                            $('.tt-query').css('background-color', '#fff');
+                            $('span[title]').tooltip();
+                            $('textarea.autosize').trigger('autosize.resize');
+                            $('#btnCreate').click(function() {
+                                $('#ajaxIndicator').show();
+                                $('#btnCreate').attr('disabled', 'disabled');
+                                $.ajax({
+                                    type: 'POST',
+                                    url: "/journal-entry-form?FileID=UFQuIEJBQw&Referrer=5e1cb1da-1e60-4910-8562-43b69113c9c3",
+                                    data: ko.toJSON(viewModel),
+                                    contentType: 'application/json; charset=utf-8',
+                                    success: function(data) {
+                                        var referrer = "/journal-entry-view?FileID=UFQuIEJBQw&Referrer=5e1cb1da-1e60-4910-8562-43b69113c9c3";
+                                        if (true) referrer = referrer + '&Key=' + data;
+                                        $(location).attr('href', referrer);
+                                    },
+                                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                                        $('#ajaxIndicator').hide();
+                                        $('#btnCreate').removeAttr('disabled');
+                                        alert(XMLHttpRequest.responseText);
+                                    }
+                                });
+                            });
+
+                            $('#btnCreateAndAddAnother').click(function() {
+                                $('#ajaxIndicator').show();
+                                $('#btnCreateAndAddAnother').attr('disabled', 'disabled');
+                                $.ajax({
+                                    type: 'POST',
+                                    url: "/journal-entry-form?FileID=UFQuIEJBQw&Referrer=5e1cb1da-1e60-4910-8562-43b69113c9c3",
+                                    data: ko.toJSON(viewModel),
+                                    contentType: 'application/json; charset=utf-8',
+                                    success: function(data) {
+                                        $(location).attr('href', "/journal-entry-form?FileID=UFQuIEJBQw&Referrer=5e1cb1da-1e60-4910-8562-43b69113c9c3");
+                                    },
+                                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                                        $('#ajaxIndicator').hide();
+                                        $('#btnCreateAndAddAnother').removeAttr('disabled');
+                                        alert(XMLHttpRequest.responseText);
+                                    }
+                                });
+                            });
+
+                            $('#btnUpdate').click(function() {
+                                $('#ajaxIndicator').show();
+                                $('#btnUpdate').attr('disabled', 'disabled');
+                                $('#btnDelete').attr('disabled', 'disabled');
+                                $.ajax({
+                                    type: 'POST',
+                                    url: "/journal-entry-form?FileID=UFQuIEJBQw&Referrer=5e1cb1da-1e60-4910-8562-43b69113c9c3",
+                                    data: ko.toJSON(viewModel),
+                                    contentType: 'application/json; charset=utf-8',
+                                    success: function(data) {
+                                        $(location).attr('href', "/journal-entries?Skip=0&Take=50&FileID=UFQuIEJBQw");
+                                    },
+                                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                                        $('#ajaxIndicator').hide();
+                                        $('#btnUpdate').removeAttr('disabled');
+                                        $('#btnDelete').removeAttr('disabled');
+                                        alert(XMLHttpRequest.responseText);
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                    <script type="text/javascript">
+                        var help = true;
+
+                        function toggleHelp() {
+
+                            help = !help;
+                            document.cookie = 'help=' + help.toString();
+
+                            if (help) {
+                                document.getElementById('help-btn').style.color = '#999';
+                                document.getElementById('btn-image-off').style.display = 'none';
+                                document.getElementById('btn-image-on').style.display = 'inline';
+                                document.getElementById('help-links').style.display = 'block';
+                                document.getElementById('help-tag').style.display = 'inline';
+                                document.getElementById('help-placeholder').style.display = 'none';
+                            } else {
+                                document.getElementById('help-btn').style.color = '#ccc';
+                                document.getElementById('btn-image-off').style.display = 'inline';
+                                document.getElementById('btn-image-on').style.display = 'none';
+                                document.getElementById('help-links').style.display = 'none';
+                                document.getElementById('help-tag').style.display = 'none';
+                                document.getElementById('help-placeholder').style.display = 'block';
+                            }
+
+                        }
+                    </script>
+                    <div class="print-display-none" style="font-size: 12px; padding: 10px; text-shadow: 1px 1px 0px #fff"><button id="help-btn" style="font-weight: bold; font-size: 14px; text-shadow: 1px 1px 0px #fff; border: none; background-color: transparent; padding: 0px; color: #999" onclick="javascript:toggleHelp();">Learn how to …&nbsp;&nbsp;<img src="resources/toggle-on.png" id="btn-image-on" /><img src="resources/toggle-off.png" id="btn-image-off" style="display: none" /></button><span id="help-tag" style="border: 1px solid #ddd; color: #ddd; font-size: 12px; padding: 3px 6px; border-radius: 10px; margin-left: 10px">journal-entry-form</span>
+                        <div id="help-placeholder" style="color: #ccc; padding-top: 5px; font-size: 12px; display: none">12 guides available</div>
+                        <div id="help-links" style="padding-top: 5px; line-height: 200%">
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/9820?utm_source=app" target="_blank">Make journal entries</a></div>
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/20615?utm_source=app" target="_blank">Write on inventory</a></div>
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/9655?utm_source=app" target="_blank">Offset simultaneous sales and purchase invoices</a></div>
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/14465?utm_source=app" target="_blank">Write off bad debts</a></div>
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/5503?utm_source=app" target="_blank">Record billable expenses</a></div>
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/27559?utm_source=app" target="_blank">Define foreign currencies</a></div>
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/18764?utm_source=app" target="_blank">Use reference numbers</a></div>
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/18222?utm_source=app" target="_blank">Perform calculations in number fields</a></div>
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/9158?utm_source=app" target="_blank">Use multiple currencies</a></div>
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/8941?utm_source=app" target="_blank">Use custom fields</a></div>
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/14059?utm_source=app" target="_blank">Set form defaults</a></div>
+                            <div class="print-display-none" style="font-weight: bold; font-size: 13px; margin: 5px; color: #ccc; text-shadow: 1px 1px 0px #fff"><img src="resources/caret-right.png" style="margin-right: 10px; opacity: 0.5" /><a href="https://www.manager.io/guides/13392?utm_source=app" target="_blank">Use HTML code in fields</a></div>
                         </div>
                     </div>
-                    <div class="btn-group nav-user-text" id="hide_notif" style="display:none;">
-                        <div class="dropdown-toggle user-nav uppercase" data-toggle="dropdown" style="padding: 6px 0px;">
-                            <a href="/">
-                                PT. XYZ
-                            </a>
-                            <i class="fa fa-caret-down"></i>
-                            <div class="user-name-label">
-                                Qomarudin
-                            </div>
-                        </div>
-                        <ul class="dropdown-menu dropdown-menu-right" style="left: auto;">
-                            <li>
-                                <a href="/user_account/profile">Profil Akun</a>
-                            </li>
-                            <li>
-                                <a href="/user_account/companies">Daftar Perusahaan</a>
-                            </li>
-                            <li>
-                                <a class="new-label" href="/credential_access">
-                                    <div class="new-feature">
-                                        API Credentials
-                                    </div>
-                                    <img class="margin-left-10 new-tag-mobile" src="/assets/icon/new-41678a911ead2dd9b3afa89db8bf9bf6.svg" width="37px">
-                                </a>
-                            </li>
-                            <li>
-                                <a class="new-label" href="/user_referrals">
-                                    <div class="new-feature">
-                                        Referral program
-                                    </div>
-                                    <img class="margin-left-10 new-tag-mobile" src="/assets/icon/new-41678a911ead2dd9b3afa89db8bf9bf6.svg" width="37px">
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a rel="nofollow" data-method="post" href="/users/switch_company?company_id=215589">PT. XYZ (Aktif)</a>
-                            </li>
-                            <li>
-                                <a rel="nofollow" data-method="post" href="/users/switch_company?company_id=215645">PT. ABC</a>
-                            </li>
-                        </ul>
-                    </div>
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            function showLanguages() {
+                var elements = document.getElementsByClassName('hideOnDefault');
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].style.display = 'inline-block';
+                }
+                document.getElementById('language-expand-link').style.display = 'none';
+            }
+        </script>
+        <div class="print-display-none" style="line-height: 200%; width: 600px; margin: 20px auto; margin-bottom: 10px; text-align: center; font-size: 14px; color: #ccc; text-shadow: 1px 1px 0px #fff">
+            <form action="/switch-language" method="POST"><input type="hidden" name="Location" value="/journal-entry-form?FileID=UFQuIEJBQw&amp;Referrer=5e1cb1da-1e60-4910-8562-43b69113c9c3" /><span class="btn" style="color: #999; font-weight: bold; display: inline-block; background-color: transparent" title="English">English</span><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Afrikaans" title="Afrikaans" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Azərbaycan­ılı" title="Azeri" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Bahasa Indonesia" title="Indonesian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Bahasa Melayu" title="Malay" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="bosanski" title="Bosnian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Català" title="Catalan" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="čeština" title="Czech" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Chinese, China" title="Chinese, China" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Chinese, Hong Kong" title="Chinese, Hong Kong" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Chinese, Taiwan" title="Chinese, Taiwan" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="dansk" title="Danish" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Deutsch" title="German" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="eesti" title="Estonian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Elsässisch" title="Swiss German" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="español" title="Spanish" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="français" title="French" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="galego" title="Galician" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Haitian" title="Haitian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="hrvatski" title="Croatian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="íslenska" title="Icelandic" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="italiano" title="Italian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Kiswahili" title="Swahili" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="lietuvių" title="Lithuanian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="magyar" title="Hungarian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Nederlands" title="Dutch" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="norsk (bokmål)" title="Norwegian Bokmål" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="O'zbekcha" title="Uzbek" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="polski" title="Polish" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="português" title="Portuguese" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="română" title="Romanian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Shqip" title="Albanian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="slovenčina" title="Slovak" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="slovenščina" title="Slovenian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Soomaali" title="Somali" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="srpski" title="Serbian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="suomi" title="Finnish" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="svenska" title="Swedish" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Tiếng Việt" title="Vietnamese" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Türkçe" title="Turkish" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Ελληνικά" title="Greek" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Беларуская" title="Belarusian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="български" title="Bulgarian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="македонски јазик" title="Macedonian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="Монгол хэл" title="Mongolian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="русский" title="Russian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="українська" title="Ukrainian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="ქართული" title="Georgian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="עברית" title="Hebrew" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="اُردو" title="Urdu" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="العربية" title="Arabic" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="فارسى" title="Persian" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="کوردیی ناوەڕاست" title="Kurdish" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="ދިވެހިބަސް" title="Divehi" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="नेपाली" title="Nepali" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="हिंदी" title="Hindi" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="বাংলা" title="Bengali" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="ગુજરાતી" title="Gujarati" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="தமிழ்" title="Tamil" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="తెలుగు" title="Telugu" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="മലയാളം" title="Malayalam" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="සිංහල" title="Sinhala" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="ไทย" title="Thai" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="ဗမာ" title="Burmese" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="한국어" title="Korean" /><input type="submit" class="btn btn-link hideOnDefault" style="display: none" name="Language" value="日本語" title="Japanese" />
+                <style>
+                    a#language-expand-link {
+                        color: #ccc;
+                        padding: 3px 6px;
+                        margin-left: 5px;
+                        border: 1px solid #ccc;
+                        border-radius: 3px
+                    }
 
-                </div>
-            </nav>
-            <div class="top-navbar-replicate"></div>
-            <div class="flash-message alert fade in blueprint-flash" style="padding-left: 25px; display: none;">
-                <a class="no-override close" data-dismiss="alert" href="#">×</a>
-                <i class="fa fa-info-circle"></i>
-            </div>
-
-            <input type="hidden" name="company_id" id="company_id" value="215589">
-            <div id="main-content" class="dz-clickable">
-                <header class="page-heading border-bottom white-bg">
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                            <div class="page-title-heading">
-                                <h2>
-                                    <small>
-                                        Transaksi
-                                    </small>
-                                    Ubah Pembayaran
-                                </h2>
-                                <div class="hidden" id="company-currency-symbol">
-                                    Rp.
-                                </div>
-                                <div class="hidden" id="company-currency-delimiter">
-                                    .
-                                </div>
-                                <div class="hidden" id="company-currency-separator">
-                                    ,
-                                </div>
-                                <div class="hidden" id="company-currency-precision">
-                                    2
-                                </div>
-                                <div class="hidden" id="company-currency-base-symbol">
-                                    Rp.
-                                </div>
-                                <div class="hidden" id="company-clone-transaction">
-
-                                </div>
-                                <div class="hidden" id="transaction-provider-id">
-
-                                </div>
-                                <input type="hidden" name="selected_type" id="selected_type" value="10">
-                                <input type="hidden" name="witholding_currency" id="witholding_currency">
-                                <input type="hidden" name="deposit_currency" id="deposit_currency">
-                                <input type="hidden" name="order_custom_rate" id="order_custom_rate">
-                                <input type="hidden" name="preferred_purchase_term_id" id="preferred_purchase_term_id" value="1007548">
-
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                <section class="page-content transactions">
-                    <div class="col-md-12 main-form">
-                        <div class="row">
-                            <form id="main_form" novalidate="novalidate" class="simple_form edit_transaction" action="/purchase_payments/149513309" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="Wh6JeLkZWoOdT4oCv96slgac6nf6Z6cl31ngJeySnV89cd/uJbavphQC7FvmCM0wq2pQTj3QcFBMbJ8CXmklMg==">
-                                <div class="form-group hidden transaction_token"><input class="form-control hidden" type="hidden" value="JBEfUXikED7-S68MBZnVbQ" name="transaction[token]" id="transaction_token"></div>
-                                <div class="form-group hidden transaction_transaction_type"><input class="form-control hidden" type="hidden" value="10" name="transaction[transaction_type_id]" id="transaction_transaction_type_id"></div>
-                                <input default="default" class="hidden" type="hidden" value="149513309" name="transaction[id]" id="transaction_id">
-                                <div class="form-group hidden transaction_person"><input class="form-control hidden" type="hidden" value="12479589" name="transaction[person_id]" id="transaction_person_id"></div>
-                                <input type="hidden" value="false" name="transaction[is_draft]" id="transaction_is_draft">
-                                <!-- IMPORTANT INFO (row above all inputs) -->
-                                <div class="important-info form row">
-                                    <!-- Customer Name -->
-                                    <div class="col-lg-3">
-                                        <label class="control-label" style="font-family: Gotham-Bold">
-                                            Supplier
-                                        </label>
-                                        <div class="input-group customer">
-                                            <select class="form-control select required disabled newclass form-control" disabled="disabled" name="transaction[person_id]" id="transaction_person_id">
-                                                <option selected="selected" value="12479589">Supplier (Supplier)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <!-- Second column -->
-                                    <div class="col-lg-3">
-                                        <label class="control-label" style="font-family: Gotham-Bold">
-                                            Bayar Dari
-                                        </label>
-                                        <div class="customer" style="width: 100%">
-                                            <div class="select2-container form-control font-size-12 invoice_refund check_currency_list select2-allowclear" id="s2id_invoice_deposit_to"><a href="javascript:void(0)" class="select2-choice" style="font-weight:normal;" tabindex="-1"> <span class="select2-chosen" id="select2-chosen-6">(1-10001) - Kas (Cash &amp; Bank)</span><abbr class="select2-search-choice-close"></abbr> <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen6" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-6" id="s2id_autogen6">
-                                                <div class="select2-drop select2-display-none select2-with-searchbox select2-drop-active" style="font-weight: normal; display: none; left: 225px; width: 558px; bottom: auto; top: 284.575px; position: fixed;">
-                                                    <div class="select2-search"> <label for="s2id_autogen6_search" class="select2-offscreen"></label> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-6" id="s2id_autogen6_search" placeholder=""> </div>
-                                                    <ul class="select2-results" role="listbox" id="select2-results-6"></ul>
-                                                </div>
-                                            </div><input label_method="get_name_with_code" value_method="id" wrapper="false" label="false" class="form-control font-size-12 select2-ajax-account invoice_refund check_currency_list" include_blank="false" default="default" id="invoice_deposit_to" data-category="account" data-type="cash" data-priority="cash-bank" data-new="yes" value="26253438" type="text" name="transaction[refund_from_id]" tabindex="-1" title="" style="display: none;">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 total-amount">
-                                        <h2>
-                                            Total
-                                            <span id="header_amount">Rp. 11.000.000,00</span>
-                                        </h2>
-                                    </div>
-                                </div>
-                                <!-- / INVOICE DETAILS ROW WILL -->
-                                <div class="invoice-details row">
-                                    <!-- FIRST COLUMN -->
-                                    <div class="col-lg-2">
-                                        <div class="contact-details">
-                                            <div class="form-group">
-                                                <label class="control-label">
-                                                    Cara Pembayaran
-                                                </label>
-                                                <div class="select2-container form-control select optional newclass form-control" id="s2id_transaction_payment_method_id"><a href="javascript:void(0)" class="select2-choice" style="font-weight:normal;" tabindex="-1"> <span class="select2-chosen" id="select2-chosen-1">Transfer Bank</span><abbr class="select2-search-choice-close"></abbr> <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen1" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1">
-                                                    <div class="select2-drop select2-display-none select2-with-searchbox select2-drop-active" style="font-weight: normal; display: none; left: 225px; width: 188px; bottom: auto; top: 306.35px; position: fixed;">
-                                                        <div class="select2-search"> <label for="s2id_autogen1_search" class="select2-offscreen"></label> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search" placeholder=""> </div>
-                                                        <ul class="select2-results" role="listbox" id="select2-results-1"></ul>
-                                                    </div>
-                                                </div><select class="form-control select optional newclass form-control select2-single" name="transaction[payment_method_id]" id="transaction_payment_method_id" tabindex="-1" title="" style="display: none;">
-                                                    <option value="1086192">Kas Tunai</option>
-                                                    <option value="1086193">Cek &amp; Giro</option>
-                                                    <option selected="selected" value="1086194">Transfer Bank</option>
-                                                    <option value="1086195">Kartu Kredit</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- SECOND COLUMN - PAYMENT TERMS -->
-                                    <div class="col-lg-2">
-                                        <div class="payment-terms">
-                                            <!-- Transaction Date -->
-                                            <div class="form-group">
-                                                <label class="control-label">
-                                                    Tgl Pembayaran
-                                                </label>
-                                                <div class="input-group date" data-date-format="dd/mm/yyyy">
-                                                    <span class="input-group-addon custom">
-                                                        <i class="fa fa-calendar"></i>
-                                                    </span>
-                                                    <input class="form-control string required  form-control" value="14/06/2020" type="text" name="transaction[transaction_date]" id="transaction_transaction_date">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="payment-terms">
-                                            <div class="form-group">
-                                                <label class="control-label">
-                                                    Tgl Jatuh Tempo
-                                                </label>
-                                                <div class="input-group date" data-date-format="dd/mm/yyyy">
-                                                    <span class="input-group-addon custom">
-                                                        <i class="fa fa-calendar"></i>
-                                                    </span>
-                                                    <input class="form-control string optional form-control" type="text" name="transaction[due_date]" id="transaction_due_date">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-lg-push-2">
-                                        <div class="taggings">
-                                            <label class="control-label">
-                                                Tag
-                                            </label>
-                                            <div class="select2-container select2-container-multi tags_size" id="s2id_transaction_tag_ids" style="position: relative;">
-                                                <ul class="select2-choices">
-                                                    <li class="select2-search-field"> <label for="s2id_autogen4" class="select2-offscreen"></label> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" id="s2id_autogen4" style="width: 34px;" placeholder=""> </li>
-                                                </ul>
-                                                <div id="select2-drop-mask" class="select2-drop-mask" style="display: none;"></div>
-                                                <div class="select2-drop select2-drop-multi select2-display-none select2-drop-active" style="display: none; width: 558px; bottom: auto; position: absolute; top: 34px; left: 0px;">
-                                                    <ul class="select2-results"></ul>
-                                                </div>
-                                            </div><input class="select2-multiple-ajax tags_size" type="text" value="" name="transaction[tag_ids]" id="transaction_tag_ids" tabindex="-1" style="display: none;">
-                                        </div>
-                                    </div>
-                                    <!-- FOURTH COLUMN -->
-                                    <div class="col-lg-2 col-lg-push-2">
-                                        <div class="transaction-ref">
-                                            <!-- Transaction Number -->
-                                            <div class="form-group">
-                                                <label class="control-label">
-                                                    No Transaksi
-                                                </label>
-                                                <input class="form-control string optional form-control" type="text" value="10003" name="transaction[transaction_no]" id="transaction_transaction_no">
-                                                <input class="hidden" type="hidden" name="transaction[transaction_no_format_id]" id="transaction_transaction_no_format_id">
-                                                <input type="hidden" name="is_change_type" id="is_change_type">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="multi-currency-row row form-horizontal">
-                                    <div class="col-lg-6">
-                                    </div>
-
-                                </div>
-
-                                <div class="products-table row" style="margin: 0">
-                                    <!-- INVOICE - TABLE TO ADD PRODUCTS TO INVOICE -->
-                                    <div class="table-container list-table">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover" id="main_record">
-                                                <thead class="table-header">
-                                                    <tr>
-                                                        <th class="col-md-2">
-                                                            Number
-                                                        </th>
-                                                        <th class="col-md-2">
-                                                            Deskripsi
-                                                        </th>
-                                                        <th class="col-md-2">
-                                                            Tgl Jatuh Tempo
-                                                        </th>
-                                                        <th>
-                                                            Total
-                                                        </th>
-                                                        <th>
-                                                            Sisa Tagihan
-                                                        </th>
-                                                        <th>
-                                                            Jumlah
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody id="group_lines">
-                                                    <tr>
-                                                        <td>
-                                                            <input class="hidden" type="hidden" value="149480967" name="transaction[records_attributes][0][transaction_id]" id="transaction_records_attributes_0_transaction_id">
-                                                            <a class="tooltip_trans position-relative" href="/purchases/149480967" title="1 (Buah) Cisco 4500;">
-                                                                Purchase Invoice #10003
-                                                            </a>
-
-                                                        </td>
-                                                        <td>
-
-                                                        </td>
-                                                        <td>
-                                                            14/07/2020
-                                                        </td>
-                                                        <td>
-                                                            Rp. 11.000.000,00
-                                                        </td>
-                                                        <td>
-                                                            Rp. 0,00
-                                                        </td>
-                                                        <td>
-                                                            <input class="form-control string required form-control amount-input" type="text" value="11000000.0" name="transaction[records_attributes][0][amount]" id="transaction_records_attributes_0_amount" data-value="11000000.0">
-                                                        </td>
-                                                    </tr>
-
-                                                    <input type="hidden" value="52415806" name="transaction[records_attributes][0][id]" id="transaction_records_attributes_0_id">
-                                                </tbody>
-                                            </table>
-                                            <a href="#" id="load_purchase" style="padding-left: 14px; cursor: pointer; display: none;">
-                                                <i class="fa fa-plus-circle"></i>
-                                                Tampilkan lagi
-                                            </a>
-                                            <div class="paginate_scroll" style="padding-left: 14px; display: none;">
-                                                <i class="fa fa-spinner fa-2x fa-spin"></i>
-                                                Memuat hasil...
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="invoice-summary row" style="margin: 0; background: white">
-                                    <div class="col-lg-6">
-                                        <div class="invoice-notes">
-                                            <div class="form-group message">
-                                                <label>
-                                                    Memo
-                                                </label>
-                                                <textarea class="form-control text optional form-control" name="transaction[memo]" id="transaction_memo"></textarea>
-                                            </div>
-                                        </div>
-                                        <label>
-                                            <i class="fa fa-paperclip"></i>
-                                            Lampiran
-                                        </label>
-                                        <div class="form-group attachment">
-                                            <div class="file-attachments">
-                                            </div>
-                                            <div class="dropzonePreview" id="dropzonePreview">
-
-                                            </div>
-                                            <div class="dropzoneAdd dz-clickable" id="dropzoneAdd">
-                                                <div class="addText">
-                                                    <div class="fa fa-cloud-upload"></div>
-                                                    Tarik file ke sini, atau
-                                                    <span style="color:#22B5E7; text-decoration: underline">
-                                                        pilih file
-                                                    </span>
-                                                </div>
-                                                <div class="addText-detail">
-                                                    ukuran maksimal 10 MB/file
-                                                </div>
-                                            </div>
-                                            <div class="dropzoneMaxFileReached" id="dropzoneMaxFileReached" style="display:none">
-                                                Jumlah file upload telah mencapai limit
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-lg-push-1">
-                                        <div id="witholding_toggle_row">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-sm-12 col-xs-12 text-right">
-                                                    <a href="#" id="witholding_toggle">
-                                                        <i class="fa fa-chevron-circle-right"></i>
-                                                        Masukan Jumlah Pemotongan
-                                                    </a>
-                                                </div>
-                                                <div class="col-lg-4 col-sm-12 col-xs-12"></div>
-                                                <div class="col-lg-4 col-sm-12 col-xs-12"></div>
-                                            </div>
-                                        </div>
-                                        <div class="hidden" id="witholding_input_row">
-                                            <div class="row">
-                                                <div class="witholding">
-                                                    <div class="col-lg-4 col-sm-4 col-xs-4 witholding-account">
-                                                        <div class="select2-container form-control check_currency_list select2-allowclear" id="s2id_witholding_account"><a href="javascript:void(0)" class="select2-choice" style="font-weight:normal;" tabindex="-1"> <span class="select2-chosen" id="select2-chosen-7">(1-10001) - Kas (Cash &amp; Bank)</span><abbr class="select2-search-choice-close"></abbr> <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen7" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-7" id="s2id_autogen7">
-                                                            <div class="select2-drop select2-display-none select2-with-searchbox" style="font-weight:normal;">
-                                                                <div class="select2-search"> <label for="s2id_autogen7_search" class="select2-offscreen"></label> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-7" id="s2id_autogen7_search" placeholder=""> </div>
-                                                                <ul class="select2-results" role="listbox" id="select2-results-7"> </ul>
-                                                            </div>
-                                                        </div><input label_method="get_name_with_code" value_method="id" label="false" wrapper="false" class="form-control select2-ajax-account check_currency_list" id="witholding_account" data-category="account" data-type="account" data-priority="all" data-new="no" value="26253438" type="text" name="transaction[witholding_account_id]" tabindex="-1" title="" style="display: none;">
-                                                    </div>
-                                                    <div class="col-lg-4 col-sm-4 col-xs-4">
-                                                        <div class="row">
-                                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 no-padding">
-                                                                <label class="label-control text-small">
-                                                                    Pemotongan
-                                                                </label>
-                                                                <input class="form-control string optional form-control" data-value="0.0" type="text" value="0.0" name="transaction[witholding_value]" id="transaction_witholding_value">
-                                                                <input class="form-control hidden form-control" data-value="percent" type="hidden" value="percent" name="transaction[witholding_type]" id="transaction_witholding_type">
-                                                            </div>
-                                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 padding-top-1-7em">
-                                                                <span class="btn-group btn-toggle">
-                                                                    <button class="btn btn-default btn-selected btn-switch btn-toggle-percent btn-toggle-percent-value" data-value="percent" target="transaction_witholding_type" var_input="transaction_witholding_value">
-                                                                        %
-                                                                    </button>
-                                                                    <button class="btn btn-default btn-switch btn-toggle-percent-values toggle-currency-symbol" data-value="value" id="btn-toggle-value" target="transaction_witholding_type" var_input="transaction_witholding_value">
-                                                                        Rp.
-                                                                    </button>
-                                                                </span>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-sm-4 col-xs-4 text-right amount witholding-amount" id="witholding-amount">Rp. 0,00</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="invoice-total">
-                                            <!-- Sub Total -->
-                                            <div class="subtotal row">
-                                                <div class="col-lg-4 col-sm-4 col-xs-4 amount-due">
-                                                    Total
-                                                </div>
-                                                <div class="amount-due text-right" id="total_payment">Rp. 11.000.000,00</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="action-group">
-                                    <div class="col-md-12 text-right">
-                                        <a class="btn btn-action btn-danger" href="/purchase_payments/149513309">
-                                            <i class="fa fa-close"></i>
-                                            Batal
-                                        </a>
-                                        <!-- # = f.button :submit, name: "create", id: id, value: submit_label, class: "btn btn-action button_submit btn-success #{button_class}", data: { disable_with: t('processing-label')} -->
-                                        <button name="button" type="submit" id="update_invoice" class="btn btn-action btn-success " wrapper="false" data-disable-with="Sedang Diproses...">Ubah Pembayaran</button>
-
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <script>
-                var fakeProviderID = "6";
-            </script>
-
-            <div class="popup-dnd-container" id="popup-dnd" onclick="$(this).hide()" style="display:none">
-                <div class="dnd-modal" style="pointer-events: none">
-                    <div class="dnd-item-container">
-                        <div class="dnd-item-1"></div>
-                        <div class="dnd-item-2"></div>
-                        <div class="dnd-item-3"></div>
-                    </div>
-                    <div class="dnd-text-container">
-                        <div class="dnd-text-header">
-                            TARIK FILE UNTUK MENGUNGGAH
-                        </div>
-                        <div class="dnd-text-detail">
-                            <div class="p">
-                                Dengan menarik file ke sini, file tersebut akan menjadi
-                            </div>
-                            <div class="p">
-                                lampiran untuk transaksi ini.
-                            </div>
-                            <div class="p" style="font-size: 0.8em">
-                                Anda dapat menambahkan hingga 5 lampiran dalam satu file
-                            </div>
-                            <div class="p" style="font-size: 0.8em">
-                                Ukuran maksimum lampiran adalah 10 MB/file.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="modal-dnd-confirm">
-                <div class="modal-dialog modal-dialog-asset-white" style="top:calc(50vh - 140px); padding:0">
-                    <div class="modal-header">
-                        <input type="hidden" name="dnd_confirm_id" id="dnd_confirm_id" value="">
-                        <button class="close" data-dismiss="modal" style="margin-top:-8px" type="button">
-                            ×
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-xs-12" style="text-align:center">
-                                <p>
-                                    Apakah anda yakin ingin menghapus attachment?
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2"></div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4" style="text-align:center">
-                                <button class="btn btn-soft-grey" data-dismiss="modal" style="width:70%" type="button">
-                                    Cancel
-                                </button>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4" style="text-align:center">
-                                <button class="btn btn-action" onclick="deleteAttachment($('#dnd_confirm_id').val(), 1)" style="width:70%">
-                                    Ya
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="add-account">
-                <div class="modal-dialog">
-                    <div class="modal-header">
-                        <button class="close" data-dismiss="modal" type="button">
-                            ×
-                        </button>
-                        <h4 class="modal-title" id="modal-label">
-                            Akun Baru
-                        </h4>
-                    </div>
-                    <div class="modal-body">
-                        <form id="account-form" class="simple_form form-horizontal" novalidate="novalidate" action="/accounts.json" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
-                            <div class="error-messages"></div>
-                            <div class="form-group hidden account_category_id"><input class="form-control hidden" value="3" type="hidden" name="account[category_id]" id="account_category_id"></div>
-                            <div class="form-group">
-                                <label class="col-sm-12 col-md-4 control-label">
-                                    Nama
-                                </label>
-                                <div class="col-md-7">
-                                    <input class="form-control string required" type="text" name="account[name]" id="account_name">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-12 col-md-4 control-label">
-                                    Nomor
-                                </label>
-                                <div class="col-md-7">
-                                    <input class="form-control string optional" type="text" name="account[number]" id="account_number">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-12 col-md-4 control-label">
-                                    Kategori
-                                </label>
-                                <div class="col-md-7">
-                                    <div class="select2-container form-control select required newclass form-control fixed-in-bottom" id="s2id_account_category_id"><a href="javascript:void(0)" class="select2-choice" style="font-weight:normal;" tabindex="-1"> <span class="select2-chosen" id="select2-chosen-2">Kas &amp; Bank</span><abbr class="select2-search-choice-close"></abbr> <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2">
-                                        <div class="select2-drop select2-display-none select2-with-searchbox" style="font-weight:normal;">
-                                            <div class="select2-search"> <label for="s2id_autogen2_search" class="select2-offscreen"></label> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-2" id="s2id_autogen2_search" placeholder=""> </div>
-                                            <ul class="select2-results" role="listbox" id="select2-results-2"> </ul>
-                                        </div>
-                                    </div><select class="form-control select required newclass form-control select2-single-no-add fixed-in-bottom" name="account[category_id]" id="account_category_id" tabindex="-1" title="" style="display: none;">
-                                        <option selected="selected" value="3">Kas &amp; Bank</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-12 col-md-4 control-label" id="company_tax_label">
-                                    Pajak
-                                </label>
-                                <div class="col-lg-7">
-                                    <div class="select2-container form-control tax-line transaction_tax fixed-in-bottom" id="s2id_account_company_tax_id"><a href="javascript:void(0)" class="select2-choice select2-default" style="font-weight:normal;" tabindex="-1"> <span class="select2-chosen" id="select2-chosen-5">Pilih pajak</span><abbr class="select2-search-choice-close"></abbr> <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen5" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-5" id="s2id_autogen5">
-                                        <div class="select2-drop select2-display-none select2-with-searchbox" style="font-weight:normal;">
-                                            <div class="select2-search"> <label for="s2id_autogen5_search" class="select2-offscreen"></label> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-5" id="s2id_autogen5_search" placeholder=""> </div>
-                                            <ul class="select2-results" role="listbox" id="select2-results-5"> </ul>
-                                        </div>
-                                    </div><input include_blank="true" label="false" wrapper="false" class="form-control select2-ajax-other tax-line transaction_tax fixed-in-bottom" data-category="other" data-type="tax" data-new="no" type="text" name="account[company_tax_id]" id="account_company_tax_id" tabindex="-1" title="" style="display: none;">
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-default close-clear" data-dismiss="modal" type="button">
-                            Tutup
-                        </button>
-                        <button class="btn btn-primary" id="add-new-account">
-                            Simpan
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="add-payment-method">
-                <div class="modal-dialog">
-                    <div class="modal-header">
-                        <button class="close" data-dismiss="modal" type="button">
-                            ×
-                        </button>
-                        <h4 class="modal-title" id="modal-label">
-                            Metode Pembayaran Baru
-                        </h4>
-                    </div>
-                    <div class="modal-body">
-                        <form id="payment-method-form" class="simple_form form-horizontal" novalidate="novalidate" action="/payment_methods.json" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
-                            <div class="error-messages"></div>
-                            <div class="form-group">
-                                <label class="col-sm-12 col-md-4 control-label">
-                                    Nama
-                                </label>
-                                <div class="col-md-7">
-                                    <input class="form-control string required" maxlength="255" size="255" type="text" name="payment_method[name]" id="payment_method_name">
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-default close-clear" data-dismiss="modal" type="button">
-                            Tutup
-                        </button>
-                        <button class="btn btn-primary" id="add-new-payment-method">
-                            Simpan
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <script>
-                var update_and_approve = "Ubah dan Setujui";
-                var update = "Ubah Pembayaran";
-            </script>
-
-            <footer class="site-footer" id="site-footer">
-                <div class="col-lg-12">
-                    <div class="copyright col-xs-7 col-sm-5">
-                        ©
-                        2020 Jurnal.id - Simple Online Accounting Software
-                    </div>
-                    <div class="col-sm-2"></div>
-                    <div class="language-select col-xs-5 col-sm-5">
-                        Ubah Bahasa
-                        <span class="english">
-                            <a rel="nofollow" data-method="post" href="/en">English</a>
-                        </span>
-                        <span class="bahasa">
-                            <a rel="nofollow" data-method="post" href="/id">Indonesia</a>
-                        </span>
-                    </div>
-                </div>
-            </footer>
-
+                    a#language-expand-link:hover {
+                        text-decoration: none;
+                        background-color: #fff;
+                        color: #333;
+                        border: 1px solid #999;
+                        text-shadow: none
+                    }
+                </style><a href="javascript:showLanguages()" id="language-expand-link">+</a>
+            </form>
         </div>
+        <div class="print-display-none" style="font-weight: bold; text-align: center; font-size: 14px; margin: 10px; color: #ccc; text-shadow: 1px 1px 0px #fff">20.7.13</div>
     </div>
-    <div class="modal fade" id="expired_trial_warning">
-        <div class="modal-dialog">
-            <div class="modal-header modal-header-noline">
-                <span>
-                    Masa Percobaan Telah Berakhir
-                </span>
-                <button class="close" data-dismiss="modal" type="button">
-                    ×
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="row expired-trial-content">
-                    <div class="col-md-2 col-sm-2 col-xs-1"></div>
-                    <div class="col-md-8 col-sm-8 col-xs-10">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 col-xs-12 margin-top-10">
-                                <img alt="Icon" class="image-content" src="/assets/new_calendar_icon-d26a4d8d4b7e911d4eebc356d7831c71.png">
-                            </div>
-                        </div>
-                        <br>
-                        <h3>
-                            Halo,
-                            Qomarudin
-                        </h3>
-                        <p>
-                            Versi gratis telah berakhir, tapi semua data yang telah Anda buat masih tersimpan secara aman.
-                        </p>
-                        <div class="row margin-bottom-10">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="btn btn-link">
-                                    <a href="https://www.jurnal.id/id/support" target="_blank">
-                                        Hubungi kami
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <a class="btn btn-submit" href="/company/setting#billings">Berlangganan sekarang</a>
-                            </div>
-                        </div>
-                        <small>
-                            <a href="https://www.jurnal.id/id/product_tour">
-                                Jangan lewatkan fitur - fitur unggulan Jurnal
-                            </a>
-                        </small>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-xs-1"></div>
-                </div>
-
-            </div>
-            <div class="modal-footer modal-bottom-noline"></div>
-        </div>
-    </div>
-    <div class="modal fade modal-demo" id="demo_account_form">
-        <div class="modal-dialog">
-            <div class="modal-header">
-                <span>
-                    Buat demo
-                </span>
-                <button class="close" data-dismiss="modal" type="button">
-                    ×
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="modal_demo_company_form" novalidate="novalidate" class="simple_form company" action="/company/create_demo.json" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="Wh6JeLkZWoOdT4oCv96slgac6nf6Z6cl31ngJeySnV89cd/uJbavphQC7FvmCM0wq2pQTj3QcFBMbJ8CXmklMg==">
-                    <div class="form-group">
-                        <p class="company-title">
-                            Industri
-                        </p>
-                        <div class="form-group hidden company_name"><input class="form-control hidden" value="PT. XYZ" type="hidden" name="company[name]" id="company_name"></div>
-                        <div class="form-group hidden company_language_id"><input class="form-control hidden" value="2" type="hidden" name="company[language_id]" id="company_language_id"></div>
-                        <div class="select2-container form-control" id="s2id_company_industry"><a href="javascript:void(0)" class="select2-choice" style="font-weight:normal;" tabindex="-1"> <span class="select2-chosen" id="select2-chosen-3">Jasa</span><abbr class="select2-search-choice-close"></abbr> <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen3" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-3" id="s2id_autogen3">
-                            <div class="select2-drop select2-display-none select2-with-searchbox" style="font-weight:normal;">
-                                <div class="select2-search"> <label for="s2id_autogen3_search" class="select2-offscreen"></label> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-3" id="s2id_autogen3_search" placeholder=""> </div>
-                                <ul class="select2-results" role="listbox" id="select2-results-3"> </ul>
-                            </div>
-                        </div><select class="select2-industry form-control" name="company[industry]" id="company_industry" tabindex="-1" title="" style="display: none;">
-                            <option value="Services">Jasa</option>
-                            <option value="Retail">Retail</option>
-                            <option value="Distribution Trading">Grosir/Distributor</option>
-                            <option value="Food &amp; Restaurant &amp; Beverage">Makanan dan Minuman</option>
-                            <option value="Manufacturing">Manufaktur</option>
-                        </select>
-                        <input class="form-control string required" style="display:none" data-other-text="Others" placeholder="Pilih Industri Demo" type="text" name="company[industry_text]" id="company_industry_text">
-                        <div class="col-md-12 col-sm-12 col-lg-12 info-demo-container">
-                            <div class="col-lg-1 col-md-2- col-sm-2 warning-icon">
-                                <img src="/assets/icon/ic-warning-line-85811bab915ced1625bade5398d0307e.svg">
-                            </div>
-                            <div class="col-lg-11 col-md-10 col-sm-10 info-title">
-                                Perusahaan demo akan dibuat terpisah dan tidak akan berpengaruh pada data perusahaan Anda.
-                            </div>
-                        </div>
-                        <div class="pull-right" id="demo-button-group">
-                            <button class="cancel-demo-account button-demo-account onboard-btn-secondary" data-dismiss="modal" type="button">
-                                Batal
-                            </button>
-                            <input type="submit" name="commit" value="Buat" class="button-demo-account submit-demo onboard-btn-primary">
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
-    <div class="modal fade modal-demo" id="demo_loading">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-header">
-                <span>
-                    Proses Pembuatan Demo
-                </span>
-            </div>
-            <div class="modal-body">
-                <div class="demo-image-container col-md-12">
-                    <img alt="Icon" class="demo-image image-content" src="/assets/preloader_modal_popup-668354c47fce462a16e4b76b91c8e1ed.gif">
-                </div>
-                <div class="demo-text-container col-md-12">
-                    <div class="demo-modal-title">
-                        <h4>
-                            Jurnal sedang menyiapkan data Anda
-                        </h4>
-                    </div>
-                    <div class="demo-modal-content">
-                        <p>
-                            Proses ini membutuhkan 1-2 menit. Mohon tidak tutup halaman ini selama proses berjalan.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <script id="IntercomSettingsScriptTag">
-        window.intercomSettings = {
-            "email": "qomarudin@qmail.id",
-            "name": "Qomarudin",
-            "created_at": 1591674445,
-            "user_id": 219515,
-            "language": "Bahasa Indonesia",
-            "user_hash": "1a27156b5b84564cd9fb26ec541dfa68e1b0181518fbc8d40d4c4aef073acc44",
-            "app_id": "yhxmtksi",
-            "company": {
-                "id": 215589,
-                "name": "PT. XYZ",
-                "created_at": 1591677846,
-                "demo_company": false,
-                "industry": ""
-            }
-        };
-        (function() {
-            var w = window;
-            var ic = w.Intercom;
-            if (typeof ic === "function") {
-                ic('reattach_activator');
-                ic('update', intercomSettings);
-            } else {
-                var d = document;
-                var i = function() {
-                    i.c(arguments)
-                };
-                i.q = [];
-                i.c = function(args) {
-                    i.q.push(args)
-                };
-                w.Intercom = i;
-
-                function l() {
-                    var s = d.createElement('script');
-                    s.type = 'text/javascript';
-                    s.async = true;
-                    s.src = 'https://widget.intercom.io/widget/yhxmtksi';
-                    var x = d.getElementsByTagName('script')[0];
-                    x.parentNode.insertBefore(s, x);
-                }
-                if (w.attachEvent) {
-                    w.attachEvent('onload', l);
-                } else {
-                    w.addEventListener('load', l, false);
-                }
-            };
-        })()
-    </script>
-
-    <!-- = feedback_tab(:position => 'top') -->
-    <script src="/assets/application_cookies-596246828f573447d6e741863a59ad35.js" data-turbolinks-track="true"></script>
-    <script src="/assets/popup_sharing-c6b3d692b2805b94bb613bd87baf57b1.js" data-turbolinks-track="true"></script>
-    <script src="/assets/application_footer-f8c3887b46e6fd762e21ac9bff13514f.js" data-turbolinks-track="true"></script>
-    <script src="/assets/highlight_menu-f58bf79ea0090b814d85678861a0df77.js" data-turbolinks-track="true"></script>
-    <script src="/assets/notification-92561dedc90f6d791480fefcb9a6969a.js" data-turbolinks-track="true"></script>
-    <script src="/assets/demo_account-749ded18422ddbe41d39f88618808e6a.js" data-turbolinks-track="true"></script>
-    <script src="/assets/helpers/number_input_converter-b94e4ea2c398d5c21a5a81bad26c18ef.js" data-turbolinks-track="true"></script>
-    <script src="/assets/amount_calculation-a8178115404ef8f229ff466221a0a140.js" data-turbolinks-track="true"></script>
-    <script src="/assets/transaction_toggle-8c6e2e3d1916c02ce8f8382e3b789d10.js" data-turbolinks-track="true"></script>
-    <script src="/assets/payment-53973243cce4d16c23b0fc7afbc65442.js" data-turbolinks-track="true"></script>
-    <script src="/assets/add_on_demand-e69fb0347e7aa12e0461050892d47b45.js" data-turbolinks-track="true"></script>
-    <script src="/assets/add_new_select/add_new_pay_from-dfddf81375db30c5a19a104a2321a64d.js" data-turbolinks-track="true"></script>
-    <script src="/assets/add_new_select/add_new_payment_method-d4d4e8aa92e72e36da09ab5f6c4737db.js" data-turbolinks-track="true"></script>
-    <script src="/assets/view_attachment-d6acc990cf53889f6410488bf4d4db86.js" data-turbolinks-track="true"></script>
-    <script src="/assets/change_multi_currency-2ee2f61b107c033a30edb4b16e7057f3.js" data-turbolinks-track="true"></script>
-    <script src="/assets/edit_multi_currency-713f5e082afb3f18fd3e9a2b92641a25.js" data-turbolinks-track="true"></script>
-    <script src="/assets/dropzone-a6ee38ac93542ff4ccba4a30a7f89e3c.js" data-turbolinks-track="true"></script>
-    <script src="/assets/dropzone_set-1adf9fbe34140c225f4831cc1c64f4c8.js" data-turbolinks-track="true"></script><input type="file" multiple="multiple" class="dz-hidden-input" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;"><input type="file" multiple="multiple" class="dz-hidden-input" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;">
-    <script src="/assets/btn-dropdown-a1ad05f34a32479be9a8f336e6ac203a.js" data-turbolinks-track="true"></script>
-
-    <script>
-        jQuery.timeago.settings.lang = "id";
-        var expired_date_value = "true";
-        var company_is_expired = "false";
-    </script>
-    <script>
-        if (typeof fbq == 'undefined') {
-            ! function(f, b, e, v, n, t, s) {
-                if (f.fbq) return;
-                n = f.fbq = function() {
-                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-                };
-                if (!f._fbq) f._fbq = n;
-                n.push = n;
-                n.loaded = !0;
-                n.version = '2.0';
-                n.queue = [];
-                t = b.createElement(e);
-                t.async = !0;
-                t.src = v;
-                s = b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t, s)
-            }(window, document, 'script', '//connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '204662986589048');
-        };
-        fbq('track', "PageView");
-    </script>
-    <noscript>
-        <img height='1' lazy src='https://www.facebook.com/tr?id=204662986589048&amp;ev=PageView&amp;noscript=1' style='display:none' width='1'>
-    </noscript>
-    <!-- Google Tag Manager Data Layer -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-            eventCategory: "purchase_payments",
-            eventAction: "edit",
-            eventLabel: "219515"
-        })
-    </script>
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NM8LB4L');
-    </script>
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-W23JLJG');
-    </script>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-NM8LB4L' style='display:none;visibility:hidden' width='0'></iframe>
-    </noscript>
-    <noscript>
-        <iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-W23JLJG' style='display:none;visibility:hidden' width='0'></iframe>
-    </noscript>
-
-
-
-    <div aria-hidden="true" aria-labelledby="user-manage-changeLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="user-manage-change" role="dialog" style="z-index: 999999999999999; font-family: Roboto-Regular, sans-serif !important" tabindex="-1">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="user-manage-changeLabel" style="font-family: Roboto-Medium, sans-serif">
-                        Sesi Berakhir
-                    </h4>
-                </div>
-                <div class="logged-out hidden">
-                    <div class="modal-body">
-                        Mohon masuk akun untuk melanjutkan.
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-success" onclick="window.location.reload()">
-                            Masuk Akun
-                        </button>
-                    </div>
-                </div>
-                <div class="switched-company hidden">
-                    <div class="modal-body">
-                        Anda membuka perusahaan lain, mohon muat ulang halaman ini.
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-success" onclick="window.location.reload()">
-                            Muat Ulang
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('user-manage-changed', function(e) {
-            if (e.detail.newManageID == UserManageWatch.tabManageID) {
-                $('#user-manage-change').modal('hide')
-            } else {
-                // show message & action
-                var isLoggedOut = isNaN(parseInt(e.detail.newManageID))
-                $("#user-manage-change .logged-out").toggleClass('hidden', !isLoggedOut)
-                $("#user-manage-change .switched-company").toggleClass('hidden', isLoggedOut)
-                // show modal
-                $('#user-manage-change').modal('show')
-            }
-        })
-
-        $(document).ready(function() {
-            UserManageWatch.init(262876)
-        })
-    </script>
-
-
-    <script>
-        var locale = "id";
-    </script>
-    <span role="status" aria-live="polite" class="select2-hidden-accessible">+ Mulai Mengetik untuk Menambahkan</span>
-    <div class="tip-twitter">
-        <div class="tip-inner tip-bg-image"></div>
-        <div class="tip-arrow tip-arrow-top tip-arrow-right tip-arrow-bottom tip-arrow-left"></div>
-    </div><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" aria-hidden="true" tabindex="-1" title="Intercom"></iframe>
-    <div class="intercom-lightweight-app" aria-live="polite">
-        <div class="intercom-lightweight-app-launcher intercom-launcher" role="button" tabindex="0" aria-label="Open Intercom Messenger">
-            <div class="intercom-lightweight-app-launcher-icon intercom-lightweight-app-launcher-icon-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 32">
-                    <path d="M28 32s-4.714-1.855-8.527-3.34H3.437C1.54 28.66 0 27.026 0 25.013V3.644C0 1.633 1.54 0 3.437 0h21.125c1.898 0 3.437 1.632 3.437 3.645v18.404H28V32zm-4.139-11.982a.88.88 0 00-1.292-.105c-.03.026-3.015 2.681-8.57 2.681-5.486 0-8.517-2.636-8.571-2.684a.88.88 0 00-1.29.107 1.01 1.01 0 00-.219.708.992.992 0 00.318.664c.142.128 3.537 3.15 9.762 3.15 6.226 0 9.621-3.022 9.763-3.15a.992.992 0 00.317-.664 1.01 1.01 0 00-.218-.707z"></path>
-                </svg></div>
-            <div class="intercom-lightweight-app-launcher-icon intercom-lightweight-app-launcher-icon-minimize"><svg viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M.116 4.884l1.768-1.768L8 9.232l6.116-6.116 1.768 1.768L8 12.768.116 4.884z"></path>
-                </svg></div>
-        </div>
-        <style id="intercom-lightweight-app-style">
-            @keyframes intercom-lightweight-app-launcher {
-                from {
-                    opacity: 0;
-                    transform: scale(0.5);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: scale(1);
-                }
-            }
-
-            @keyframes intercom-lightweight-app-gradient {
-                from {
-                    opacity: 0;
-                }
-
-                to {
-                    opacity: 1;
-                }
-            }
-
-            @keyframes intercom-lightweight-app-messenger {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            .intercom-lightweight-app {
-                position: fixed;
-                z-index: 2147483001;
-                width: 0;
-                height: 0;
-                font-family: intercom-font, "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
-            }
-
-            .intercom-lightweight-app-gradient {
-                position: fixed;
-                z-index: 2147483002;
-                width: 500px;
-                height: 500px;
-                bottom: 0;
-                right: 0;
-                pointer-events: none;
-                background: radial-gradient(ellipse at bottom right,
-                        rgba(29, 39, 54, 0.16) 0%,
-                        rgba(29, 39, 54, 0) 72%);
-                animation: intercom-lightweight-app-gradient 200ms ease-out;
-            }
-
-            .intercom-lightweight-app-launcher {
-                position: fixed;
-                z-index: 2147483003;
-                bottom: 20px;
-                right: 20px;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                background: #57c1e8;
-                cursor: pointer;
-                box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
-                animation: intercom-lightweight-app-launcher 250ms ease;
-            }
-
-            .intercom-lightweight-app-launcher:focus {
-                outline: none;
-
-            }
-
-            .intercom-lightweight-app-launcher-icon {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 60px;
-                height: 60px;
-                transition: transform 100ms linear, opacity 80ms linear;
-            }
-
-            .intercom-lightweight-app-launcher-icon-open {
-
-                opacity: 1;
-                transform: rotate(0deg) scale(1);
-
-            }
-
-            .intercom-lightweight-app-launcher-icon-open svg {
-                width: 28px;
-                height: 32px;
-            }
-
-            .intercom-lightweight-app-launcher-icon-open svg path {
-                fill: rgb(255, 255, 255);
-            }
-
-            .intercom-lightweight-app-launcher-icon-self-serve {
-
-                opacity: 1;
-                transform: rotate(0deg) scale(1);
-
-            }
-
-            .intercom-lightweight-app-launcher-icon-self-serve svg {
-                height: 56px;
-            }
-
-            .intercom-lightweight-app-launcher-icon-self-serve svg path {
-                fill: rgb(255, 255, 255);
-            }
-
-            .intercom-lightweight-app-launcher-custom-icon-open {
-                max-height: 36px;
-                max-width: 36px;
-
-                opacity: 1;
-                transform: rotate(0deg) scale(1);
-
-            }
-
-            .intercom-lightweight-app-launcher-icon-minimize {
-
-                opacity: 0;
-                transform: rotate(-60deg) scale(0);
-
-            }
-
-            .intercom-lightweight-app-launcher-icon-minimize svg {
-                width: 16px;
-            }
-
-            .intercom-lightweight-app-launcher-icon-minimize svg path {
-                fill: rgb(255, 255, 255);
-            }
-
-            .intercom-lightweight-app-messenger {
-                position: fixed;
-                z-index: 2147483003;
-                overflow: hidden;
-                background-color: white;
-                animation: intercom-lightweight-app-messenger 250ms ease-out;
-
-                width: 376px;
-                height: calc(100% - 120px);
-                max-height: 704px;
-                min-height: 250px;
-                right: 20px;
-                bottom: 100px;
-                box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
-                border-radius: 8px;
-
-            }
-
-            .intercom-lightweight-app-messenger-header {
-                height: 75px;
-                background: linear-gradient(135deg,
-                        rgb(0, 127, 181) 0%,
-                        rgb(0, 55, 79) 100%);
-            }
-
-            @media print {
-                .intercom-lightweight-app {
-                    display: none;
-                }
-            }
-        </style>
-    </div>
-    <div class="select2-sizer" style="position: absolute; left: -10000px; top: -10000px; display: none; font-size: 14px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; text-transform: none; white-space: nowrap;"></div>
 </body>
 
 </html>

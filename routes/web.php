@@ -47,6 +47,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/sale/printorder/{id}', 'SaleController@printorder')->name('sale.printorder');
     Route::get('/sale/printquotation/{id}', 'QuotationController@print')->name('sale.printquotation');  
    
+    Route::get('/getcoa', 'ChartOfAccountController@searchCoa')->name('getcoa');
+
     Route::resource('setting/roles', 'RoleController');
     Route::resource('setting/users', 'UserController');
     Route::resource('setting/permissions', 'PermissionController');

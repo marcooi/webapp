@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ChartOfAccount;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -85,4 +86,6 @@ class JournalController extends Controller
     {
         //
     }
+
+    
 }

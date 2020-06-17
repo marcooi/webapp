@@ -59,11 +59,11 @@ class ChartOfAccountController extends Controller
     {
 
         request()->validate([
-            'coa_id' => 'required|unique:chart_of_accounts,coa_id,' . $request->id, 
+            'coa_id' => 'required|unique:chart_of_accounts,coa_id,' . $request->id,
             'name' => 'required'
         ]);
 
-     
+
 
         $user = ChartOfAccount::updateOrCreate(
             ['id' => $request->id],
@@ -74,7 +74,7 @@ class ChartOfAccountController extends Controller
 
             ]
         );
-        
+
         return Response::json($user);
         // return Response::json($request->id);
 
@@ -131,13 +131,29 @@ class ChartOfAccountController extends Controller
     {
 
         $coa = ChartOfAccount::findOrFail($id);
-
-
         $coa->delete();
-
-        // $coa->delete();
 
         return redirect()->route('chart-of-accounts.index')
             ->with('success', 'Chart of Account deleted successfully');
+    }
+
+    public function searchCoa(Request $request)
+    {
+       
+
+
+        $listvendor = ChartOfAccount::where('name', 'LIKE', '%' . $request->input('term', '') . '%')
+            // ->get(['id', 'name as text']);
+            ->Select('id', DB::raw("CONCAT(coa_id,' | ',name) as text" ))
+            ->get(['id', 'text']);
+
+
+// return Response::json($user);
+        return ['results' => $listvendor];
+
+        // $listvendor = ChartOfAccount::where('name', 'LIKE', '%' . $request->input('term', '') . '%')
+        // ->select(DB::raw("CONCAT('coa_id', 'name') AS text"),'id')->get()->pluck('id', 'text');
+
+        // return ['results' => $listvendor];
     }
 }
