@@ -24,32 +24,29 @@
 
 
 
-<section class="panel">
+<!-- <form action="" autocomplete="off"> -->
+<form action="{{ route('journals.store') }}" method="POST" class="form-horizontal" id="myForm" autocomplete="off">
+    @csrf
+    <section class="panel">
 
-    <header class="panel-heading">
-        <div class="pull-right">
+        <header class="panel-heading">
+
+            <h2 class="panel-title">Create New Journal</h2>
+        </header>
 
 
-        </div>
-
-        <h2 class="panel-title">Create New Journal</h2>
-    </header>
-
-
-    <div class="panel-body">
-        @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-        @endif
-
-        <form action="" autocomplete="off">
+        <div class="panel-body">
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+            @endif
 
             <div class="form-group">
-                <label class="col-sm-2 control-label">Type</label>
+                <label class="col-sm-2 control-label text-right">Type</label>
                 <div class="col-sm-4">
-                    <select name="company_id" class="form-control select2-type" required>
-
+                    <select name="type_id" id="type_id" class="form-control select2-type" required>
+                        <option value="0"></option>
                         <option value="1">Receipt</option>
                         <option value="2">Payment</option>
                     </select>
@@ -57,21 +54,21 @@
             </div>
 
             <div class="form-group">
-                <label class="col-sm-2 control-label">Date </span></label>
+                <label class="col-sm-2 control-label text-right">Date </span></label>
                 <div class="col-sm-2">
-                    <input type="text" name='date' class="form-control input-sm datepicker" value="{{ Request::old('date') }}" required>
+                    <input type="text" name='date' class="form-control datepicker" value="{{ Request::old('date') }}" required>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-sm-2 control-label">Company</label>
+                <label class="col-sm-2 control-label text-right">Company</label>
                 <div class="col-sm-4">
-                    <select name="company_id" class="form-control select2-company" required></select>
+                    <select name="company_id" class="form-control input-sm select2-company" required></select>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-sm-2 control-label">PO#</label>
+                <label class="col-sm-2 control-label text-right">PO / Invoice #</label>
                 <div class="col-sm-4">
                     <select name="company_id" class="form-control select2-po-no" required></select>
                 </div>
@@ -98,14 +95,20 @@
 
             </div>
 
-        </form>
+        </div>
 
+        <footer class="panel-footer">
+            <div class="row">
+                <div class="mb-xs text-center">
+                    <button class="btn btn-primary">Submit</button>
+                    <a class="btn btn-default" href="{{ route('journals.index') }}"> Cancel</a>
+                </div>
+            </div>
+        </footer>
 
-    </div>
+    </section>
 
-</section>
-
-
+</form>
 
 @endsection
 
@@ -136,16 +139,16 @@
             allowClear: true
         });
 
-
-
         function initSelect2(strClass, strUrl) {
             $(strClass).select2({
                 placeholder: 'Select...',
+                // minimumInputLength: 2,
                 width: '100%',
                 allowClear: true,
                 ajax: {
                     url: strUrl,
                     dataType: 'json',
+                    delay: 250,
                     data: function(params) {
                         return {
                             term: params.term || '',
@@ -157,34 +160,69 @@
             });
         }
 
-      
+        // initSelect2('.select2-po-no', '');
+        // initSelect2()
 
-        function initSelectPo(strClass, strUrl) {
+        function onchangeSelectCompany() {
             $('.select2-company').on('select2:select', function(e) {
                 let datax = e.params.data;
                 axios.get('/getpurchase/' + datax.id)
                     .then(function(response) {
 
                         var len = response.data.length;
-                        // $(".select2-po-no").append("<option></option>");
+                        
                         for (var i = 0; i < len; i++) {
                             var id = response.data[i]['id'];
-                            var name = response.data[i]['po_no'];
-
-                            // $(".po-no").append("<option value='" + id + "'>" + name + "</option>");                        
-                            // $(".select2-po-no").append("<option value='" + id + "' >" + name + "</option>");
+                            var name = response.data[i]['po_no'];                            
 
                             var newOption = new Option(name, id, false, false);
+                            
+                            $('.select2-po-no').val(null).empty();
                             $('.select2-po-no').append(newOption).trigger('change');
                         }
                     });
             });
         };
 
-        initSelectPo();
-        // initSelect2('.select2-company', '{{ route("getcustomer") }}');
-        initSelect2('.select2-company', '{{ route("getvendor") }}');
+        onchangeSelectCompany();
         initSelect2('.select2-coa', '{{ route("getcoa") }}');
+
+
+        $("#type_id").change(function() {
+            let e = document.getElementById("type_id");
+            let result = e.options[e.selectedIndex].value;
+
+            switch (result) {
+                case "1":
+                    // onchangeSelectCompany('.select2-company', '');
+                    $('.select2-company').val(null).empty();
+                    $('.select2-po-no').val(null).empty();
+                    initSelect2('.select2-company', '{{ route("getcustomer") }}');
+
+                    console.log('1')
+
+                    break;
+
+                case "2":
+                    // onchangeSelectCompany('.select2-company', '');
+                    $('.select2-company').val(null).empty();
+                    $('.select2-po-no').val(null).empty();
+                    initSelect2('.select2-company', '{{ route("getvendor") }}');
+                    console.log('2')
+                    break;
+
+                case "0":
+                    initSelect2('.select2-company', '');
+                    $('.select2-company').val(null).empty();
+                    $('.select2-po-no').val(null).empty();
+
+                    console.log('0')
+
+                    break;
+
+            }
+        });
+
 
 
 

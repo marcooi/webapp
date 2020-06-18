@@ -40,7 +40,7 @@
                 <div class="col-sm-2">
                     <input type="text" name='receive_at' class="form-control input-sm datepicker" value="{{ Request::old('date') }}" required>
                 </div>
-             
+
             </div>
 
             <div class="form-group">
@@ -55,13 +55,13 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label">Product</label>
                 <div class="col-sm-4">
-                    <select  class="form-control select2-product" required>
+                    <select class="form-control select2-product" required>
                     </select>
                 </div>
 
-                <input type="button" class="add-row" value="Add Row">             
+                <input type="button" class="add-row" value="Add Row">
 
-            </div>       
+            </div>
 
 
             <div class="form-group">
@@ -82,22 +82,14 @@
                         </thead>
                         <tbody>
 
-
                         </tbody>
                     </table>
                 </div>
 
             </div>
 
-
-
-
-
         </div>
-
-
-
-        </div>
+       
         <footer class="panel-footer">
             <div class="row">
                 <div class="mb-xs text-center">
