@@ -164,7 +164,7 @@ class SaleController extends Controller
             ->select('sales.*', 'companies.description', 'employees.name', 'addresses.address1')
             ->where('sales.id', $sale->id)->first();
 
-          
+
 
         $details = DB::table('sale_details')
             ->join('products', 'sale_details.product_id', '=', 'products.id')
@@ -349,9 +349,7 @@ class SaleController extends Controller
             )
             ->where('sales.id', $id)->first();
 
-
         $shipping = Address::find($header->shipping_address_id);
-        // dd($shipping);
 
         $details = DB::table('sale_details')
             ->join('products', 'sale_details.product_id', '=', 'products.id')
@@ -359,14 +357,6 @@ class SaleController extends Controller
             ->where('sale_id', '=', $id)
             ->where('sale_details.deleted_at', null)
             ->get();
-
-
-
-
-        // $pdf = PDF::loadView('sales.invoice', compact('header', 'shipping', 'details'));            
-        // return $pdf->stream('document.pdf');
-
-
 
         switch ($request->print_option) {
             case '1':
@@ -379,18 +369,17 @@ class SaleController extends Controller
                 return view('sales.delv-order', compact('header', 'shipping', 'details'));
                 break;
         }
+    }
 
-        // $purchases = DB::table('purchases')
-        //     ->join('companies', 'companies.id', '=', 'purchases.company_id')            
-        //     ->select('purchases.*', 'companies.description')
-        //     ->get();
+    function getSale($request)
+    {
+        $sales = DB::table('sales')
+        ->where('company_id', $request)
+            ->where('is_confirmed', '1')
+            ->whereNull('deleted_at')
+            ->get();
 
-        // dd($purchasesdetail);
+        return $sales->toJson(JSON_PRETTY_PRINT);      
 
-
-        // $pdf = PDF::loadView('purchases.print2',  compact('purchases', 'companies', 'purchasesdetail'));
-        // return $pdf->stream('document.pdf');
-
-        // return view('purchases.print', compact('purchases', 'companies', 'purchasesdetail'));
     }
 }

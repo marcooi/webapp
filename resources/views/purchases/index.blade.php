@@ -37,9 +37,10 @@
                         <th class="text-center">Status</th>
                         <th class="text-center" width=120px>Action</th>
                     </tr>
+                </thead>
                 <tbody>
 
-                    @foreach ($purchases as $purc)
+                    @foreach ($purchases as $i as $purc)
                     <tr>
                         <td class="text-center">{{ ++$i }}</td>
                         <!-- <td class="text-center">{{ $purc->description }}</td> -->

@@ -45,9 +45,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/employee/all', 'EmployeeController@searchEmployee')->name('employee.all');
     Route::get('/address/{id}', 'AddressController@searchShippingAddress')->name('address.all');
     Route::get('/sale/printorder/{id}', 'SaleController@printorder')->name('sale.printorder');
-    Route::get('/sale/printquotation/{id}', 'QuotationController@print')->name('sale.printquotation');  
+    Route::get('/sale/printquotation/{id}', 'QuotationController@print')->name('sale.printquotation');
+
+    Route::get('/getsale/{id}', 'SaleController@getSale')->name('getsale');  
    
     Route::get('/getcoa', 'ChartOfAccountController@searchCoa')->name('getcoa');
+    // Route::get('/journaltype', 'JournalController@journalType')->name('journaltype');
+
 
     Route::resource('setting/roles', 'RoleController');
     Route::resource('setting/users', 'UserController');

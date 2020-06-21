@@ -15,9 +15,12 @@ class CreateJournalDetailsTable extends Migration
     {
         Schema::create('journal_details', function (Blueprint $table) {
             $table->id();
-            $table->string('coa_id');
+            $table->unsignedInteger('journal_id');
+            $table->string('chart_of_account_id');
+            $table->string('description');
             $table->decimal('debit', 18, 2)->default(0); 
             $table->decimal('credit', 18, 2)->default(0); 
+            $table->softDeletes();
             $table->timestamps();
         });
     }
